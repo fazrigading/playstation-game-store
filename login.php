@@ -1,3 +1,12 @@
+<?php
+    session_start();
+    require 'config.php';
+    if (isset($_POST["submitregis"]) ){
+        if (register($_POST) > 0) echo "<script> alert('Registration Success.'); </script>";
+        else echo "<script> alert('Registration Failed.'); </script>";
+    };
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,21 +14,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-    <link rel="stylesheet" href="login.css">
     <title>Login & Registration Form</title>
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
     <div class="container">
         <div class="forms">
             <div class="form login">
                 <span class="title">Masuk</span>
-                <form action="#">
+                <form action="#" method="post">
+                    
                     <div class="input-field">
-                        <input type="text" placeholder="Masukkan email Anda" required>
+                        <input type="text" name="user" placeholder="Your Username/Email" required>
                         <i class="uil uil-envelope icon"></i>
                     </div>
+
                     <div class="input-field">
-                        <input type="password" class="password" placeholder="Masukkan kata sandi Anda" required>
+                        <input type="password" name="pass" class="password" placeholder="Your Password" required>
                         <i class="uil uil-lock icon"></i>
                         <i class="uil uil-eye-slash showHidePw"></i>
                     </div>
@@ -34,7 +45,7 @@
                     </div>
 
                     <div class="input-field button">
-                        <input type="submit" name="submit-login" value="Masuk">
+                        <input type="submit" name="submitlogin" value="Masuk">
                     </div>
                 </form>
 
@@ -47,24 +58,25 @@
 
             <div class="form signup">
                 <span class="title">Daftar</span>
-                <form action="#">
+                <form action="#" method="post" enctype="multipart/form-data">
                     <div class="input-field">
-                        <input type="text" placeholder="Masukkan username Anda" required>
+                        <input type="text" name="user" placeholder="Masukkan username Anda" required>
                         <i class="uil uil-user"></i>
                     </div>
                     <div class="input-field">
-                        <input type="text" placeholder="Masukkan email Anda" required>
+                        <input type="text" name="email" placeholder="Masukkan email Anda" required>
                         <i class="uil uil-envelope icon"></i>
                     </div>
                     <div class="input-field">
-                        <input type="password" class="password" placeholder="Buat kata sandi" required>
+                        <input type="password" class="password" name="pass" placeholder="Buat kata sandi" required>
                         <i class="uil uil-lock icon"></i>
                     </div>
                     <div class="input-field">
-                        <input type="password" class="password" placeholder="Konfimasi kata sandi" required>
+                        <input type="password" class="password" name="cpass" placeholder="Konfimasi kata sandi" required>
                         <i class="uil uil-lock icon"></i>
                         <i class="uil uil-eye-slash showHidePw"></i>
                     </div>
+
 
                     <div class="checkbox-text">
                         <div class="checkbox-content">
@@ -72,10 +84,12 @@
                             <label for="termCon" class="text">Saya menyetujui Syarat dan Ketentuan</label>
                         </div>
                     </div>
-
+                    <div class="input-field">
+                        <p>Profile Picture*:</p> 
+                        <input type="file" name="photo" placeholder="Add profile picture" required>
+                    </div>
                     <div class="input-field button">
-                        <input type="submit" name="submit-regis" value="Daftar">
-                        <!-- <input type="button" value="Daftar"> -->
+                        <input type="submit" name="submitregis" value="Daftar">
                     </div>
                 </form>
 
@@ -93,38 +107,26 @@
 </html>
 
 <?php 
-    session_start();
-    require 'config.php';
-
-    if (isset($_POST["submit-regis"]) ){
-        if (register($_POST) > 0){
-            echo "<script> alert('Registrasi Berhasil!'); </script>";
-        } else {
-            echo "<script> alert('Registrasi gagal!'); </script>";
-        }
-    };
-
     if (isset($_COOKIE["id"]) && isset($_COOKIE["key"])){
         $id = $_COOKIE['id'];
         $key = $_COOKIE['key'];
-
         $result = mysqli_query($db, "SELECT username FROM users WHERE id = $id");
         $rows = mysqli_fetch_assoc($result);
-        if ($key === hash('sha256', $rows['username'])){
-            $_SESSION["login"] = true;
-        }
+        if ($key === hash('sha256', $rows['username'])) $_SESSION["login"] = true;
+        
     };
 
     if (isset($_SESSION["login"])){
-        header('Location: dashboard.php');
-        exit;
+        echo "<script> document.location.href = 'dashboard.php'; </script>";
+        // header('Location: dashboard.php');
+        // exit;
     };
     
-    if (isset($_POST["submit-login"])){
-        $username = $_POST["username"];
-        $password = $_POST["password"];
-        $result = mysqli_query($db, "SELECT * FROM users WHERE username = '$username'");
-        if ( mysqli_num_rows($result) === 1 ){
+    if (isset($_POST["submitlogin"])){
+        $username = $_POST["user"];
+        $password = $_POST["pass"];
+        $result = $db->query("SELECT * FROM users WHERE username = '$username' OR email = '$username'");
+        if (mysqli_num_rows($result) === 1 ){
             $rows = mysqli_fetch_assoc($result);
             if (password_verify($password, $rows["password"])){
                 $_SESSION["login"] = true;
@@ -132,9 +134,13 @@
                     setcookie('id', $rows["id"], time()+ 3600);
                     setcookie('key', hash('sha256', $rows["username"]), time()+ 3600);
                 };
-                header("Location: dashboard.php");
-                exit;
+                echo "<script> 
+                    alert('Welcome, @$username!'); 
+                    document.location.href = 'dashboard.php';
+                </script>";
             }                  
+        } else {
+            echo "<script> alert('User not found. Please register first.'); </script>";
         }
     };
 ?>
