@@ -10,14 +10,15 @@
 <body>
     <div class="container">
         <div class="navbar">
-            <img src="images/logo.png" class="logo">
+            <img src="assets/logo.png" class="logo">
             <h1>Playstation Game Store</h1>
             <nav>
                 <ul id="menuList">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="aboutme.html">About Me</a></li>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="aboutme.php">About Me</a></li>
                     <li><a href="">Console</a></li>
                     <li><a href="">Accessories</a></li>
+                    <li><a href="login.php">Login</a></li>
                     <li>
                         <label>
                             <input type="checkbox" class="checkbox" id="modegelap2">
@@ -35,22 +36,22 @@
                 <p>Informatics 2020 - Universitas Mulawarman</p>
                 <h4>"Jika orang lain bisa, mengapa saya tidak?"</h4>
                 <a href="https://linktr.ee/fazrigading/">
-                    <button type="button">Follow Me<img src="images/arrow.png"></button>
+                    <button type="button">Follow Me<img src="assets/arrow.png"></button>
                 </a>
             </div>
             <div class="col-3">
-                <img src="images/gading.jpg" class="gambar">
+                <img src="assets/gading.jpg" class="gambar">
             </div>
         </div>
         <div class="social-links">
             <a href="https://www.facebook.com/fazrigading">
-                <img src="images/fb.png">
+                <img src="assets/fb.png">
             </a>
             <a href="https://twitter.com/fazrigading">
-                <img src="images/tw.png">
+                <img src="assets/tw.png">
             </a>
             <a href="https://instagram.com/fazrigading">
-                <img src="images/ig.png">
+                <img src="assets/ig.png">
             </a>
         </div>
     </div>

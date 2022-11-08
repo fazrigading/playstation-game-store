@@ -12,7 +12,6 @@ tombolKeranjang.addEventListener("click",
         alert("Mohon maaf, tombol Add to Cart belum dapat digunakan. Situs sedang dalam masa pengembangan.");
     },
 )
-
 modeGelap.addEventListener("click",
     function(){
         document.body.classList.toggle("dark-mode");
