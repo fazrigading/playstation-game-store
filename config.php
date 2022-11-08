@@ -1,5 +1,5 @@
 <?php
-$db = mysqli_connect("localhost", "root", "", "fazrigading");
+$db = mysqli_connect("localhost", "root", "", "playstation-game-store");
 
 function query($query) {
     global $db;
