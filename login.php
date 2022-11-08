@@ -1,3 +1,36 @@
+<?php 
+    session_start();
+    require 'config.php';
+    cookieCheck();
+    sessionCheck();
+
+    if (isset($_POST["submitLogin"]) ){
+        if (login($_POST) > 0){
+            echo "
+            <script>
+            alert('Login Berhasil!');
+            </script>";
+        } else {
+            echo "<script>
+            alert('Login gagal!');
+            </script>";
+        }
+    };
+    
+    if (isset($_POST["submitRegis"]) ){
+        if (register($_POST) > 0){
+            echo "
+            <script>
+            alert('Registrasi Berhasil!');
+            </script>";
+        } else {
+            echo "<script>
+            alert('Registrasi gagal!');
+            </script>";
+        }
+    };
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,18 +68,19 @@
             <h2>
                 Toko videogame terlengkap <br>dan termurah
             </h2>
-            <form>
+            <form method="post">
                 <!-- INPUT USERNAME  -->
-                <label for="fname">Username</label><br>
+                <label for="username">Username</label><br>
                 <input type="text" id="username" name="username"><br><br>
 
                 <!-- INPUT PASSWORD  -->
-                <label for="fname">Password</label><br>
+                <label for="password">Password</label><br>
                 <input type="password" id="password" name="password"><br>
+
+                <button id="Sign-in" type="submit" name="submitLogin">Sign in to my account</button><br>
+                <button id="Sign-Up">Sign Up</button>
             </form>
 
-            <button id="Sign-in">Sign in to my account</button><br>
-            <button id="Sign-Up">Sign Up</button>
 
         </div>
     </div>
