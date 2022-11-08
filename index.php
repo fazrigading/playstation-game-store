@@ -23,14 +23,14 @@
                     <li><a href="aboutme.php">About Me</a></li>
                     <li><a href="catalog.php">Catalog</a></li>
                     <?php 
+                    if(isset($_SESSION["loginAdmin"])){
+                        echo "<li><a href='admin/dashboard.php'>Dashboard</a></li>";
+                    } else if (!isset($_SESSION["loginUser"]) && !isset($_SESSION["loginAdmin"])){
+                        echo "<li><a href='login.php'>Login</a></li>";
+                    }
                     if(isset($_SESSION["loginUser"]) || isset($_SESSION["loginAdmin"])){
                         echo "<li><a href='logout.php'>Logout</a></li>";
                     } 
-                    if(isset($_SESSION["loginAdmin"])){
-                        echo "<li><a href='admin/dashboard.php'>Dashboard</a></li>";
-                    } else {
-                        echo "<li><a href='login.php'>Login</a></li>";
-                    }
                     ?>
                     <li>
                         <label>

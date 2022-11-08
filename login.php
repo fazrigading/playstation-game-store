@@ -8,11 +8,11 @@
         if (login($_POST) > 0){
             echo "
             <script>
-            alert('Registrasi Berhasil!');
+            alert('Login Berhasil!');
             </script>";
         } else {
             echo "<script>
-            alert('Registrasi gagal!');
+            alert('Login gagal!');
             </script>";
         }
     };

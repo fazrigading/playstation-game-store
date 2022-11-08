@@ -1,4 +1,5 @@
 <?php
+define ('SITE_ROOT', realpath(dirname(__FILE__)));
 $db = mysqli_connect("localhost", "root", "", "playstation-game-store");
 
 function query($query) {
@@ -31,7 +32,7 @@ function cookieCheck() {
 
 function sessionCheck() {
     if (isset($_SESSION["loginAdmin"])){
-        header('Location: dashboard.php');
+        header('Location: admin/dashboard.php');
         exit;
     } 
     if (isset($_SESSION["loginUser"])){
@@ -104,7 +105,7 @@ function register($data){
 function upload(){
     $nameFile = $_FILES["photo"]["name"];
     $sizeFile = $_FILES["photo"]["size"];
-    // $errorFile = $_FILES["photo"]["error"];
+    $errorFile = $_FILES["photo"]["error"];
     $temporaryFile = $_FILES["photo"]["tmp_name"];
     
     $validFileExt = ['jpg', 'jpeg', 'png'];
@@ -119,29 +120,49 @@ function upload(){
         return false;
     }
     date_default_timezone_set('Asia/Makassar');
-    $newFileName = date('m-d-Y h-i-s a', time());
+    $newFileName = 'IMG_' . date('mdY_his', time());
     $newFileName .= '.';
     $newFileName .= $imgExt;
     
-    move_uploaded_file($temporaryFile, 'img/' . $newFileName);
+    
+    // Upload file
+    $moved = move_uploaded_file($temporaryFile, SITE_ROOT . '/resources/img/' . $newFileName);
+
+    if( $moved ) {
+    echo "Successfully uploaded";         
+    } else {
+    echo "Not uploaded because of error #".$errorFile;
+    exit;
+    }
+
     return $newFileName;
 }
 
 function updateUser($data){
     global $db;
+    $samePhoto = htmlspecialchars($data["samePhoto"]);
+    if ($_FILES['photo']['error'] === 4){
+        $photo =  $samePhoto;   
+    } else {
+        $photo = upload();                                                    //
+    }
     $id = htmlspecialchars($data["id"]);
     $username = htmlspecialchars($data["user"]);
     $password = htmlspecialchars($data["pass"]);
-    $photo = upload();
-    $samePhoto = htmlspecialchars($data["samePhoto"]);
-
-    if ($_FILES['photo']['error'] === 4) $photo =  $samePhoto;
-    $result = $db->query("SELECT * FROM users WHERE username = '$username'");
-    if (mysqli_num_rows($result) === 1){
+    
+    
+    $result = $db->query("SELECT * FROM users WHERE id = '$id'");
+    if (mysqli_num_rows($result) == 1){
         $rows = mysqli_fetch_assoc($result);
         if (password_verify($password, $rows["password"])) {
-            mysqli_query($db, "UPDATE users SET username = '$username', photo = '$photo' WHERE id = '$id'");
-            return (mysqli_affected_rows($db));
+            $query = "UPDATE users SET 
+                username = '$username', 
+                photo = '$photo' 
+                WHERE id = '$id'
+                ";
+            echo $photo;
+            mysqli_query($db, $query);
+            return mysqli_affected_rows($db);
         } else {
             echo "<script> alert('Confirmation password different.'); </script>";
             return false;

@@ -8,7 +8,7 @@
   $id = $_GET["id"];
   $user = query("SELECT * FROM users WHERE id = $id")[0];
   if (isset($_POST["submitupdate"])) {
-    if (updateProduct($_POST) > 0) echo "<script> alert('Data updated succesfully.'); document.location.href = 'dashboard.php'; </script>";
+    if (updateProduct($_POST) > 0) echo "<script> alert('Data updated succesfully.'); document.location.href = '../dashboard.php'; </script>";
     else {
       $feedback = "Data Gagal Diubah";
       echo mysqli_error($db);
@@ -37,7 +37,7 @@
           <div class="input-field-photo">
             <table>
               <td>
-                <img src="img/<?= $user["photo"] ?>" alt="Your photo" width="100">
+                <img src="../../resources/img/<?= $user["photo"] ?>" alt="Your photo" width="100">
               </td>
               <td>
                 <input type="file" name="photo" placeholder="Add Picture...">
