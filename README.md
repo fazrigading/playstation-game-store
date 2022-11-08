@@ -15,7 +15,7 @@ Bagian ini menunjukkan hasil perkembangan pengerjaan proyek dengan beberapa emoj
 - 🔵 UI On Progress
 - 🟢 UI Done
 - ⚫ System Not Started
-- 🔘 System On Progress
+- 🔛 System On Progress
 - ⚪ System Done
 - (B) Back-End
 - (F) Front-End
@@ -31,10 +31,10 @@ Bagian ini menunjukkan hasil perkembangan pengerjaan proyek dengan beberapa emoj
 - Detail Page 🔵⚫ Alex (F)
 
 ## Auth:
-- Login 🔵🔘 Alex (F)
-- Register 🔵🔘 Alex (F)
-- Auth Cookies 🟢⚪ Risky (B)
-- Auth Session 🟢⚪ Risky (B)
+- Login 🟢🔛 Alex (F)
+- Register 🟢🔛 Alex (F)
+- Auth Cookies ⚪ Risky (B)
+- Auth Session ⚪ Risky (B)
 
 ## Post-Auth:
 - Cart 🟡⚫
@@ -47,6 +47,6 @@ Bagian ini menunjukkan hasil perkembangan pengerjaan proyek dengan beberapa emoj
 
 ## Admin:
 - Dashboard (?) (Grafik Penjualan) ❓ 
-- User Panel (Kelola User) 🟡⚫
-- Item Panel (CRUD Barang) 🟡🔘 Risky (B)
+- User Panel (Kelola User) 🟡⚫ 
+- Item Panel (CRUD Barang) 🟡🔛 Risky (B)
 
