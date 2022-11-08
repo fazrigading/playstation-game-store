@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Playstation Game Store</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="resources/css/style.css">
 </head>
 <body>
     <div class="container">
         <div class="navbar">
-            <img src="assets/logo.png" class="logo">
+            <img src="resources/assets/logo.png" class="logo">
             <h1>Playstation Game Store</h1>
             <nav>
                 <ul id="menuList">
@@ -36,22 +36,22 @@
                 <p>Informatics 2020 - Universitas Mulawarman</p>
                 <h4>"Jika orang lain bisa, mengapa saya tidak?"</h4>
                 <a href="https://linktr.ee/fazrigading/">
-                    <button type="button">Follow Me<img src="assets/arrow.png"></button>
+                    <button type="button">Follow Me<img src="resources/assets/arrow.png"></button>
                 </a>
             </div>
             <div class="col-3">
-                <img src="assets/gading.jpg" class="gambar">
+                <img src="resources/assets/gading.jpg" class="gambar">
             </div>
         </div>
         <div class="social-links">
             <a href="https://www.facebook.com/fazrigading">
-                <img src="assets/fb.png">
+                <img src="resources/assets/fb.png">
             </a>
             <a href="https://twitter.com/fazrigading">
-                <img src="assets/tw.png">
+                <img src="resources/assets/tw.png">
             </a>
             <a href="https://instagram.com/fazrigading">
-                <img src="assets/ig.png">
+                <img src="resources/assets/ig.png">
             </a>
         </div>
     </div>

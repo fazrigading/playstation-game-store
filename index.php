@@ -1,7 +1,6 @@
 <?php 
     session_start();
     require 'config.php';
-    $result = mysqli_query($db, "SELECT * FROM users");
 ?>
 
 <!DOCTYPE html>
@@ -11,12 +10,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Playstation Game Store</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="resources/css/style.css">
 </head>
 <body>
     <div class="container">
         <div class="navbar">
-            <img src="assets/logo.png" class="logo">
+            <img src="resources/assets/logo.png" class="logo">
             <h1>Playstation Game Store</h1>
             <nav>
                 <ul id="menuList">
@@ -24,10 +23,13 @@
                     <li><a href="aboutme.php">About Me</a></li>
                     <li><a href="catalog.php">Catalog</a></li>
                     <?php 
-                    if(!isset($_SESSION["login"])){
-                        echo "<li><a href='login.php'>Login</a></li>";
-                    } else {
+                    if(isset($_SESSION["loginUser"]) || isset($_SESSION["loginAdmin"])){
                         echo "<li><a href='logout.php'>Logout</a></li>";
+                    } 
+                    if(isset($_SESSION["loginAdmin"])){
+                        echo "<li><a href='admin/dashboard.php'>Dashboard</a></li>";
+                    } else {
+                        echo "<li><a href='login.php'>Login</a></li>";
                     }
                     ?>
                     <li>
@@ -46,26 +48,26 @@
                 <h3>Stick PS Tanpa Kabel untuk Playstation 4</h3>
                 <p>(Kompatibel/Original)</p>
                 <h4>Rp500.000</h4>
-                <button type="button" id="buynow">Beli Sekarang<img src="assets/arrow.png"></button>
+                <button type="button" id="buynow">Beli Sekarang<img src="resources/assets/arrow.png"></button>
             </div>
             <div class="col-2">
-                <img src="assets/controller.png" class="controller">
+                <img src="resources/assets/controller.png" class="controller">
                 <div class="color-box"></div>
                 <div class="add-btn" id="addCart">
-                    <img src="assets/add.png">
+                    <img src="resources/assets/add.png">
                     <p><small>Add to Cart</small></p>
                 </div>
             </div>
         </div>
         <div class="social-links">
             <a href="https://www.facebook.com/fazrigading">
-                <img src="assets/fb.png">
+                <img src="resources/assets/fb.png">
             </a>
             <a href="https://twitter.com/fazrigading">
-                <img src="assets/tw.png">
+                <img src="resources/assets/tw.png">
             </a>
             <a href="https://instagram.com/fazrigading">
-                <img src="assets/ig.png">
+                <img src="resources/assets/ig.png">
             </a>
         </div>
     </div>
@@ -80,6 +82,6 @@
         </ul>
         </div>
     </footer>
-    <script src="script-index.js"></script>
+    <script src="resources/js/script-index.js"></script>
 </body>
 </html>

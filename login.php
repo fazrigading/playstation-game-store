@@ -1,9 +1,33 @@
-<?php
+<?php 
     session_start();
     require 'config.php';
-    if (isset($_POST["submitregis"]) ){
-        if (register($_POST) > 0) echo "<script> alert('Registration Success.'); </script>";
-        else echo "<script> alert('Registration Failed.'); </script>";
+    cookieCheck();
+    sessionCheck();
+
+    if (isset($_POST["submitLogin"]) ){
+        if (login($_POST) > 0){
+            echo "
+            <script>
+            alert('Registrasi Berhasil!');
+            </script>";
+        } else {
+            echo "<script>
+            alert('Registrasi gagal!');
+            </script>";
+        }
+    };
+    
+    if (isset($_POST["submitRegis"]) ){
+        if (register($_POST) > 0){
+            echo "
+            <script>
+            alert('Registrasi Berhasil!');
+            </script>";
+        } else {
+            echo "<script>
+            alert('Registrasi gagal!');
+            </script>";
+        }
     };
 ?>
 
@@ -15,7 +39,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <title>Login & Registration Form</title>
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="resources/css/login.css">
 </head>
 <body>
     <div class="container">
@@ -25,19 +49,19 @@
                 <form action="#" method="post">
                     
                     <div class="input-field">
-                        <input type="text" name="user" placeholder="Your Username/Email" required>
+                        <input type="text" name="username" placeholder="Username" required>
                         <i class="uil uil-envelope icon"></i>
                     </div>
 
                     <div class="input-field">
-                        <input type="password" name="pass" class="password" placeholder="Your Password" required>
+                        <input type="password" name="password" class="password" placeholder= "Password" required>
                         <i class="uil uil-lock icon"></i>
                         <i class="uil uil-eye-slash showHidePw"></i>
                     </div>
 
                     <div class="checkbox-text">
                         <div class="checkbox-content">
-                            <input type="checkbox" id="logCheck">
+                            <input type="checkbox" id="logCheck" name="remember">
                             <label for="logCheck" class="text">Tetap masuk</label>
                         </div>
                         
@@ -45,7 +69,7 @@
                     </div>
 
                     <div class="input-field button">
-                        <input type="submit" name="submitlogin" value="Masuk">
+                        <input type="submit" name="submitLogin" value="Masuk">
                     </div>
                 </form>
 
@@ -80,8 +104,8 @@
 
                     <div class="checkbox-text">
                         <div class="checkbox-content">
-                            <input type="checkbox" id="termCon">
-                            <label for="termCon" class="text">Saya menyetujui Syarat dan Ketentuan</label>
+                            <input type="checkbox" id="termCon" required>
+                            <label for="termCon" class="text">Saya menyetujui Syarat dan Ketentuan*</label>
                         </div>
                     </div>
                     <div class="input-field">
@@ -89,7 +113,7 @@
                         <input type="file" name="photo" placeholder="Add profile picture" required>
                     </div>
                     <div class="input-field button">
-                        <input type="submit" name="submitregis" value="Daftar">
+                        <input type="submit" name="submitRegis" value="Daftar">
                     </div>
                 </form>
 
@@ -102,45 +126,6 @@
         </div>
     </div>
 
-    <script src="login.js"></script>
+    <script src="resources/js/login.js"></script>
 </body>
 </html>
-
-<?php 
-    if (isset($_COOKIE["id"]) && isset($_COOKIE["key"])){
-        $id = $_COOKIE['id'];
-        $key = $_COOKIE['key'];
-        $result = mysqli_query($db, "SELECT username FROM users WHERE id = $id");
-        $rows = mysqli_fetch_assoc($result);
-        if ($key === hash('sha256', $rows['username'])) $_SESSION["login"] = true;
-        
-    };
-
-    if (isset($_SESSION["login"])){
-        echo "<script> document.location.href = 'dashboard.php'; </script>";
-        // header('Location: dashboard.php');
-        // exit;
-    };
-    
-    if (isset($_POST["submitlogin"])){
-        $username = $_POST["user"];
-        $password = $_POST["pass"];
-        $result = $db->query("SELECT * FROM users WHERE username = '$username' OR email = '$username'");
-        if (mysqli_num_rows($result) === 1 ){
-            $rows = mysqli_fetch_assoc($result);
-            if (password_verify($password, $rows["password"])){
-                $_SESSION["login"] = true;
-                if (isset($_POST["logCheck"])){
-                    setcookie('id', $rows["id"], time()+ 3600);
-                    setcookie('key', hash('sha256', $rows["username"]), time()+ 3600);
-                };
-                echo "<script> 
-                    alert('Welcome, @$username!'); 
-                    document.location.href = 'dashboard.php';
-                </script>";
-            }                  
-        } else {
-            echo "<script> alert('User not found. Please register first.'); </script>";
-        }
-    };
-?>

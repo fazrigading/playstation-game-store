@@ -1,7 +1,7 @@
 <?php
     session_start();
-    require 'config.php';
-    if ( !isset($_SESSION["login"])){
+    require '../../config.php';
+    if ( !isset($_SESSION["loginAdmin"])){
       header('Location: login.php');
       exit;
     } 
@@ -19,10 +19,17 @@
   <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>">
 </head>
 <body>
+  <h1>INI PAGE USERS</h1>
   <div>
-    <a href="logout.php" role="button"> Logout</a>
+    <a href="../../logout.php" role="button"> Logout</a>
   </div>
-  <h1>User</h1>
+  <div>
+    <a href="../products/" role="button"> Produk</a>
+  </div>
+  <div>
+    <a href="../dashboard.php" role="button"> Dashboard</a>
+  </div>
+  <h1>Users</h1>
   <table border="1">
     <tr>
       <th>No</th>
@@ -36,7 +43,7 @@
     <tr>
       <td><?= $i ?></td>
       <td><?= $user['id'] ?></td>
-      <td><img src="img/<?= $user["photo"]?>" alt="" width="256px"></td>
+      <td><img src="../../resources/img/<?= $user["photo"]?>" alt="" width="100px"></td>
       <td><?= $user['username'] ?></td>
       <td><?= $user['password'] ?></td>
       <td>
