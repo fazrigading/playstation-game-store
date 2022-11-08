@@ -1,6 +1,5 @@
 <?php 
     require 'config.php';
-
     $result = mysqli_query($db, "SELECT * FROM users");
 ?>
 
@@ -25,6 +24,11 @@
                     <li><a href="">Console</a></li>
                     <li><a href="">Accessories</a></li>
                     <li><a href="login.php">Login</a></li>
+                    <?php 
+                        if (isset($_SESSION["login"])){
+                            echo "<li><a href='logout.php'>Logout</a></li>";
+                        };
+                    ?>
                     <li>
                         <label>
                             <input type="checkbox" class="checkbox" id="modegelap">

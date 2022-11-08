@@ -25,7 +25,7 @@
 </head>
 <body class="pb-25px">
   <div class="pt-25px">
-    <a href="logout.php" class="button-mode my-btn-dark fs-2" role="button"> Logout</a>
+    <a href="logout.php" role="button"> Logout</a>
   </div>
   <h3 class="text-center fs-3 pb-25px" >User</h3>
   <table class="my-table m-auto">
