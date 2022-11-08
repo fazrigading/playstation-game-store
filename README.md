@@ -33,7 +33,8 @@ Bagian ini menunjukkan hasil perkembangan pengerjaan proyek dengan beberapa emoj
 ## Auth:
 - Login 🔵🔘 Alex (F)
 - Register 🔵🔘 Alex (F)
-- Cookie Auth 🟢⚪ Risky (B)
+- Auth Cookies 🟢⚪ Risky (B)
+- Auth Session 🟢⚪ Risky (B)
 
 ## Post-Auth:
 - Cart 🟡⚫
