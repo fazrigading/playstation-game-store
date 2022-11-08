@@ -10,15 +10,15 @@ Kontributor proyek ini terdiri dari 1 programmer back-end dan 2 programmer front
 # Project Progress
 Bagian ini menunjukkan hasil perkembangan pengerjaan proyek dengan beberapa emoji yang melambangkan tingkat kelengkapan.
 ## Keterangan:
-❓ Dipertanyakan
-🟡 UI Not Started
-🔵 UI On Progress
-🟢 UI Done
-⚫ System Not Started
-🔘 System On Progress
-⚪ System Done
-(B) Back-End
-(F) Front-End
+- ❓ Dipertanyakan
+- 🟡 UI Not Started
+- 🔵 UI On Progress
+- 🟢 UI Done
+- ⚫ System Not Started
+- 🔘 System On Progress
+- ⚪ System Done
+- (B) Back-End
+- (F) Front-End
 
 ## Pre-Auth:
 - About Us (Team Page) 🟡⚫
