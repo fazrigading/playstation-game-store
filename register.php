@@ -33,28 +33,41 @@
             <form>
                 <!-- INPUT NAMA LENGKAP  -->
                 <label for="fname">Nama Lengkap</label><br>
-                <input type="text" id="fullanme" name="fullanme"><br>
+                <input type="text" id="fullanme" name="fullanme" required/><br>
 
                 <!-- INPUT Nomor HP  -->
-                <label for="fname">Nomor Handphone</label><br>
-                <input type="tel" id='telp' name="telphone" placeholder="0812 5372 1678" pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}" maxlength="12" required/> <br>
+                <label for="email">Email</label><br>
+                <input type="text" id='email' name="email" required/> <br>
 
                 <!-- INPUT USERNAME  -->
-                <label for="fname">Username</label><br>
-                <input type="text" id="username" name="username"><br>
+                <label for="username">Username</label><br>
+                <input type="text" id="username" name="username" required/><br>
 
                 <!-- INPUT PASSWORD  -->
-                <label for="fname">Password</label><br>
-                <input type="password" id="password" name="password"><br>
+                <label for="pass">Password</label><br>
+                <input type="password" id="password" name="password" required/><br>
 
                 <!-- KONFIRMASI PASSWORD  -->
-                <label for="fname">Konfirmasi Password</label><br>
-                <input type="password" id="confirmpassword" name="confirmpassword"><br>
+                <label for="pass">Konfirmasi Password</label><br>
+                <input type="password" id="confirmpassword" name="confirmpassword" required/><br>
+
+                <!-- IMAGE  -->
+                <div class="form-group file-area">
+                    <label for="image">Upload Gambar</label><br>
+                    <input type="file" name="images" id="images" required="required"/>
+                    <div class="file-dummy">
+                        <div class="success">File Telah Diupload</div>
+                        <div class="default">Pilih File Gambar</div>
+                    </div>
+                </div>
             </form>
 
 
             <button id="Sign-up">Daftar Sekarang</button><br>
             <button id="Back-sign">Kembali ke Halaman Login</button>
+            
+
+            
 
             </div>
             

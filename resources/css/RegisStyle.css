@@ -48,7 +48,7 @@ main{
     margin-bottom:20px;
 }
 
-input{
+input[type="text"]{
     height:37px;
     width: 44%;
     background-color: #f3f3f3;
@@ -57,7 +57,26 @@ input{
     border: 1px solid #ccc;
     border-radius: 10px;
     box-sizing: border-box;
-  }
+}
+
+input[type="password"]{
+    height:37px;
+    width: 44%;
+    background-color: #f3f3f3;
+    padding: 12px 20px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+input[type=file] {
+    width: 22%;
+    height:70px;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
 
 #Sign-up{
     margin-top:20px;
@@ -85,4 +104,32 @@ input{
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
+}
+
+#submitimg {
+    padding: 8px 30px;
+    background: rgba(255,255,255,0.8);
+    color: #208bff;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 11px;
+    border: 0;
+    text-shadow: 0 1px 2px #fff;
+    cursor: pointer;
+}
+
+.file-dummy{
+    border-radius: 5px;
+    height:50px;
+    padding-top: 20px;
+    width: 44%;
+    color: white;
+    background-color: #208bff;
+    border: 2px dashed blue;
+    text-align: center;
+    transition: background 0.3s ease-in-out;
+}
+
+.success {
+    display: none;
 }

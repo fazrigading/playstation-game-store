@@ -9,46 +9,58 @@ $(document).ready(function(){
       }, function(){
       $(this).css("background-color", "#208bff");
     });
-  });
 
-
-$(document).ready(function(){
+    //Focus Input Shadow
     $("input").focus(function(){
       $(this).css("box-shadow", "#add8e6 0px 2px 8px 0px");
     },);
-
     $("input").focusout(function(){
         $(this).css("box-shadow", "none");
       },);
-    
-});
 
-$(document).ready(function(){
+    //Hover Tombol Sign Up
     $("#Sign-up").hover(function(){
       $(this).css("background-color", "#1b70cc");
       }, function(){
       $(this).css("background-color", "#208bff");
     });
-  });
 
-  $(document).ready(function(){
+    //Hover Tombol Kembali ke Login
     $("#Back-sign").hover(function(){
       $(this).css("background-color", "#f0e9e9");
       }, function(){
       $(this).css("background-color", "#f3f3f3");
     });
-  });
 
-  
-  $(document).ready(function(){
+    //Hover Image Form
+    $("#images").hover(function(){
+      $(".file-dummy").css("background-color", "#1b70cc");
+      }, function(){
+      $(".file-dummy").css("background-color", "#208bff");
+    });
+    
+    $(".main-content").on('change', "input[id='images']",function () {
+      $(".success").css("display", "inline-block");
+      $(".default").css("display", "none");
+    }
+);
+         
+
+    //Navigasi Ke Sign In (Header) 
     $('.sign-in').click(function(){
-        window.location.href='./login.php';
-     })
-  });
+      window.location.href='./login.php';
+   })
 
-  
-$(document).ready(function(){
-    $('#Back-sign').click(function(){
-        window.location.href='./login.php';
-     })
+    //Navigasi Ke Sign In (Button) 
+   $('#Back-sign').click(function(){
+    window.location.href='./login.php';
+ })
 });
+
+
+
+
+
+
+
+
