@@ -30,7 +30,8 @@ input:focus {
 .sign-in{
     background-color:#208bff;
     border-radius: 5px;
-    color:white;
+    color:white; 
+    transition: background 0.3s ease-in-out;
 }
 
 
@@ -90,6 +91,7 @@ input[type=file] {
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
+    transition: background 0.3s ease-in-out;
 }
 
 #Back-sign{
@@ -104,19 +106,9 @@ input[type=file] {
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
+    transition: background 0.3s ease-in-out;
 }
 
-#submitimg {
-    padding: 8px 30px;
-    background: rgba(255,255,255,0.8);
-    color: #208bff;
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 11px;
-    border: 0;
-    text-shadow: 0 1px 2px #fff;
-    cursor: pointer;
-}
 
 .file-dummy{
     border-radius: 5px;

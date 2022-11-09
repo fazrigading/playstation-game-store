@@ -53,7 +53,7 @@
 
                 <!-- IMAGE  -->
                 <div class="form-group file-area">
-                    <label for="image">Upload Gambar</label><br>
+                    <label for="gambar">Upload Gambar</label><br>
                     <input type="file" name="images" id="images" required="required"/>
                     <div class="file-dummy">
                         <div class="success">File Telah Diupload</div>
