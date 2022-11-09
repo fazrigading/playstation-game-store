@@ -144,7 +144,7 @@ function updateUser($data){
     if ($_FILES['photo']['error'] === 4){
         $photo =  $samePhoto;   
     } else {
-        $photo = upload();                                                    //
+        $photo = upload();
     }
     $id = htmlspecialchars($data["id"]);
     $username = htmlspecialchars($data["user"]);
@@ -179,46 +179,34 @@ function deleteUser($id){
 // ----------------------------------------------------------------
 // Products start
 function addProduct($data){
-    // global $db;
+    global $db;
     // $photo = upload();
     // if (!$photo) return false;
-    // $username = strtolower(stripslashes($data["user"]));
-    // $email = strtolower(stripslashes($data["email"]));
-    // $password = mysqli_real_escape_string($db, $data["pass"]);
-    // $confirm_password = mysqli_real_escape_string($db, $data["cpass"]);
-    // $result = mysqli_query($db, "SELECT username FROM users WHERE username = '$username'");
-    // if(mysqli_fetch_assoc($result)) {
-    //     echo "<script> alert('Username telah digunakan. Tolong gunakan username lain.'); </script>";
-    //     return false;
-    // };
-    // if ($password !== $confirm_password) {
-    //     echo "<script> alert('Password konfirmasi berbeda.'); </script>";
-    //     return false;
-    // };
-    // $password_hashed = password_hash($password, PASSWORD_DEFAULT);
-    // mysqli_query($db, "INSERT INTO users (username, password, email, photo) VALUES ('$username', '$password_hashed', '$email', '$photo')");
-    // return (mysqli_affected_rows($db));
+    $name = stripslashes($data["name"]);
+    $price = $data["price"];
+    $stock = $data["stock"];
+    $desc = stripslashes($data["desc"]);
+    $category = stripslashes($data["category"]);
+    mysqli_query($db, "INSERT INTO users (name, price, stock, desc, category) VALUES ('$name', '$price', '$stock', '$desc', '$category')");
+    return (mysqli_affected_rows($db));
 };
 function updateProduct($data){
-    // global $db;
-    // $id = htmlspecialchars($data["id"]);
-    // $username = htmlspecialchars($data["user"]);
-    // $password = htmlspecialchars($data["pass"]);
-    // $photo = upload();
-    // $samePhoto = htmlspecialchars($data["samePhoto"]);
+    global $db;
+    $photo = upload();
+    $samePhoto = htmlspecialchars($data["samePhoto"]);
+    $id = stripslashes($data["id"]);
+    $name = stripslashes($data["name"]);
+    $price = $data["price"];
+    $stock = $data["stock"];
+    $desc = stripslashes($data["desc"]);
+    $category = stripslashes($data["category"]);
 
-    // if ($_FILES['photo']['error'] === 4) $photo =  $samePhoto;
-    // $result = $db->query("SELECT * FROM users WHERE username = '$username'");
-    // if (mysqli_num_rows($result) === 1){
-    //     $rows = mysqli_fetch_assoc($result);
-    //     if (password_verify($password, $rows["password"])) {
-    //         mysqli_query($db, "UPDATE users SET username = '$username', photo = '$photo' WHERE id = '$id'");
-    //         return (mysqli_affected_rows($db));
-    //     } else {
-    //         echo "<script> alert('Confirmation password different.'); </script>";
-    //         return false;
-    //     }
-    // }
+    if ($_FILES['photo']['error'] === 4) $photo =  $samePhoto;
+    $result = $db->query("SELECT * FROM products WHERE id = '$id'");
+    if (mysqli_num_rows($result) === 1){
+        mysqli_query($db, "UPDATE products SET name = '$name', price = '$price', stock = '$stock', desc = '$desc', category = '$category' WHERE id = '$id'");
+        return (mysqli_affected_rows($db));
+    }
 }
 
 function deleteProduct($id){

@@ -14,39 +14,39 @@ Bagian ini menunjukkan hasil perkembangan pengerjaan proyek dengan beberapa emoj
 - 🟡 UI Not Started
 - 🔵 UI On Progress
 - 🟢 UI Done
-- ⚫ System Not Started
-- 🔛 System On Progress
-- ⚪ System Done
+- 🟨 System Not Started
+- 🟦 System On Progress
+- 🟩 System Done
 - (B) Back-End
 - (F) Front-End
 
 ## Pre-Auth:
-- About Us (Team Page) 🟡⚫
-- Homepage: 🟡⚫
+- 🟡[Gading] 🟨[Risky] - About Us (Team Page) 
+- 🔵[Gading] 🟨[Risky] - Homepage
   - Featured Items (Bisa slideshow/scroll) 
   - Tombol Explore Catalog tiap featured item 
-- Catalog: Console 🟡⚫
-- Catalog: Game 🟡⚫
-- Catalog: Accessories 🟡⚫
-- Detail Page 🔵⚫ Alex (F)
+- 🟡[Gading] 🟨[Risky] - Catalog: Console
+- 🟡[Gading] 🟨[Risky] - Catalog: Game 
+- 🟡[Gading] 🟨[Risky] - Catalog: Accessories 
+- 🔵[Alex]   🟨[Risky] - Detail Page 
 
 ## Auth:
-- Login 🟢🔛 Alex (F)
-- Register 🟢🔛 Alex (F)
-- Auth Cookies ⚪ Risky (B)
-- Auth Session ⚪ Risky (B)
+- 🟢[Alex]   🟦[Risky] - Login **(Havent Connected)**
+- 🟢[Alex]   🟦[Risky] - Register **(Havent Connected)**
+- 🟩[Risky] Auth Cookies 
+- 🟩[Risky] Auth Session
 
 ## Post-Auth:
-- Cart 🟡⚫
-- Payment Method 🟡⚫
-- History 🟡⚫
+- 🟡[Alex]   🟨[Risky] Cart
+- 🟡[Alex]   🟨[Risky] Payment Method
+- 🟡[Alex]   🟨[Risky] History
 
 ## User:
-- Profile Page (Display Info) 🔵🔘 Gading (F)
-- Edit Account Page (Personal Info & Address) 🔵🔘 Gading (F)
+- 🔵[Gading] 🟦[Risky] - Profile Page (Display Info) 
+- 🔵[Gading] 🟦[Risky] - Edit Account Page (Personal Info & Address)
 
 ## Admin:
-- Dashboard (?) (Grafik Penjualan) ❓ 
-- User Panel (Kelola User) 🟡⚫ 
-- Item Panel (CRUD Barang) 🟡🔛 Risky (B)
+- Dashboard (?) (Grafik Penjualan) ❓(Considerable) 
+- 🟡[-] ⚫[Risky] - User Panel (Kelola User) 
+- 🟡[-] 🟢[Risky] - Item Panel (CRUD Barang) 
 
