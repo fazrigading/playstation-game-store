@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
   <title>Update Profile</title>
-  <link rel="stylesheet" href="../../resources/css/login.css">
+  <link rel="stylesheet" href="../../resources/css/login.css?v=<?php echo time(); ?>">
 </head>
 
 <body>
@@ -51,9 +51,23 @@
             <input type="text" id="username" name="user" placeholder="Username" value="<?= $user['username'] ?>" required>
             <i class="uil uil-user"></i>
           </div>
-
+          
           <div class="input-field">
-            <input type="password" name="pass" class="password" placeholder="Your Password" required>
+            <input type="text" id="name" name="name" placeholder="Name" value="<?= $user['name'] ?>" required>
+            <i class="uil uil-user"></i>
+          </div>
+          
+          <div class="input-field">
+            <input type="text" id="address" name="address" placeholder="Address" value="<?= $user['address'] ?>" required>
+            <i class="uil uil-user"></i>
+          </div>
+          <input type="hidden" name="oldPass", value="<?= $user['password'] ?>">
+          <div class="input-field">
+            <input type="password" name="newPass" class="password" placeholder="New Password">
+            <i class="uil uil-lock icon"></i>
+          </div>
+          <div class="input-field">
+            <input type="password" name="confirmNewPass" class="password" placeholder="Confirm New Password">
             <i class="uil uil-lock icon"></i>
             <i class="uil uil-eye-slash showHidePw"></i>
           </div>
@@ -65,7 +79,7 @@
       </div>
     </div>
   </div>
-  <script src="login.js"></script>
+  <script src="../../resources//js/login.js"></script>
   
 </body>
 </html>

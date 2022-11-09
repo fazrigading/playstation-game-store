@@ -81,6 +81,8 @@ function register($data){
     global $db;
     $photo = upload();
     if (!$photo) return false;
+    $address = strtolower(stripslashes($data["address"]));
+    $name = strtolower(stripslashes($data["name"]));
     $username = strtolower(stripslashes($data["user"]));
     $email = strtolower(stripslashes($data["email"]));
     $password = mysqli_real_escape_string($db, $data["pass"]);
@@ -95,7 +97,7 @@ function register($data){
         return false;
     };
     $password_hashed = password_hash($password, PASSWORD_DEFAULT);
-    mysqli_query($db, "INSERT INTO users (username, password, email, photo) VALUES ('$username', '$password_hashed', '$email', '$photo')");
+    mysqli_query($db, "INSERT INTO users (name, username, password, email, address, photo) VALUES ('$name', '$username', '$password_hashed', '$email', '$photo', '$address')");
     return (mysqli_affected_rows($db));
 };
 
@@ -128,11 +130,9 @@ function upload(){
     // Upload file
     $moved = move_uploaded_file($temporaryFile, SITE_ROOT . '/resources/img/' . $newFileName);
 
-    if( $moved ) {
-    echo "Successfully uploaded";         
-    } else {
-    echo "Not uploaded because of error #".$errorFile;
-    exit;
+    if( !$moved ) {
+        echo "Not uploaded because of error #".$errorFile;     
+        exit;
     }
 
     return $newFileName;
@@ -147,26 +147,33 @@ function updateUser($data){
         $photo = upload();
     }
     $id = htmlspecialchars($data["id"]);
+    $name = htmlspecialchars($data["name"]);
+    $address = htmlspecialchars($data["address"]);
     $username = htmlspecialchars($data["user"]);
-    $password = htmlspecialchars($data["pass"]);
-    
-    
+    $oldPassword = htmlspecialchars($data["oldPass"]);
+    $newPassword = htmlspecialchars($data["newPass"]);
+    $confirmNewPassword = htmlspecialchars($data["confirmNewPass"]);
+    if ($newPassword == '') {
+        $newPassword = $oldPassword;
+    } else {
+        if ($newPassword != $confirmNewPassword) {
+            echo "<script>alert('Konfirmasi Password Salah');</script>"; 
+        }
+    }
+    $password_hashed = password_hash($newPassword, PASSWORD_DEFAULT);
     $result = $db->query("SELECT * FROM users WHERE id = '$id'");
     if (mysqli_num_rows($result) == 1){
         $rows = mysqli_fetch_assoc($result);
-        if (password_verify($password, $rows["password"])) {
-            $query = "UPDATE users SET 
-                username = '$username', 
-                photo = '$photo' 
-                WHERE id = '$id'
-                ";
-            echo $photo;
-            mysqli_query($db, $query);
-            return mysqli_affected_rows($db);
-        } else {
-            echo "<script> alert('Confirmation password different.'); </script>";
-            return false;
-        }
+        $query = "UPDATE users SET 
+            name = '$name', 
+            username = '$username', 
+            password = '$password_hashed', 
+            address = '$address', 
+            photo = '$photo' 
+            WHERE id = '$id'
+            ";
+        mysqli_query($db, $query);
+        return mysqli_affected_rows($db);
     }
 }
 
