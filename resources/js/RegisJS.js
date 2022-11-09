@@ -51,4 +51,4 @@ $(document).ready(function(){
     $('#Back-sign').click(function(){
         window.location.href='./login.php';
      })
-  });
+});

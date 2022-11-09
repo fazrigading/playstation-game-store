@@ -31,16 +31,16 @@ $(document).ready(function(){
     });
   });
 
-  $(document).ready(function(){
-    $("#Sign-Up").hover(function(){
-      $(this).css("background-color", "#f0e9e9");
-      }, function(){
-      $(this).css("background-color", "#f3f3f3");
-    });
+$(document).ready(function(){
+  $("#Sign-Up").hover(function(){
+    $(this).css("background-color", "#f0e9e9");
+    }, function(){
+    $(this).css("background-color", "#f3f3f3");
   });
+});
 
 $(document).ready(function(){
-    $("#Sign-Up").click(function(){
-        window.location.href='./register.php';
-     })
+  $('#Sign-Up').click(function(){
+      window.location.href='./register.php';
+   })
 });

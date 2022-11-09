@@ -78,9 +78,9 @@
                 <input type="password" id="password" name="password"><br>
 
                 <button id="Sign-in" type="submit" name="submitLogin">Sign in to my account</button><br>
-                <button id="Sign-Up">Sign Up</button>
+                
             </form>
-
+            <button id="Sign-Up" name="signup">Sign Up</button>
 
         </div>
     </div>
