@@ -130,17 +130,9 @@ function upload(){
     // Upload file
     $moved = move_uploaded_file($temporaryFile, SITE_ROOT . '/resources/img/' . $newFileName);
 
-<<<<<<< Updated upstream
-    if( $moved ) {
-    echo "Successfully uploaded";         
-    } else {
-    echo "Not uploaded because of error #".$errorFile;
-    exit;
-=======
     if( !$moved ) {
         echo "Not uploaded because of error #".$errorFile;     
         exit;
->>>>>>> Stashed changes
     }
 
     return $newFileName;

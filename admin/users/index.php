@@ -30,37 +30,6 @@
   </div>
   <section>
   <h1>Users</h1>
-<<<<<<< Updated upstream
-  <table border="1">
-    <tr>
-      <th>No</th>
-      <th>ID</th>
-      <th>Photo</th>
-      <th>Username</th>
-      <th>Password</th>
-      <th>Action</th>
-    </tr>
-    <?php foreach ($users as $user): ?>
-    <tr>
-      <td><?= $i ?></td>
-      <td><?= $user['id'] ?></td>
-      <td><img src="../../resources/img/<?= $user["photo"]?>" alt="" width="100px"></td>
-      <td><?= $user['username'] ?></td>
-      <td><?= $user['password'] ?></td>
-      <td>
-        <a href="update.php?id=<?= $user["id"]?>">
-          <i>Update</i>
-        </a>|
-        <a href="delete.php?id=<?= $user["id"]?>" 
-          onclick = "return confirm('Apakah anda ingin menghapus File?')">
-          <i>Delete</i>
-        </a>
-      </td>
-    </tr>
-    <?php $i++;?>
-    <?php endforeach; ?>
-  </table>
-=======
   <div class="tbl-header">
     <table>
       <thead>
@@ -112,6 +81,5 @@
     $('.tbl-header').css({'padding-right':scrollWidth});
   }).resize();
 </script>
->>>>>>> Stashed changes
 </body>
 </html>
