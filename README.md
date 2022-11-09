@@ -46,7 +46,7 @@ Bagian ini menunjukkan hasil perkembangan pengerjaan proyek dengan beberapa emoj
 - 🔵[Gading] 🟦[Risky] - Edit Account Page (Personal Info & Address)
 
 ## Admin:
-- Dashboard (?) (Grafik Penjualan) ❓(Considerable) 
-- 🟡[-] ⚫[Risky] - User Panel (Kelola User) 
+- 🟡 Dashboard (?) (Grafik Penjualan) ❓(Considerable) 
+- 🟢[-] 🟢[Risky] - User Panel (Kelola User) 
 - 🟡[-] 🟢[Risky] - Item Panel (CRUD Barang) 
 
