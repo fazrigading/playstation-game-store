@@ -31,8 +31,8 @@ Bagian ini menunjukkan hasil perkembangan pengerjaan proyek dengan beberapa emoj
 - 🔵[Alex]   🟨[Risky] - Detail Page 
 
 ## Auth:
-- 🟢[Alex]   🟦[Risky] - Login **(Havent Connected)**
-- 🟢[Alex]   🟦[Risky] - Register **(Havent Connected)**
+- 🟢[Alex]   🟩[Risky] - Login **(Havent Connected)**
+- 🔵[Alex]   🟩[Risky] - Register **(Havent Connected)**
 - 🟩[Risky] Auth Cookies 
 - 🟩[Risky] Auth Session
 
