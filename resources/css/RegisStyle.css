@@ -11,7 +11,6 @@ input:focus {
 .container-header{
     margin-right:80px;
     margin-top:30px;
-    width: 1300px;
 }
 
 
@@ -80,7 +79,7 @@ input{
     height:38px;
     background-color: #f3f3f3; 
     border: none;
-    color: #d7d7d7 ;
+    color: #000000 ;
     text-align: center;
     text-decoration: none;
     font-size: 16px;
