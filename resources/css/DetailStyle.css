@@ -32,6 +32,7 @@ li{
     text-align: center;
     padding-top:10px;
     cursor: pointer;
+    transition: 0.2s ease-in-out;
 }
 
 .sign-in{
@@ -125,34 +126,36 @@ main{
 
 #add-cart{
     width: 50%;
-    height:38px;
+    height:45px;
     background-color: #208bff;
     border: none;
     color: white;
     text-align: center;
     text-decoration: none;
     font-size: 16px;
-    border-radius: 10px;
+    border-radius: 5px;
     cursor: pointer;
     display:block;
     margin-left: auto;
     margin-right: auto;
+    transition: 0.3s ease-in-out;
 }
 
 #buy-now{
     width: 50%;
-    height:38px;
+    height:45px;
     background-color: #208bff;
     border: none;
     color: white;
     text-align: center;
     text-decoration: none;
     font-size: 16px;
-    border-radius: 10px;
+    border-radius: 5px;
     cursor: pointer;
     display:block;
     margin-left: auto;
     margin-right: auto;
+    transition: 0.3s ease-in-out;
 }
 
 

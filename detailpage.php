@@ -14,10 +14,10 @@
             <li class='sign-in'>
                 Masuk
             </li>
-            <li>
+            <li class = 'text'>
                 Daftar
             </li>
-            <li>
+            <li class = 'text'>
                 Beranda
             </li>
         </ul>
