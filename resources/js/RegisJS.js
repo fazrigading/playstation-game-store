@@ -58,12 +58,12 @@ $(document).ready(function () {
 
   //Navigasi Ke Sign In (Header) 
   $('.sign-in').click(function () {
-    window.location.href = './login.php';
+    window.location.href = './auth.php';
   })
 
   //Navigasi Ke Sign In (Button) 
   $('#Back-sign').click(function () {
-    window.location.href = './login.php';
+    window.location.href = './auth.php';
   })
 });
 

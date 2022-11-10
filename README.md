@@ -31,15 +31,15 @@ Bagian ini menunjukkan hasil perkembangan pengerjaan proyek dengan beberapa emoj
 - 🔵[Alex]   🟨[Risky] - Detail Page 
 
 ## Auth:
-- 🟢[Alex]   🟩[Risky] - Login **(Havent Connected)**
-- 🔵[Alex]   🟩[Risky] - Register **(Havent Connected)**
+- 🟢[Gading]   🟩[Risky] - Login **(Havent Connected)**
+- 🟢[Gading]   🟩[Risky] - Register **(Havent Connected)**
 - 🟩[Risky] Auth Cookies 
 - 🟩[Risky] Auth Session
 
 ## Post-Auth:
-- 🟡[Alex]   🟨[Risky] Cart
-- 🟡[Alex]   🟨[Risky] Payment Method
-- 🟡[Alex]   🟨[Risky] History
+- 🔵[Alex]   🟦[Risky] Cart
+- 🔵[Alex]   🟦[Risky] Payment Method
+- 🔵[Alex]   🟦[Risky] History
 
 ## User:
 - 🔵[Gading] 🟦[Risky] - Profile Page (Display Info) 
@@ -47,6 +47,6 @@ Bagian ini menunjukkan hasil perkembangan pengerjaan proyek dengan beberapa emoj
 
 ## Admin:
 - 🟡 Dashboard (?) (Grafik Penjualan) ❓(Considerable) 
-- 🟢[-] 🟢[Risky] - User Panel (Kelola User) 
-- 🟡[-] 🟢[Risky] - Item Panel (CRUD Barang) 
+- 🔵[-] 🟢[Risky] - User Panel (Kelola User) 
+- 🔵[-] 🟢[Risky] - Item Panel (CRUD Barang) 
 

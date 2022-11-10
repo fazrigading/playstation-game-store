@@ -45,7 +45,7 @@ $(document).ready(function () {
   //NAVIGATION
   //Navigasi Ke laman logn
   $('.sign-in').click(function () {
-    window.location.href = './login.php';
+    window.location.href = './auth.php';
   })
 
 });

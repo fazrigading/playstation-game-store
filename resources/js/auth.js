@@ -8,7 +8,7 @@ const container = document.querySelector(".container"),
 pwShowHide.forEach(eyeIcon =>{
     eyeIcon.addEventListener("click", ()=>{
         pwFields.forEach(pwField =>{
-            if(pwField.type ==="password"){
+            if(pwField.type === "password"){
                 pwField.type = "text";
 
                 pwShowHide.forEach(icon =>{

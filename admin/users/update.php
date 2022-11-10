@@ -2,7 +2,7 @@
   session_start();
   require '../../config.php';
   if (!isset($_SESSION["loginAdmin"])) {
-    header('Location: login.php');
+    header('Location: auth.php');
     exit;
   }
   $id = $_GET["id"];

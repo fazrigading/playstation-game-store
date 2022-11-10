@@ -30,6 +30,7 @@ body{
 .container .forms{
     display: flex;
     align-items: center;
+    height: 450px;
     width: 200%;
     transition: height 0.2s ease;
 }
@@ -59,7 +60,7 @@ body{
 }
 
 .container.active .forms{
-    height: 600px;
+    height: 650px;
 }
 .container .form .title{
     position: relative;
@@ -82,14 +83,7 @@ body{
     position: relative;
     height: 50px;
     width: 100%;
-    margin-top: 10px;
-}
-
-.form .input-field-photo{
-    position: relative;
-    height: 80px;
-    width: 100%;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .input-field input{

@@ -74,15 +74,13 @@ function login($data) {
         } else {
             echo "<script>alert('Username tidak ditemukan!')</script>";
         }
-        $error = true;
 }
 
 function register($data){
     global $db;
-    $photo = upload();
-    if (!$photo) return false;
-    $address = strtolower(stripslashes($data["address"]));
-    $name = strtolower(stripslashes($data["name"]));
+    // $photo = upload();
+    // if (!$photo) return false;
+    $name = strtolower(stripslashes($data["fullname"]));
     $username = strtolower(stripslashes($data["user"]));
     $email = strtolower(stripslashes($data["email"]));
     $password = mysqli_real_escape_string($db, $data["pass"]);
@@ -97,7 +95,7 @@ function register($data){
         return false;
     };
     $password_hashed = password_hash($password, PASSWORD_DEFAULT);
-    mysqli_query($db, "INSERT INTO users (name, username, password, email, address, photo) VALUES ('$name', '$username', '$password_hashed', '$email', '$photo', '$address')");
+    mysqli_query($db, "INSERT INTO users (name, username, password, email) VALUES ('$name', '$username', '$password_hashed', '$email')");
     return (mysqli_affected_rows($db));
 };
 
