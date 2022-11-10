@@ -30,7 +30,7 @@
                     }
                     if(isset($_SESSION["loginUser"]) || isset($_SESSION["loginAdmin"])){
                         echo "<li><a href='logout.php'>Logout</a></li>";
-                    } 
+                    }
                     ?>
                     <li>
                         <label>

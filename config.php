@@ -74,7 +74,6 @@ function login($data) {
         } else {
             echo "<script>alert('Username tidak ditemukan!')</script>";
         }
-        $error = true;
 }
 
 function register($data){
