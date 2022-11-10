@@ -38,10 +38,8 @@ $(document).ready(function () {
   //Hover text pada navigation
   $(".text").hover(function () {
     $(this).css("color", "gray");
-    $(this).css("text-decoration", "underline");
   }, function () {
     $(this).css("color", "black");
-    $(this).css("text-decoration", "none");
   });
 
   //NAVIGATION
