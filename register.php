@@ -4,22 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="resources/css/RegisStyle.css">
+    <link rel="stylesheet" href="resources/css/RegisStyle.css?v=<?php echo time(); ?>">
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <title>Document</title>
 </head>
 <body>
 <div class="container-header">
         <ul>
-            <li class='sign-in'>
+            <li>
                 Masuk
             </li>
-            <li>
+            <li class='sign-in'>
                 Daftar
             </li>
             <li>
                 Beranda
             </li>
+            <div class="clear"></div>
         </ul>
     </div>
 
@@ -33,7 +34,7 @@
             <form>
                 <!-- INPUT NAMA LENGKAP  -->
                 <label for="fname">Nama Lengkap</label><br>
-                <input type="text" id="fullanme" name="fullanme" required/><br>
+                <input type="text" id="fullanme" name="fullname" required/><br>
 
                 <!-- INPUT Nomor HP  -->
                 <label for="email">Email</label><br>

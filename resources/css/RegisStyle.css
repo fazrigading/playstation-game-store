@@ -39,10 +39,19 @@ main{
     padding-top: 80px;
 }
 
-.main-container{
-    margin-left: 38%;
-    width: 50%;
-  }
+.main-content{
+    padding: 0, 150px;
+}
+
+.main-container {
+    margin: auto;
+    justify-content: center;
+    max-width: 500px;
+}
+
+.main-container input{
+    width: 100%;
+}
 
 .main-container h1{
     font-weight: 500;
@@ -51,7 +60,6 @@ main{
 
 input[type="text"]{
     height:37px;
-    width: 44%;
     background-color: #f3f3f3;
     padding: 12px 20px;
     margin: 10px 0;
@@ -62,7 +70,6 @@ input[type="text"]{
 
 input[type="password"]{
     height:37px;
-    width: 44%;
     background-color: #f3f3f3;
     padding: 12px 20px;
     margin: 10px 0;
@@ -72,7 +79,6 @@ input[type="password"]{
 }
 
 input[type=file] {
-    width: 22%;
     height:70px;
     position: absolute;
     opacity: 0;
@@ -81,8 +87,8 @@ input[type=file] {
 
 #Sign-up{
     margin-top:20px;
-    width: 44%;
     height:38px;
+    width: 100%;
     background-color: #208bff; 
     border: none;
     color: white;
@@ -96,8 +102,8 @@ input[type=file] {
 
 #Back-sign{
     margin-top:20px;
-    width: 44%;
     height:38px;
+    width: 100%;
     background-color: #f3f3f3; 
     border: none;
     color: #000000 ;
@@ -124,4 +130,8 @@ input[type=file] {
 
 .success {
     display: none;
+}
+
+.clear {
+    clear: both;
 }
