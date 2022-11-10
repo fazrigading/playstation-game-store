@@ -2,7 +2,7 @@
   require 'config.php';
   session_start();
   if ( !isset($_SESSION['loginAdmin'])){
-    header('Location: login.php');
+    header('Location: auth.php');
     exit;
   } 
 

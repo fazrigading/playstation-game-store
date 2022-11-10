@@ -26,7 +26,7 @@
                     if(isset($_SESSION["loginAdmin"])){
                         echo "<li><a href='admin/dashboard.php'>Dashboard</a></li>";
                     } else if (!isset($_SESSION["loginUser"]) && !isset($_SESSION["loginAdmin"])){
-                        echo "<li><a href='login.php'>Login</a></li>";
+                        echo "<li><a href='auth.php'>Login</a></li>";
                     }
                     if(isset($_SESSION["loginUser"]) || isset($_SESSION["loginAdmin"])){
                         echo "<li><a href='logout.php'>Logout</a></li>";

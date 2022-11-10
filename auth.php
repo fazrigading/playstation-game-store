@@ -49,12 +49,12 @@
                 <span class="title">Masuk</span>
                 <form action="#" method="post">
                     <div class="input-field">
-                        <input type="text" name="user" placeholder="Your Username/Email" required>
+                        <input type="text" name="username" placeholder="Your Username/Email" required>
                         <i class="uil uil-envelope icon"></i>
                     </div>
 
                     <div class="input-field">
-                        <input type="password" name="pass" class="password" placeholder="Your Password" required>
+                        <input type="password" name="password" class="password" placeholder="Your Password" required>
                         <i class="uil uil-lock icon"></i>
                         <i class="uil uil-eye-slash showHidePw"></i>
                     </div>
@@ -67,7 +67,7 @@
                     </div>
 
                     <div class="input-field button">
-                        <input type="submit" name="submitlogin" value="Masuk">
+                        <input type="submit" name="submitLogin" value="Masuk">
                     </div>
                 </form>
 
@@ -82,8 +82,8 @@
             <!-- SIGN UP -->
             <div class="form signup">
                 <span class="title">Daftar</span>
-                <form action="#" method="post" enctype="multipart/form-data">
-                <div class="input-field">
+                <form method="post">
+                    <div class="input-field">
                         <input type="text" name="fullname" placeholder="Masukkan nama lengkap Anda" required>
                         <i class="uil uil-user"></i>
                     </div>
@@ -108,7 +108,7 @@
 
                     <!-- Submit Register -->
                     <div class="input-field button">
-                        <input type="submit" name="submitregis" value="Daftar">
+                        <input type="submit" name="submitRegis" value="Daftar">
                     </div>
                 </form>
 

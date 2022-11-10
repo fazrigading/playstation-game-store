@@ -18,7 +18,7 @@
                     <li><a href="aboutme.php">About Me</a></li>
                     <li><a href="">Console</a></li>
                     <li><a href="">Accessories</a></li>
-                    <li><a href="login.php">Login</a></li>
+                    <li><a href="auth.php">Login</a></li>
                     <li>
                         <label>
                             <input type="checkbox" class="checkbox" id="modegelap2">
