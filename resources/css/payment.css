@@ -1,74 +1,375 @@
-* {
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,600);
+
+html,
+html a {
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+}
+
+body {
+    background-color: #fff;
+    color: #666;
+    font-family: 'Poppins';
+    font-size: 62.5%;
+    margin: 0 auto;
+}
+
+a {
+    border: 0 none;
+    outline: 0;
+    text-decoration: none;
+}
+
+strong {
+    font-weight: bold;
+}
+
+p {
+    margin: 0.75rem 0 0;
+}
+
+h1 {
+    font-size: 0.75rem;
+    font-weight: normal;
     margin: 0;
     padding: 0;
-    font-family: 'Poppins'
+}
+
+input,
+button {
+    border: 0 none;
+    outline: 0 none;
+}
+
+button {
+    background-color: #208bff;
+    color: #fff;
+}
+
+button:hover,
+button:focus {
+    background-color: #1b70cc;
+}
+
+img,
+.basket-labels,
+.basket-product {
+    width: 100%;
+}
+
+input,
+button,
+.basket,
+.basket-labels,
+.item,
+.price,
+.quantity,
+.subtotal,
+.basket-product,
+.product-image,
+.product-details {
+    float: left;
+}
+
+.price:before,
+.subtotal:before,
+.subtotal-value:before,
+.total-value:before,
+.promo-value:before {
+    content: 'Rp. ';
+}
+
+.hide {
+    display: none;
+}
+
+main {
+    clear: both;
+    font-size: 0.75rem;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 1rem 0;
+    width: 960px;
+}
+
+.basket,
+aside {
+    padding: 0 1rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.basket {
+    width: 70%;
+}
+
+
+label {
+    display: block;
+    margin-bottom: 0.3125rem;
+}
+
+
+.basket-labels {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 li {
-    list-style: none;
+    color: #111;
+    display: inline-block;
+    padding: 0.625rem 0;
 }
 
-.container-header {
-    margin-right: 80px;
-    padding-top: 30px;
-    width: 1300px;
-    height: 50px;
-
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0;
-    /* required */
-    background-color: white
-}
-
-
-.container-header li {
-    position: relative;
-    float: right;
-    width: 110px;
-    height: 35px;
-    list-style: none;
-    font-size: 16px;
-    margin-left: 5px;
-    margin-right: 5px;
-    text-align: center;
-    padding-top: 10px;
-    cursor: pointer;
-    transition: 0.2s ease-in-out;
-}
-
-.text::after {
+li.price:before,
+li.subtotal:before {
     content: '';
+}
+
+.item {
+    width: 55%;
+}
+
+.price,
+.quantity,
+.subtotal {
+    width: 15%;
+}
+
+.subtotal {
+    text-align: right;
+}
+
+.remove {
+    bottom: 1.125rem;
+    float: right;
     position: absolute;
-    background-color: #208bff;
-    left: 0;
-    bottom: 0;
-    width: 110px;
-    height: 2px;
-    opacity: 0;
-    transition: .3s ease;
+    right: 0;
+    text-align: right;
+    width: 45%;
 }
 
-.text:hover::after {
-    opacity: 1;
-    transform: translateY(1px);
+.remove button {
+    background-color: transparent;
+    color: #777;
+    float: none;
+    cursor: pointer;
 }
 
-.left {
-    border-right: 1px solid rgba(103, 99, 99, 0.5);
+.item-heading {
+    padding-left: 4.375rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-.text-profile span {
-    color: #FF7158;
+.basket-product {
+    border-bottom: 1px solid #ccc;
+    padding: 1rem 0;
+    position: relative;
 }
 
-.icon-cart {
-    font-size: 10px;
+.product-image {
+    width: 35%;
 }
 
-.fa-cart-shopping {
+.product-details {
+    width: 65%;
+}
+
+.product-frame {
+    border: 1px solid #aaa;
+}
+
+.product-details {
+    padding: 0 1.5rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.quantity-field {
+    background-color: #ccc;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    font-size: 0.625rem;
+    padding: 2px;
+    width: 3.75rem;
+}
+
+aside {
+    float: right;
+    position: relative;
+    width: 30%;
+}
+
+.summary {
+    background-color: #5069f5;
+    border: 1px solid white;
+    padding: 1rem;
+    position: fixed;
+    width: 250px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.summary-total-items {
+    color: white;
+    font-size: 0.875rem;
+    text-align: center;
+}
+
+.summary-subtotal,
+.summary-total {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    clear: both;
+    margin: 1rem 0;
+    overflow: hidden;
+    padding: 0.5rem 0;
+}
+
+.subtotal-title,
+.subtotal-value,
+.total-title,
+.total-value,
+.promo-title,
+.promo-value {
+    color: white;
     float: left;
-    padding-top: 5px;
-    font-size: 14px;
-    color: rgb(151, 146, 146);
+    width: 50%;
+}
+
+.summary-promo {
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.promo-title {
+    float: left;
+    width: 70%;
+}
+
+.promo-value {
+    color: #8B0000;
+    float: left;
+    text-align: right;
+    width: 30%;
+}
+
+.summary-delivery {
+    padding-bottom: 3rem;
+}
+
+.subtotal-value,
+.total-value {
+    text-align: right;
+}
+
+.total-title {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.summary-checkout {
+    display: block;
+}
+
+.checkout-cta {
+    display: block;
+    float: none;
+    font-size: 0.75rem;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0.625rem 0;
+    width: 100%;
+}
+
+
+@media screen and (max-width: 640px) {
+
+    aside,
+    .basket,
+    .summary,
+    .item,
+    .remove {
+        width: 100%;
+    }
+
+    .basket-labels {
+        display: none;
+    }
+
+    .item {
+        margin-bottom: 1rem;
+    }
+
+    .product-image {
+        width: 40%;
+    }
+
+    .product-details {
+        width: 60%;
+    }
+
+    .price,
+    .subtotal {
+        width: 33%;
+    }
+
+    .quantity {
+        text-align: center;
+        width: 34%;
+    }
+
+    .quantity-field {
+        float: none;
+    }
+
+    .remove {
+        bottom: 0;
+        text-align: left;
+        margin-top: 0.75rem;
+        position: relative;
+    }
+
+    .remove button {
+        padding: 0;
+    }
+
+    .summary {
+        margin-top: 1.25rem;
+        position: relative;
+    }
+}
+
+@media screen and (min-width: 641px) and (max-width: 960px) {
+    aside {
+        padding: 0 1rem 0 0;
+    }
+
+    .summary {
+        width: 28%;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    main {
+        width: 100%;
+    }
+
+    .product-details {
+        padding: 0 1rem;
+    }
 }

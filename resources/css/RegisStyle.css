@@ -2,7 +2,8 @@
     overflow-x: hidden;
     margin: 0;
     padding: 0;
-    font-family: 'Poppins'
+    font-family: 'Poppins';
+    overflow-x: hidden;
 }
 
 input:focus {
@@ -135,4 +136,8 @@ input[type=file] {
 
 .clear {
     clear: both;
+}
+
+.overflow-x-hidden {
+    overflow: hidden;
 }

@@ -24,7 +24,7 @@
         </ul>
     </div>
 
-    <main>
+    <main class="overflow-x-hidden">
         <div class="main-container">
             <div class='main-content'>
             <h1>
