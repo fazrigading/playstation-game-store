@@ -16,7 +16,7 @@
     <div class="container">
         <div class="navbar">
             <img src="resources/assets/logo.png" class="logo">
-            <h1>Playstation Game</h1>
+            <h1>Playstation Game Store</h1>
             <nav>
                 <ul id="menuList">
                     <li><a href="index.php">Home</a></li>
