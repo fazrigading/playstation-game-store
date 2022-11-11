@@ -65,6 +65,6 @@
         </ul>
         </div>
     </footer>
-    <script src="script-aboutme.js"></script>
+    <script src="resources/js/script-aboutme.js"></script>
 </body>
 </html>
