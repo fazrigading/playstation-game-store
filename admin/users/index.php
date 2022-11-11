@@ -2,7 +2,7 @@
     session_start();
     require '../../config.php';
     if ( !isset($_SESSION["loginAdmin"])){
-      header('Location: auth.php');
+      header('Location: ../../auth.php');
       exit;
     } 
     $users = query("SELECT * FROM users");

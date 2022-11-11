@@ -16,8 +16,7 @@
                 <ul id="menuList">
                     <li><a href="index.php">Home</a></li>
                     <li><a href="aboutme.php">About Me</a></li>
-                    <li><a href="">Console</a></li>
-                    <li><a href="">Accessories</a></li>
+                    <li><a href="catalog.php">Catalog</a></li>
                     <li><a href="auth.php">Login</a></li>
                     <li>
                         <label>
