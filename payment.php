@@ -13,6 +13,25 @@
 </head>
 
 <body>
+    <div class="container">
+        <div class="navbar">
+            <img src="resources/assets/logo.png" class="logo">
+            <h1>Playstation Game Store</h1>
+            <nav>
+                <ul id="menuList">
+                    <li><a href="index.php">Beranda</a></li>
+                    <li><a href="catalog.php">Catalog</a></li>
+                    <li>
+                        <label>
+                            <input type="checkbox" class="checkbox" id="modegelap">
+                            <span class="check"></span>
+                        </label>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
     <main>
         <div class="basket">
             <div class="basket-labels">
@@ -61,24 +80,6 @@
                 </div>
             </div>
 
-            <div class="basket-product">
-                <div class="item">
-                    <div class="product-image">
-                        <img src="resources/assets/PS5SIDE3.jpg" alt="Placholder Image 2" class="product-frame">
-                    </div>
-                    <div class="product-details">
-                        <h1><strong><span class="item-quantity">4</span> x Playstation 5</strong> Disc Version</h1>
-                    </div>
-                </div>
-                <div class="price">26.00</div>
-                <div class="quantity">
-                    <input type="number" value="1" min="1" class="quantity-field">
-                </div>
-                <div class="subtotal">26.00</div>
-                <div class="remove">
-                    <button>Remove</button>
-                </div>
-            </div>
         </div>
 
         <aside>

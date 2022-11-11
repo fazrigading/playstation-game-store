@@ -7,7 +7,7 @@ html a {
 }
 
 body {
-    background-color: #fff;
+    background-color: var(--bg-primary);
     color: #666;
     font-family: 'Poppins';
     font-size: 62.5%;
@@ -123,7 +123,7 @@ ul {
 }
 
 li {
-    color: #111;
+    color: var(--warna-h1);
     display: inline-block;
     padding: 0.625rem 0;
 }
@@ -131,6 +131,7 @@ li {
 li.price:before,
 li.subtotal:before {
     content: '';
+
 }
 
 .item {
@@ -141,6 +142,7 @@ li.subtotal:before {
 .quantity,
 .subtotal {
     width: 15%;
+    color:var(--warna-h1);
 }
 
 .subtotal {
@@ -158,7 +160,7 @@ li.subtotal:before {
 
 .remove button {
     background-color: transparent;
-    color: #777;
+    color: var(--warna-h1);
     float: none;
     cursor: pointer;
 }
@@ -182,6 +184,7 @@ li.subtotal:before {
 
 .product-details {
     width: 65%;
+    color:var(--warna-h1);
 }
 
 .product-frame {
@@ -196,12 +199,13 @@ li.subtotal:before {
 }
 
 .quantity-field {
-    background-color: #ccc;
+    background-color: var(--bg-primary);
     border: 1px solid #aaa;
     border-radius: 4px;
     font-size: 0.625rem;
     padding: 2px;
     width: 3.75rem;
+    color:var(--warna-h1);
 }
 
 aside {
@@ -211,8 +215,7 @@ aside {
 }
 
 .summary {
-    background-color: #5069f5;
-    border: 1px solid white;
+    background: linear-gradient(#526bfb, #1c317c);
     padding: 1rem;
     position: fixed;
     width: 250px;
@@ -249,28 +252,6 @@ aside {
     width: 50%;
 }
 
-.summary-promo {
-    -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
-}
-
-.promo-title {
-    float: left;
-    width: 70%;
-}
-
-.promo-value {
-    color: #8B0000;
-    float: left;
-    text-align: right;
-    width: 30%;
-}
-
-.summary-delivery {
-    padding-bottom: 3rem;
-}
 
 .subtotal-value,
 .total-value {
@@ -372,4 +353,141 @@ aside {
     .product-details {
         padding: 0 1rem;
     }
+}
+
+
+/*NAVBAR */
+.container{
+    width: 100%;
+    min-width: 100vh;
+    padding-left: 8%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.navbar {
+    width: 100%;
+    padding-right: 8%;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.logo {
+    width: 50px;
+    cursor: pointer;
+    margin: 30px 0;
+}
+
+.menu-icon {
+    width: 25px;
+    cursor: pointer;
+    display: none;
+}
+
+:root {
+    --bg-primary: #fff;
+    --warna-h1: #0f1734;
+}
+
+.dark-mode {
+    --bg-primary: #0f1734;
+    --warna-h1: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p .h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-variant-ligatures: common-ligatures;
+    text-rendering: optimizeLegibility;
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+    vertical-align: text-top;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 30px;
+    vertical-align: text-top;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--warna-h1);
+    ;
+    font-size: 14px;
+    vertical-align: text-top;
+}
+
+nav ul li a:hover {
+    color: #1c317c;
+}
+
+check-box {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+input[type="checkbox"] {
+    display: none;
+    visibility: hidden;
+}
+
+input[type="checkbox"]:checked~.check:before {
+    transform: translateX(20px);
+}
+
+input[type="checkbox"]:checked~.check:before {
+    background-color: #1c317c;
+    box-shadow: 0 0 0 50000px #ffffff;
+}
+
+.check:before,
+.check:after {
+    border-radius: 50%;
+    content: '';
+    height: 16px;
+    position: absolute;
+    top: 2px;
+    transition: transform 1.5s ease;
+    width: 16px;
+}
+
+.check:before {
+    background-color: #ffffff;
+    left: 2px;
+}
+
+.check {
+    background-color: #1c317c;
+    border-radius: 20px;
+    cursor: pointer;
+    display: block;
+    height: 20px;
+    overflow: hidden;
+    position: relative;
+    transition: background-color 0.5s ease-in, box-shadow 0.5s ease-in;
+    margin-left: 20px;
+    width: 40px;
+}
+
+.navbar h1{
+    padding-left: 24px;
+    font-size: 21px;
+    font-weight: 600;
+    color: var(--warna-h1);
 }
