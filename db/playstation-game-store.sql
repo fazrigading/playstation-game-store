@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 12 Nov 2022 pada 12.40
--- Versi server: 10.4.25-MariaDB
--- Versi PHP: 8.1.10
+-- Generation Time: Nov 12, 2022 at 05:17 PM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,47 +20,51 @@ SET time_zone = "+00:00";
 --
 -- Database: `playstation-game-store`
 --
+CREATE DATABASE IF NOT EXISTS `playstation-game-store` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `playstation-game-store`;
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `cart`
+-- Table structure for table `cart`
 --
 
-CREATE TABLE `cart` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `cart` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_user` int(11) NOT NULL,
   `id_product` int(11) NOT NULL,
-  `quantity` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `quantity` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `cart`
+-- Dumping data for table `cart`
 --
 
-INSERT INTO `cart` (`id`, `id_user`, `id_product`, `quantity`) VALUES
+INSERT INTO `cart` VALUES
 (11, 11, 1, 1);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `history`
+-- Table structure for table `history`
 --
 
-CREATE TABLE `history` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `history` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_user` int(11) NOT NULL,
   `product_name` text NOT NULL,
   `date` varchar(128) NOT NULL,
   `total_price` int(11) NOT NULL,
-  `status` varchar(64) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `status` varchar(64) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `history`
+-- Dumping data for table `history`
 --
 
-INSERT INTO `history` (`id`, `id_user`, `product_name`, `date`, `total_price`, `status`) VALUES
+INSERT INTO `history` VALUES
 (7, 11, 'Sony Playstation 5 Digital Edition Resmi', '11/12/2022-11:28:28', 10618600, 'success'),
 (8, 11, '123', '11/12/2022-11:37:18', 123, 'success'),
 (9, 11, 'Sony Playstation 5 Digital Edition Resmi123', '11/12/2022-11:41:10', 0, 'success'),
@@ -80,24 +84,25 @@ INSERT INTO `history` (`id`, `id_user`, `product_name`, `date`, `total_price`, `
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `products`
+-- Table structure for table `products`
 --
 
-CREATE TABLE `products` (
-  `id` int(11) NOT NULL,
-  `name` varchar(128) NOT NULL,
+CREATE TABLE IF NOT EXISTS `products` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `product_name` varchar(128) NOT NULL,
   `price` int(11) NOT NULL,
   `stock` int(11) NOT NULL,
   `descriptions` text NOT NULL,
   `category` varchar(128) NOT NULL,
-  `photo` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `photo` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=136 DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `products`
+-- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`id`, `name`, `price`, `stock`, `descriptions`, `category`, `photo`) VALUES
+INSERT INTO `products` VALUES
 (1, 'Sony Playstation 5 Digital Edition Resmi', 10618600, 100, '*Specifications :\nCPU : 8x 8x Zen 2 Cores at 3.5 GHz\nGPU : 10.28 TFLOPs, 36 CUs at 2.23 GHz\nGPU Architecture : Custom RDNA 2\nMemory/Interface : 16 GB GDDR6/256-bit\nMemory Bandwidth : 448 Gbps\nInternal Storage Custom : 825 GB SSD\nIO Throughput : 5.56 Gbps (Raw), Typical 8-9 Gbps\nExpendable Storage : NVMe SSD Slot\nOptical Drive : 4K UHD Blu-ray Drive\n\n*Box Content :\n1x PlayStation 5 Console Disc Version\n1x Dualsense Wireless Controller PS5\n1x USB Charging Cable\n1x HDMI cable\n1x AC power cord\n1x Manual book\n1x Kartu Garansi', 'Hardware', '000001313769_01_800.jpg'),
 (124, '123', 123, 123, ' 123', '123', 'IMG_11122022_012223.png'),
 (126, 'DualSense Wireless Controller', 1269000, 10, 'Haptic feedback - Feel physically responsive feedback to your in-game actions with dual actuators which replace traditional rumble motors. In your hands, these dynamic vibrations can simulate the feeling of everything from environments to the recoil of different weapons.\nAdaptive triggers - Experience varying levels of force and tension as you interact with your in-game gear and environments. From pulling back an increasingly tight bowstring to hitting the brakes on a speeding car, feel physically connected to your on-screen actions.\nBuilt-in microphone and headset jack - Chat with friends online using the built-in microphone or by connecting a headset to the 3.5mm jack. Easily switch voice capture on and off at a moment’s notice with the dedicated mute button. Internet and account for PlayStation Network required.\nDualSense Controller PS5 and PC compatible. Not compatible with PS4.\nPS Remote Play requires Remote Play App connected to Wi-Fi, PS4 or PS5 console with the latest system software and compatible game. A PS4 or PS5 console with a wired connection via a LAN cable is recommended. Version 4.0 of the Remote Play App on iOS and iPadOS or version 4.1 on macOS is required for games to be playable with the controller over Bluetooth.\nDevices with macOS 11.3, iOS 14.5, iPadOS 14.5 or tvOS 14.5 or later supported.\nCable not included. To connect or charge the controller use the USB cable supplied with the PS5 console. Controllers sold separately.', 'Accessories', ''),
@@ -114,82 +119,27 @@ INSERT INTO `products` (`id`, `name`, `price`, `stock`, `descriptions`, `categor
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `users`
+-- Table structure for table `users`
 --
 
-CREATE TABLE `users` (
-  `id` int(11) NOT NULL,
-  `name` varchar(128) NOT NULL,
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `fullname` varchar(128) NOT NULL,
   `username` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `address` text NOT NULL,
-  `photo` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `photo` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `users`
+-- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `username`, `password`, `email`, `address`, `photo`) VALUES
+INSERT INTO `users` VALUES
 (11, '123', '123', '$2y$10$JthkPICYArVfASPFk2.nRuDpu0VQGj0aOCZO0VRGurXoorAyAg5kG', '123', '', ''),
 (13, 'admin', 'admin', '$2y$10$TfC5doldIIAmpM2LaJdGpeXkBaXi0pc3FO3K9/cnrrAZks1B.E9XC', 'admin', '', '');
-
---
--- Indexes for dumped tables
---
-
---
--- Indeks untuk tabel `cart`
---
-ALTER TABLE `cart`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indeks untuk tabel `history`
---
-ALTER TABLE `history`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indeks untuk tabel `products`
---
-ALTER TABLE `products`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indeks untuk tabel `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT untuk tabel yang dibuang
---
-
---
--- AUTO_INCREMENT untuk tabel `cart`
---
-ALTER TABLE `cart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
-
---
--- AUTO_INCREMENT untuk tabel `history`
---
-ALTER TABLE `history`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
-
---
--- AUTO_INCREMENT untuk tabel `products`
---
-ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=136;
-
---
--- AUTO_INCREMENT untuk tabel `users`
---
-ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
