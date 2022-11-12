@@ -38,7 +38,6 @@ Bagian ini menunjukkan hasil perkembangan pengerjaan proyek dengan beberapa emoj
 
 ## Post-Auth:
 - 🔵[Alex]   🟦[Risky] Cart
-- 🔵[Alex]   🟦[Risky] Payment Method
 - 🔵[Alex]   🟦[Risky] History
 
 ## User:
@@ -47,6 +46,6 @@ Bagian ini menunjukkan hasil perkembangan pengerjaan proyek dengan beberapa emoj
 
 ## Admin:
 - 🟡 Dashboard (?) (Grafik Penjualan) ❓(Considerable) 
-- 🔵[-] 🟢[Risky] - User Panel (Kelola User) 
-- 🔵[-] 🟢[Risky] - Item Panel (CRUD Barang) 
+- 🔵[-] 🟩[Risky] - User Panel (Kelola User) 
+- 🔵[-] 🟩[Risky] - Item Panel (CRUD Barang) 
 
