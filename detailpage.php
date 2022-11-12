@@ -1,34 +1,95 @@
+<?php
+    session_start();
+    require 'config.php';
+    $id = $_GET["id"];
+    $product = query("SELECT * FROM products WHERE id = $id")[0];
+
+    
+
+    if ( isset($_POST['btnCart']) || isset($_POST['btnBuy'])){
+        if ( !isset($_SESSION['loginUser'])){
+            header('Location: auth.php');
+            exit;
+        } 
+    }
+    if ( isset($_POST['btnCart']) ){
+        $query = "SELECT id FROM cart WHERE id_user = $_COOKIE[id] AND id_product = $id";
+        $isExist = query($query);  
+        if ($isExist) {
+            echo "
+            <script>
+            alert('Berhasil memasukkan ke keranjang!');
+            </script>";
+        } else {
+            if (addToCart($_POST) > 0){
+                echo "
+                <script>
+                alert('Berhasil memasukkan ke keranjang!');
+                </script>";
+            } else {
+                echo "<script>
+                alert('Gagal memasukkan ke keranjang!');
+                </script>";
+            }
+        }
+    }
+
+    if ( isset($_POST['btnBuy']) ){
+        if (buy($_POST) > 0){
+            header('Location: payment/success.php');
+        } else {
+            echo "<script>
+            alert('Gagal membeli barang!');
+            </script>";
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="resources/css/DetailStyle.css">
+    <link rel="stylesheet" href="resources/css/DetailStyle.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="resources/css/style.css?v=<?php echo time(); ?>">
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-    <title>Document</title>
+    <title><?= $product["category"]?></title>
 </head>
 <body>
-    <div class="container-header">
-        <ul>
-            <li class = 'sign-in'>
-                Masuk
-            </li>
-            <li class = 'text'>
-                Daftar
-            </li>
-            <li class = 'text'>
-                Beranda
-            </li>
-        </ul>
+    <div class="navbar">
+        <img src="resources/assets/logo.png" class="logo">
+        <h1>Playstation Game Store</h1>
+        <nav>
+            <ul id="menuList">
+                <li><a href="index.php">Home</a></li>
+                <li><a href="aboutme.php">About Me</a></li>
+                <li><a href="catalog.php">Catalog</a></li>
+                <?php 
+                if(isset($_SESSION["loginAdmin"])){
+                    echo "<li><a href='admin/dashboard.php'>Dashboard</a></li>";
+                } else if (!isset($_SESSION["loginUser"]) && !isset($_SESSION["loginAdmin"])){
+                    echo "<li><a href='auth.php'>Login</a></li>";
+                }
+                if(isset($_SESSION["loginUser"]) || isset($_SESSION["loginAdmin"])){
+                    echo "<li><a href='logout.php'>Logout</a></li>";
+                }
+                ?>
+                <li>
+                    <label>
+                        <input type="checkbox" class="checkbox" id="modegelap">
+                        <span class="check"></span>
+                    </label>
+                </li>
+            </ul>
+        </nav>
     </div>
-
     <main>
         <div class="main-container">
             <div class = "image-container">
-                <img src="resources/assets/PS5Front.jpg" alt="">
+                <img src="./resources/img/<?= $product["photo"] ?>" height="500px" alt="">
             </div>
-            <div class = "side-image-container">
+            <!-- <div class = "side-image-container">
                 <div class = "side-image">
                     <img src="resources/assets/PS5SIDE.jpg" alt="">
                 </div>
@@ -38,34 +99,39 @@
                 <div class = "side-image">
                     <img src="resources/assets/PS5SIDE3.jpg" alt="">
                 </div>
-            </div>
+            </div> -->
         </div>
         <br>
         <div class = "product">
             <div class = "product-detail">
+                <h5>
+                    <?= $product["category"]?>
+                </h5>
                 <h2>
-                    Sony Playstation 5 Disc Version (PS5 Disc)
+                    <?= $product["name"]?>
                 </h2>
                 <br>
                 <span class = "product-price">
-                    Rp. 11.000.000
+                    Rp.<?= number_format($product['price'],2, ',', '.') ?>
                 </span> 
                 <br><br>
                 <ul>
-                    <li>Style             :	Home Console</li>
-                    <li>Chipset/GPU Model :	Playstation 5</li>
-                    <li>Platform          :	Sony PlayStation 5</li>
-                    <li>MPN               : 3006634, CFI-1015A, CFI-1115A, 3005718</li>
-                    <li>Item Length       : 10.2 inch</li>
+                    <li>Stock: (<?= $product["stock"]?>)</li>
+                    <li><?= $product["descriptions"]?></li>
                 </ul>
             </div>
 
             <div class = "product-button">
-                <!-- TOMBOL TAMBAH KE KERANJANG -->
-                <button id="add-cart">Tambah Ke Keranjang</button><br>
-                
-                <!-- TOMBOL BELI SEKARANG -->
-                <button id="buy-now">Beli Sekarang</button><br>
+                <form action="" method="post">
+                    <input type="hidden" name="productName" value="<?= $product["name"]?>">
+                    <input type="hidden" name="idProduct" value="<?= $product["id"]?>">
+                    <input type="hidden" name="price" value="<?= $product["price"]?>">
+                    <!-- TOMBOL TAMBAH KE KERANJANG -->
+                    <button type="submit" name="btnCart" id="add-cart">Tambah Ke Keranjang</button><br>
+                    
+                    <!-- TOMBOL BELI SEKARANG -->
+                    <button type="submit" name="btnBuy" id="buy-now">Beli Sekarang</button><br>
+                </form>
             </div>
         </div>
     </main>

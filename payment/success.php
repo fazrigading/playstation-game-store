@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="resources/css/succespayment.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="../resources/css/succespayment.css?v=<?php echo time(); ?>">
     <!-- Fontawesome CDN Link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
     <title>Document</title>
@@ -15,7 +15,7 @@
 <body>
     <div class="container">
         <div class="navbar">
-            <img src="resources/assets/logo.png" class="logo">
+            <img src="../resources/assets/logo.png" class="logo">
             <h1>Playstation Game Store</h1>
             <nav>
                 <ul id="menuList">
@@ -43,7 +43,7 @@
 
                 <div class="buttons">
                     <a href="index.php"><button class="close-btn">Beranda</button></a>
-                    <button>Beli Lagi</button>
+                    <a href="catalog.php"><button>Beli Lagi</button></a>
                 </div>
             </div>
         </section>
