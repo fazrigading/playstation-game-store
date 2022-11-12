@@ -9,6 +9,13 @@ Kontributor proyek ini terdiri dari 1 programmer back-end dan 2 programmer front
 
 # Project Progress
 Bagian ini menunjukkan hasil perkembangan pengerjaan proyek dengan beberapa emoji yang melambangkan tingkat kelengkapan.
+
+> Design: 
+> 6/16 = 37.6% of 100%
+> 
+> System:
+> 9/20 = 45% of 100%
+
 ## Keterangan:
 - ❓ Dipertanyakan
 - 🟡 UI Not Started
@@ -31,13 +38,16 @@ Bagian ini menunjukkan hasil perkembangan pengerjaan proyek dengan beberapa emoj
 - 🟢[Alex]   🟩[Risky] - Detail Page 
 
 ## Auth:
-- 🟢[Gading]   🟩[Risky] - Login **(Havent Connected)**
-- 🟢[Gading]   🟩[Risky] - Register **(Havent Connected)**
+- 🟢[Gading]   🟩[Risky] - Login
+- 🟢[Gading]   🟩[Risky] - Register
 - 🟩[Risky] Auth Cookies 
 - 🟩[Risky] Auth Session
 
 ## Post-Auth:
 - 🟢[Alex]   🟩[Risky] Cart
+  - 🟩[Risky] Remove
+- 🟢[Alex]   🟩[Risky] Payment
+  - 🟩[Risky] Checkout
 - 🟢[Alex]   🟦[Risky] History
 
 ## User:
@@ -45,7 +55,7 @@ Bagian ini menunjukkan hasil perkembangan pengerjaan proyek dengan beberapa emoj
 - 🔵[Gading] 🟦[Risky] - Edit Account Page (Personal Info & Address)
 
 ## Admin:
-- 🟡 Dashboard (?) (Grafik Penjualan) ❓(Considerable) 
+- 🟡[-] 🟨[-] Dashboard (?) (Grafik Penjualan) ❓ (Considerable) 
 - 🔵[-] 🟩[Risky] - User Panel (Kelola User) 
 - 🔵[-] 🟩[Risky] - Item Panel (CRUD Barang) 
 
