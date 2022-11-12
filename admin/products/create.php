@@ -31,7 +31,7 @@
   <div class="container">
     <div class="forms-edit">
       <div class="form">
-        <span class="title">Update Product</span>
+        <span class="title">Add Product</span>
         <form action="#" method="post" enctype="multipart/form-data">
           <div class="input-field-photo">
             <table>
