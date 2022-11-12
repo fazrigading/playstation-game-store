@@ -1,14 +1,13 @@
 <?php
   session_start();
   if (!isset($_SESSION["loginAdmin"])) {
-    header('Location: login.php');
+    header('Location: auth.php');
     exit;
   }
   require '../../config.php';
-  $id = $_GET["id"];
-  $product = query("SELECT * FROM products WHERE id = $id")[0];
-  if (isset($_POST["submitupdate"])) {
-    if (updateProduct($_POST) > 0) echo "<script> alert('Data updated succesfully.'); document.location.href = '../dashboard.php'; </script>";
+
+  if (isset($_POST["submitCreate"])) {
+    if (addProduct($_POST) > 0) echo "<script> alert('Data created succesfully.'); document.location.href = 'index.php'; </script>";
     else {
       $feedback = "Data Gagal Diubah";
       echo mysqli_error($db);
@@ -37,45 +36,38 @@
           <div class="input-field-photo">
             <table>
               <td>
-                <img src="../../resources/img/<?= $product["photo"] ?>" alt="Your photo" width="100">
-              </td>
-              <td>
                 <input type="file" name="photo" placeholder="Add Picture...">
-                <input type="hidden" name="id" value="<?= $product['id'] ?>">
-
-                <input type="hidden" name="samePhoto" value="<?= $product["photo"] ?>"><br>
-                <input type="hidden" name="id" value="<?= $product['id'] ?>">
               </td>
             </table>
           </div>
 
           <div class="input-field">
-            <input type="text" id="name" name="name" placeholder="Name" value="<?= $product['name'] ?>" required>
+            <input type="text" id="name" name="name" placeholder="Name" required>
             <!-- <i class="uil uil-user"></i> -->
           </div>
 
           <div class="input-field">
-            <input type="text" id="price" name="price" placeholder="Price" value="<?= $product['price'] ?>" required>
+            <input type="text" id="price" name="price" placeholder="Price" required>
             <!-- <i class="uil uil-user"></i> -->
           </div>
 
           <div class="input-field">
-            <input type="text" id="stock" name="stock" placeholder="Stock" value="<?= $product['stock'] ?>" required>
+            <input type="text" id="stock" name="stock" placeholder="Stock" required>
             <!-- <i class="uil uil-user"></i> -->
           </div>
 
           <div class="input-field">
-            <textarea type="text" id="descriptions" name="descriptions" placeholder="Descriptions" required> <?= $product['descriptions'] ?> </textarea>
+            <textarea type="text" id="descriptions" name="descriptions" placeholder="Descriptions" required> </textarea>
             <!-- <i class="uil uil-user"></i> -->
           </div>
 
           <div class="input-field">
-            <input type="text" id="category" name="category" placeholder="Category" value="<?= $product['category'] ?>" required>
+            <input type="text" id="category" name="category" placeholder="Category" required>
             <!-- <i class="uil uil-user"></i> -->
           </div>
           
           <div class="input-field button">
-            <input type="submit" name="submitupdate" value="Update Product">
+            <input type="submit" name="submitCreate" value="Add Product">
           </div>
         </form>
       </div>
