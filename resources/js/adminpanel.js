@@ -10,7 +10,7 @@ $(".button-add").click(function () {
 
 $(".button-submit").click(function () {
     $(".edit").css("display", "none");
-    const inputs = document.querySelectorAll('#Username, #Password,#mail');
+    const inputs = document.querySelectorAll('#Username, #Password,#mail,#productName,#harga,#stok,#deskripsi,#kategori');
 
     inputs.forEach(input => {
         input.value = '';

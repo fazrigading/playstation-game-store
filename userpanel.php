@@ -106,7 +106,7 @@
                         <label for="cityname">Email:</label>
                         <input type="email" id="mail" name="user_email">
 
-                        <label for="cityname">Photo:</label>
+                        <label for="filename">Photo:</label>
                         <input type="file" id="myFile" name="filename">
                     </fieldset>
                     <button type="submit" class="button-submit">Submit</button>
