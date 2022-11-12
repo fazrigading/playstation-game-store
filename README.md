@@ -28,7 +28,7 @@ Bagian ini menunjukkan hasil perkembangan pengerjaan proyek dengan beberapa emoj
 - 🟡[Gading] 🟨[Risky] - Catalog: Console
 - 🟡[Gading] 🟨[Risky] - Catalog: Game 
 - 🟡[Gading] 🟨[Risky] - Catalog: Accessories 
-- 🔵[Alex]   🟨[Risky] - Detail Page 
+- 🟢[Alex]   🟩[Risky] - Detail Page 
 
 ## Auth:
 - 🟢[Gading]   🟩[Risky] - Login **(Havent Connected)**
