@@ -2,7 +2,15 @@
     session_start();
     require 'config.php';
     cookieCheck();
-    sessionCheck();
+    
+    if (isset($_SESSION["loginAdmin"])){
+        header('Location: admin/dashboard.php');
+        exit;
+    } 
+    if (isset($_SESSION["loginUser"])){
+        header('Location: index.php');
+        exit;
+    } 
 
     if (isset($_POST["submitLogin"]) ){
         if (login($_POST) > 0){

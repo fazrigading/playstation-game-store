@@ -31,15 +31,15 @@ function recalculateCart(onlyTotal) {
     if (onlyTotal) {
         /* Update total display */
         $('.total-value').fadeOut(fadeTime, function () {
-            $('#basket-total').html(total.toFixed(2));
+            $('#basket-total').html(total);
             $('.total-value').fadeIn(fadeTime);
         });
     } else {
         /* Update summary display. */
 
         $('.final-value').fadeOut(fadeTime, function () {
-            $('#basket-subtotal').html(subtotal.toFixed(2));
-            $('#basket-total').html(total.toFixed(2));
+            $('#basket-subtotal').html(subtotal);
+            $('#basket-total').html(total);
             if (total == 0) {
                 $('.checkout-cta').fadeOut(fadeTime);
             } else {
@@ -62,7 +62,7 @@ function updateQuantity(quantityInput) {
     /* Update line price display and recalc cart totals */
     productRow.children('.subtotal').each(function () {
         $(this).fadeOut(fadeTime, function () {
-            $(this).text(linePrice.toFixed(2));
+            $(this).text(linePrice);
             recalculateCart();
             $(this).fadeIn(fadeTime);
         });

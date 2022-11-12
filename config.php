@@ -30,16 +30,6 @@ function cookieCheck() {
     }
 }
 
-function sessionCheck() {
-    if (isset($_SESSION["loginAdmin"])){
-        header('Location: admin/dashboard.php');
-        exit;
-    } 
-    if (isset($_SESSION["loginUser"])){
-        header('Location: index.php');
-        exit;
-    } 
-}
 // Session and Cookie end
 // ----------------------------------------------------------------
 // Login and register start
@@ -57,11 +47,13 @@ function login($data) {
                     setcookie('id', $rows["id"], time()+ 3600);
                     setcookie('key', hash('sha256', $rows["username"]), time()+ 3600);
                 };
-
+                
                 if ($username == 'admin') {
+                    setcookie('id', $rows["id"], time()+ 36000);
                     $_SESSION["loginAdmin"] = true;
                     header("Location: admin/dashboard.php");
                 } else {
+                    setcookie('id', $rows["id"], time()+ 36000);
                     $_SESSION["loginUser"] = true;
                     header("Location: index.php");
                 }
@@ -246,5 +238,36 @@ function updateProduct($data){
 function deleteProduct($id){
     global $db;
     mysqli_query($db, "DELETE FROM products WHERE id = $id");
+    return (mysqli_affected_rows($db));
+}
+
+
+// Start Cart
+function addToCart($data) {
+    global $db;
+    $idUser = $_COOKIE['id'];
+    $idProduct = $data["idProduct"];
+    $query = "INSERT INTO cart (id_user, id_product, quantity) VALUES ('$idUser', '$idProduct', '1')";
+    mysqli_query($db, $query);
+    return (mysqli_affected_rows($db));
+}
+function deleteFromCart($id) {
+    global $db;
+    $query = "DELETE FROM cart WHERE id=$id";
+    mysqli_query($db, $query);
+    return (mysqli_affected_rows($db));
+}
+function buy($data) {
+    global $db, $idToCheckout;
+    $idUser = $_COOKIE['id'];
+    $productName = $data["productName"];
+    $totalPrice = $data["totalPrice"];
+    $date = date('m/d/Y-h:i:s');
+    $query = "INSERT INTO history (id_user, product_name, date, total_price, status) VALUES ('$idUser', '$productName', '$date', '$totalPrice', 'success')";
+    mysqli_query($db, $query);
+    
+    foreach($idToCheckout as $idToDelete) {
+        mysqli_query($db, "DELETE FROM cart WHERE id = $idToDelete");
+    }
     return (mysqli_affected_rows($db));
 }
