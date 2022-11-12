@@ -105,10 +105,6 @@
             </div>
         </section>
 
-
-      
-
-
         <script src="resources/js/payment.js"></script>
 
 </body>
