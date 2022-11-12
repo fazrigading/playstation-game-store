@@ -32,8 +32,6 @@ function recalculateCart(onlyTotal) {
         /* Update total display */
         $('.total-value').fadeOut(fadeTime, function () {
             $('#basket-total').html(total.toFixed(2));
-
-
             $('.total-value').fadeIn(fadeTime);
         });
     } else {
@@ -100,3 +98,5 @@ const modeGelap = document.getElementById("modegelap");
 $(modeGelap).click(function () {
     document.body.classList.toggle("dark-mode");
 });
+
+

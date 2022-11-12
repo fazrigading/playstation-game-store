@@ -2,6 +2,8 @@
 
 html,
 html a {
+    overflow-x: hidden;
+    overflow-y: hidden;
     -webkit-font-smoothing: antialiased;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
 }
@@ -58,7 +60,6 @@ img,
 }
 
 input,
-button,
 .basket,
 .basket-labels,
 .item,
@@ -142,7 +143,7 @@ li.subtotal:before {
 .quantity,
 .subtotal {
     width: 15%;
-    color:var(--warna-h1);
+    color: var(--warna-h1);
 }
 
 .subtotal {
@@ -184,7 +185,7 @@ li.subtotal:before {
 
 .product-details {
     width: 65%;
-    color:var(--warna-h1);
+    color: var(--warna-h1);
 }
 
 .product-frame {
@@ -205,7 +206,7 @@ li.subtotal:before {
     font-size: 0.625rem;
     padding: 2px;
     width: 3.75rem;
-    color:var(--warna-h1);
+    color: var(--warna-h1);
 }
 
 aside {
@@ -215,7 +216,7 @@ aside {
 }
 
 .summary {
-    background: linear-gradient(#526bfb, #1c317c);
+    background: var(--linearbg-Primary);
     padding: 1rem;
     position: fixed;
     width: 250px;
@@ -226,15 +227,15 @@ aside {
 }
 
 .summary-total-items {
-    color: white;
+    color: var(--warna-h1);
     font-size: 0.875rem;
     text-align: center;
 }
 
 .summary-subtotal,
 .summary-total {
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
+    border-top: 1px solid var(--warna-h1);
+    border-bottom: 1px solid var(--warna-h1);
     clear: both;
     margin: 1rem 0;
     overflow: hidden;
@@ -244,10 +245,9 @@ aside {
 .subtotal-title,
 .subtotal-value,
 .total-title,
-.total-value,
-.promo-title,
-.promo-value {
-    color: white;
+.total-value
+ {
+    color: var(--warna-h1);
     float: left;
     width: 50%;
 }
@@ -279,7 +279,6 @@ aside {
 
 
 @media screen and (max-width: 640px) {
-
     aside,
     .basket,
     .summary,
@@ -357,7 +356,7 @@ aside {
 
 
 /*NAVBAR */
-.container{
+.container {
     width: 100%;
     min-width: 100vh;
     padding-left: 8%;
@@ -386,11 +385,13 @@ aside {
 }
 
 :root {
+    --linearbg-Primary : radial-gradient(circle at 18.7% 37.8%, rgb(250, 250, 250) 0%, rgb(225, 234, 238) 90%);
     --bg-primary: #fff;
     --warna-h1: #0f1734;
 }
 
 .dark-mode {
+    --linearbg-Primary :linear-gradient(#526bfb, #1c317c);
     --bg-primary: #0f1734;
     --warna-h1: #fff;
 }
@@ -485,9 +486,13 @@ input[type="checkbox"]:checked~.check:before {
     width: 40px;
 }
 
-.navbar h1{
+.navbar h1 {
     padding-left: 24px;
     font-size: 21px;
     font-weight: 600;
     color: var(--warna-h1);
 }
+
+
+
+

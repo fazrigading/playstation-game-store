@@ -9,6 +9,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/5bbbb39d34.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
     <title>Document</title>
 </head>
 
@@ -21,6 +22,7 @@
                 <ul id="menuList">
                     <li><a href="index.php">Beranda</a></li>
                     <li><a href="catalog.php">Catalog</a></li>
+                    <li><a href="profile.php">Profile</a></li>
                     <li>
                         <label>
                             <input type="checkbox" class="checkbox" id="modegelap">
@@ -78,6 +80,7 @@
                 <div class="remove">
                     <button>Remove</button>
                 </div>
+
             </div>
 
         </div>
@@ -94,11 +97,14 @@
                     <div class="total-value final-value" id="basket-total">130.00</div>
                 </div>
                 <div class="summary-checkout">
-                    <button class="checkout-cta">Checkout</button>
+                    <a href="succespayment.php"> <button class="checkout-cta">Checkout</button></a>
                 </div>
             </div>
         </aside>
     </main>
+
+
+
     <script src="resources/js/payment.js"></script>
 </body>
 
