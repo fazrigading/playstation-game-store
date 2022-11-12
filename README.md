@@ -57,5 +57,5 @@ Bagian ini menunjukkan hasil perkembangan pengerjaan proyek dengan beberapa emoj
 ## Admin:
 - 🟡[-] 🟨[-] Dashboard (?) (Grafik Penjualan) ❓(Considerable) 
 - 🟢[Alex] 🟩[Risky] - User Panel (Kelola User) 
-- 🔵[-] 🟩[Risky] - Item Panel (CRUD Barang) 
+- 🟢[Alex] 🟩[Risky] - Item Panel (CRUD Barang) 
 
