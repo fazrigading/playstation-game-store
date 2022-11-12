@@ -10,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Playstation Game Store</title>
-    <link rel="stylesheet" href="resources/css/style.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="resources/css/style.css">
 </head>
 <body>
     <div class="container">
@@ -20,7 +20,7 @@
             <nav>
                 <ul id="menuList">
                     <li><a href="index.php">Home</a></li>
-                    <!-- <li><a href="aboutme.php">About Me</a></li> -->
+                    <li><a href="aboutme.php">About Me</a></li>
                     <li><a href="catalog.php">Catalog</a></li>
                     <?php 
                     if(isset($_SESSION["loginAdmin"])){
@@ -73,13 +73,14 @@
     </div>
 
     <footer>
-        <div class="footer-logo">Copyright &copy 2022</div>
+        <div class="footer-logo">Copyright © Fazri Gading 2022</div>
         <div class="footer-list">
-            <ul>
-                <li>Playstation Game Store </li>
-            </ul>
+        <ul>
+            <li>2009106031</li>
+            <li>Informatika A 20</li>
+            <li>Machine Learning Developer</li>
+        </ul>
         </div>
-        <div class="clear"></div>
     </footer>
     <script src="resources/js/script-index.js"></script>
 </body>

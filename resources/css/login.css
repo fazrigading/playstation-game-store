@@ -34,13 +34,6 @@ body{
     transition: height 0.2s ease;
 }
 
-.container .forms-edit{
-    display: flex;
-    align-items: center;
-    width: 200%;
-    transition: height 0.2s ease;
-}
-
 
 .container .form{
     width: 50%;
@@ -194,9 +187,4 @@ body{
 .form .login-signup{
     margin-top: 30px;
     text-align: center;
-}
-textarea {
-    width: 100%;
-    max-width: 100%;
-    height: 80px;
 }
