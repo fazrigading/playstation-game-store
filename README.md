@@ -37,7 +37,7 @@ Bagian ini menunjukkan hasil perkembangan pengerjaan proyek dengan beberapa emoj
 - 🟩[Risky] Auth Session
 
 ## Post-Auth:
-- 🟢[Alex]   🟦[Risky] Cart
+- 🟢[Alex]   🟩[Risky] Cart
 - 🟢[Alex]   🟦[Risky] History
 
 ## User:
