@@ -5,7 +5,7 @@
       header('Location: ../../auth.php');
       exit;
     } 
-    $users = query("SELECT * FROM users");
+    $products = query("SELECT * FROM products");
     $i = 1;
 ?>
 
@@ -27,30 +27,37 @@
     <a href="../users" role="button">Users</a>
   </div>
   <div>
-    <a href="../dashboard.php" role="button">Dashboard</a>
+  <a href="../dashboard.php" role="button">Dashboard</a>
   </div>
   <h1>Products</h1>
+  <div>
+    <a href="create.php" role="button">Add product</a>
+  </div>
   <table border="1">
     <tr>
       <th>No</th>
-      <th>ID</th>
       <th>Photo</th>
-      <th>Username</th>
-      <th>Password</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Stock</th>
+      <th>Description</th>
+      <th>Category</th>
       <th>Action</th>
     </tr>
-    <?php foreach ($users as $user): ?>
+    <?php foreach ($products as $product): ?>
     <tr>
       <td><?= $i ?></td>
-      <td><?= $user['id'] ?></td>
-      <td><img src="../../resources/img/<?= $user["photo"]?>" alt="" width="100px"></td>
-      <td><?= $user['username'] ?></td>
-      <td><?= $user['password'] ?></td>
+      <td><img src="../../resources/img/<?= $product["photo"]?>" alt="" width="100px"></td>
+      <td><?= $product['name'] ?></td>
+      <td>Rp.<?= number_format($product['price'],2, ',', '.') ?></td>
+      <td><?= $product['stock'] ?></td>
+      <td><?= substr($product['descriptions'], 0, 100) ?> ...</td>
+      <td><?= $product['category'] ?></td>
       <td>
-        <a href="update.php?id=<?= $user["id"]?>">
+        <a href="update.php?id=<?= $product["id"]?>">
           <i>Update</i>
         </a>|
-        <a href="delete.php?id=<?= $user["id"]?>" 
+        <a href="delete.php?id=<?= $product["id"]?>" 
           onclick = "return confirm('Apakah anda ingin menghapus File?')">
           <i>Delete</i>
         </a>

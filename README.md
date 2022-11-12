@@ -28,7 +28,7 @@ Bagian ini menunjukkan hasil perkembangan pengerjaan proyek dengan beberapa emoj
 - 🟡[Gading] 🟨[Risky] - Catalog: Console
 - 🟡[Gading] 🟨[Risky] - Catalog: Game 
 - 🟡[Gading] 🟨[Risky] - Catalog: Accessories 
-- 🔵[Alex]   🟨[Risky] - Detail Page 
+- 🟢[Alex]   🟩[Risky] - Detail Page 
 
 ## Auth:
 - 🟢[Gading]   🟩[Risky] - Login **(Havent Connected)**
@@ -37,9 +37,8 @@ Bagian ini menunjukkan hasil perkembangan pengerjaan proyek dengan beberapa emoj
 - 🟩[Risky] Auth Session
 
 ## Post-Auth:
-- 🔵[Alex]   🟦[Risky] Cart
-- 🔵[Alex]   🟦[Risky] Payment Method
-- 🔵[Alex]   🟦[Risky] History
+- 🟢[Alex]   🟦[Risky] Cart
+- 🟢[Alex]   🟦[Risky] History
 
 ## User:
 - 🔵[Gading] 🟦[Risky] - Profile Page (Display Info) 
@@ -47,6 +46,6 @@ Bagian ini menunjukkan hasil perkembangan pengerjaan proyek dengan beberapa emoj
 
 ## Admin:
 - 🟡 Dashboard (?) (Grafik Penjualan) ❓(Considerable) 
-- 🔵[-] 🟢[Risky] - User Panel (Kelola User) 
-- 🔵[-] 🟢[Risky] - Item Panel (CRUD Barang) 
+- 🔵[-] 🟩[Risky] - User Panel (Kelola User) 
+- 🔵[-] 🟩[Risky] - Item Panel (CRUD Barang) 
 

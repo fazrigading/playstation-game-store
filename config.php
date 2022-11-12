@@ -185,35 +185,64 @@ function deleteUser($id){
 // Products start
 function addProduct($data){
     global $db;
-    // $photo = upload();
-    // if (!$photo) return false;
+    $photo = upload();
+    if (!$photo) return false;
     $name = stripslashes($data["name"]);
     $price = $data["price"];
     $stock = $data["stock"];
-    $desc = stripslashes($data["desc"]);
+    $descriptions = stripslashes($data["descriptions"]);
     $category = stripslashes($data["category"]);
-    mysqli_query($db, "INSERT INTO users (name, price, stock, desc, category) VALUES ('$name', '$price', '$stock', '$desc', '$category')");
+    $query = "INSERT INTO products (
+        name, 
+        price, 
+        photo, 
+        stock, 
+        descriptions, 
+        category
+        ) VALUES (
+            '$name', 
+            '$price', 
+            '$photo', 
+            '$stock', 
+            '$descriptions', 
+            '$category'
+            )";
+    mysqli_query($db, $query);
     return (mysqli_affected_rows($db));
 };
 function updateProduct($data){
     global $db;
-    $photo = upload();
     $samePhoto = htmlspecialchars($data["samePhoto"]);
+    if ($_FILES['photo']['error'] === 4){
+        $photo =  $samePhoto;   
+    } else {
+        $photo = upload();
+    }
     $id = stripslashes($data["id"]);
     $name = stripslashes($data["name"]);
     $price = $data["price"];
     $stock = $data["stock"];
-    $desc = stripslashes($data["desc"]);
+    $descriptions = stripslashes($data["descriptions"]);
     $category = stripslashes($data["category"]);
-
-    if ($_FILES['photo']['error'] === 4) $photo =  $samePhoto;
     $result = $db->query("SELECT * FROM products WHERE id = '$id'");
     if (mysqli_num_rows($result) === 1){
-        mysqli_query($db, "UPDATE products SET name = '$name', price = '$price', stock = '$stock', desc = '$desc', category = '$category' WHERE id = '$id'");
+        try { 
+            $query = "UPDATE products SET 
+            name = '$name', 
+            photo = '$photo', 
+            price = '$price', 
+            stock = '$stock', 
+            descriptions = '$descriptions', 
+            category = '$category' 
+            WHERE id = '$id'";
+           $result = mysqli_query($db, $query); 
+        } catch (mysqli_sql_exception $e) { 
+           var_dump($e);
+           exit; 
+        } 
         return (mysqli_affected_rows($db));
     }
 }
-
 function deleteProduct($id){
     global $db;
     mysqli_query($db, "DELETE FROM products WHERE id = $id");
