@@ -4,7 +4,7 @@
     cookieCheck();
     
     if (isset($_SESSION["loginAdmin"])){
-        header('Location: admin/dashboard.php');
+        header('Location: admin/products/index.php');
         exit;
     } 
     if (isset($_SESSION["loginUser"])){
@@ -100,7 +100,7 @@
                         <i class="uil uil-user"></i>
                     </div>
                     <div class="input-field">
-                        <input type="text" name="email" placeholder="Masukkan email Anda" required>
+                        <input type="email" name="email" placeholder="Masukkan email Anda" required>
                         <i class="uil uil-envelope icon"></i>
                     </div>
                     <div class="input-field">

@@ -7,7 +7,7 @@
             <li><a href="../profile.php">Profile</a></li>
             <?php 
             if(isset($_SESSION["loginAdmin"])){
-                echo "<li><a href='../admin/dashboard.php'>Dashboard</a></li>";
+                echo "<li><a href='../admin/products/'>Dashboard</a></li>";
             } else if (!isset($_SESSION["loginUser"]) && !isset($_SESSION["loginAdmin"])){
                 echo "<li><a href='../auth.php'>Login</a></li>";
             }

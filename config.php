@@ -51,7 +51,7 @@ function login($data) {
                 if ($username == 'admin') {
                     setcookie('id', $rows["id"], time()+ 36000);
                     $_SESSION["loginAdmin"] = true;
-                    header("Location: admin/dashboard.php");
+                    header("Location: admin/products/");
                 } else {
                     setcookie('id', $rows["id"], time()+ 36000);
                     $_SESSION["loginUser"] = true;
@@ -72,9 +72,9 @@ function register($data){
     global $db;
     // $photo = upload();
     // if (!$photo) return false;
-    $name = strtolower(stripslashes($data["fullname"]));
-    $username = strtolower(stripslashes($data["user"]));
-    $email = strtolower(stripslashes($data["email"]));
+    $name = stripslashes($data["fullname"]);
+    $username = stripslashes($data["user"]);
+    $email = stripslashes($data["email"]);
     $password = mysqli_real_escape_string($db, $data["pass"]);
     $confirm_password = mysqli_real_escape_string($db, $data["cpass"]);
     $result = mysqli_query($db, "SELECT username FROM users WHERE username = '$username'");
@@ -87,7 +87,7 @@ function register($data){
         return false;
     };
     $password_hashed = password_hash($password, PASSWORD_DEFAULT);
-    mysqli_query($db, "INSERT INTO users (name, username, password, email) VALUES ('$name', '$username', '$password_hashed', '$email')");
+    mysqli_query($db, "INSERT INTO users (fullname, username, password, email) VALUES ('$name', '$username', '$password_hashed', '$email')");
     return (mysqli_affected_rows($db));
 };
 
@@ -137,9 +137,10 @@ function updateUser($data){
         $photo = upload();
     }
     $id = htmlspecialchars($data["id"]);
-    $name = htmlspecialchars($data["name"]);
+    $fullname = htmlspecialchars($data["fullname"]);
     $address = htmlspecialchars($data["address"]);
     $username = htmlspecialchars($data["user"]);
+    $email = htmlspecialchars($data["email"]);
     $oldPassword = htmlspecialchars($data["oldPass"]);
     $newPassword = htmlspecialchars($data["newPass"]);
     $confirmNewPassword = htmlspecialchars($data["confirmNewPass"]);
@@ -155,8 +156,9 @@ function updateUser($data){
     if (mysqli_num_rows($result) == 1){
         $rows = mysqli_fetch_assoc($result);
         $query = "UPDATE users SET 
-            name = '$name', 
+            fullname = '$fullname', 
             username = '$username', 
+            email = '$email', 
             password = '$password_hashed', 
             address = '$address', 
             photo = '$photo' 

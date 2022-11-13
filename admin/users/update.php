@@ -24,62 +24,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
   <title>Update Profile</title>
-  <link rel="stylesheet" href="../../resources/css/login.css?v=<?php echo time(); ?>">
+  <link rel="stylesheet" href="../../resources/css/userpanel.css?v=<?php echo time(); ?>">
 </head>
 
 <body>
-  <div class="container">
-    <div class="forms">
-      <div class="form login">
-        <span class="title">Update Profile</span>
-        <form action="#" method="post" enctype="multipart/form-data">
-          <div class="input-field-photo">
-            <table>
-              <td>
-                <img src="../../resources/img/<?= $user["photo"] ?>" alt="Your photo" width="100">
-              </td>
-              <td>
-                <input type="file" name="photo" placeholder="Add Picture...">
+  <div class="container-half">
+    <div class="edit">
+      <form method="POST" enctype="multipart/form-data">
+          <fieldset>
+            <legend>Masukkan Data</legend>
+              <input type="hidden" name="samePhoto" value="<?= $user["photo"] ?>"><br>
+              <input type="hidden" name="id" value="<?= $user['id'] ?>">
+              <img src="../../resources/img/<?= $user["photo"] ?>" alt="Your photo" width="100">
+              <input type="file" name="photo" placeholder="Add Picture...">
+              <label for="fullname">Fullname</label>
+              <input type="text" id="fullname" name="fullname" placeholder="Fullname" value="<?= $user["fullname"] ?>">
 
-                <input type="hidden" name="samePhoto" value="<?= $user["photo"] ?>"><br>
-                <input type="hidden" name="id" value="<?= $user['id'] ?>">
-              </td>
-            </table>
-          </div>
+              <label for="username">Username</label>
+              <input type="text" id="username" name="user" placeholder="Username" value="<?= $user["username"] ?>">
+              
+              <label for="password">Password baru: (Abaikan jika tidak mengganti password)</label>
+              <input type="password" id="password" name="newPass" placeholder="Password">
 
-          <div class="input-field">
-            <input type="text" id="username" name="user" placeholder="Username" value="<?= $user['username'] ?>" required>
-            <i class="uil uil-user"></i>
-          </div>
-          
-          <div class="input-field">
-            <input type="text" id="name" name="name" placeholder="Name" value="<?= $user['name'] ?>" required>
-            <i class="uil uil-user"></i>
-          </div>
-          
-          <div class="input-field">
-            <input type="text" id="address" name="address" placeholder="Address" value="<?= $user['address'] ?>" required>
-            <i class="uil uil-user"></i>
-          </div>
-          <input type="hidden" name="oldPass", value="<?= $user['password'] ?>">
-          <div class="input-field">
-            <input type="password" name="newPass" class="password" placeholder="New Password">
-            <i class="uil uil-lock icon"></i>
-          </div>
-          <div class="input-field">
-            <input type="password" name="confirmNewPass" class="password" placeholder="Confirm New Password">
-            <i class="uil uil-lock icon"></i>
-            <i class="uil uil-eye-slash showHidePw"></i>
-          </div>
-
-          <div class="input-field button">
-            <input type="submit" name="submitupdate" value="Update Profile">
-          </div>
-        </form>
-      </div>
+              <label for="cNewPass">Konfirmasi Password baru: (Abaikan jika tidak mengganti password)</label>
+              <input type="password" id="cNewPass" name="confirmNewPass" placeholder="Password">
+              <input type="hidden" name="oldPass", value="<?= $user['password'] ?>">
+              
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="Email" value="<?= $user["email"] ?>">
+              
+              <label for="address">Address</label>
+              <textarea rows="4"  id="address" name="address" placeholder="Address"><?= $user["address"] ?></textarea>
+          </fieldset>
+          <button type="submit" name="submitupdate" class="button-submit">Submit</button>
+      </form>
     </div>
-  </div>
   <script src="../../resources//js/login.js"></script>
-  
 </body>
 </html>

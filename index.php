@@ -10,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Playstation Game Store</title>
-    <link rel="stylesheet" href="resources/css/style.css">
+    <link rel="stylesheet" href="resources/css/style.css?v=<?php echo time(); ?>">
 </head>
 <body>
     <div class="container">
@@ -21,14 +21,16 @@
                 <ul id="menuList">
                     <li><a href="index.php">Home</a></li>
                     <li><a href="../catalog.php">Catalog</a></li>
-                    <li><a href="../profile.php">Profile</a></li>
                     <?php 
                     if(isset($_SESSION["loginAdmin"])){
-                        echo "<li><a href='../admin/dashboard.php'>Dashboard</a></li>";
+                        echo "<li><a href='admin/products/'>Dashboard</a></li>";
                     } else if (!isset($_SESSION["loginUser"]) && !isset($_SESSION["loginAdmin"])){
                         echo "<li><a href='auth.php'>Login</a></li>";
                     }
                     if(isset($_SESSION["loginUser"]) || isset($_SESSION["loginAdmin"])){
+                        echo "<li><a href='payment/'>Cart</a></li>";
+                        echo "<li><a href='riwayat.php'>Riwayat</a></li>";
+                        echo "<li><a href='../profile.php'>Profile</a></li>";
                         echo "<li><a href='logout.php'>Logout</a></li>";
                     }
                     ?>

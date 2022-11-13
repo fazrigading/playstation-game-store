@@ -1,3 +1,14 @@
+<?php
+    session_start();
+    require 'config.php';
+    cookieCheck();
+    if (!isset($_SESSION["loginUser"])){
+        header('Location: index.php');
+        exit;
+    } 
+    $query = "SELECT * FROM history  WHERE id_user = $_COOKIE[id]";
+    $histories = query($query);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,13 +26,24 @@
 <body>
     <div class="container">
         <div class="navbar">
-            <img src="resources/assets/logo.png" class="logo">
-            <h1>Playstation Game Store</h1>
+            <img src="./resources/assets/logo.png" class="logo">
             <nav>
                 <ul id="menuList">
-                    <li><a href="index.php">Beranda</a></li>
-                    <li><a href="catalog.php">Catalog</a></li>
-                    <li><a href="catalog.php">Profile</a></li>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="../catalog.php">Catalog</a></li>
+                    <?php 
+                    if(isset($_SESSION["loginAdmin"])){
+                        echo "<li><a href='admin/products/'>Dashboard</a></li>";
+                    } else if (!isset($_SESSION["loginUser"]) && !isset($_SESSION["loginAdmin"])){
+                        echo "<li><a href='auth.php'>Login</a></li>";
+                    }
+                    if(isset($_SESSION["loginUser"]) || isset($_SESSION["loginAdmin"])){
+                        echo "<li><a href='payment/'>Cart</a></li>";
+                        echo "<li><a href='riwayat.php'>Riwayat</a></li>";
+                        echo "<li><a href='../profile.php'>Profile</a></li>";
+                        echo "<li><a href='logout.php'>Logout</a></li>";
+                    }
+                    ?>
                     <li>
                         <label>
                             <input type="checkbox" class="checkbox" id="modegelap">
@@ -39,11 +61,11 @@
                 <table cellpadding="0" cellspacing="0" border="0">
                     <thead>
                         <tr>
-                            <th>No</th>
+                            <th>ID</th>
                             <th>Nama Produk</th>
-                            <th>Jumlah</th>
-                            <th>Total Harga</th>
                             <th>Tanggal</th>
+                            <th>Total Harga</th>
+                            <th>Status</th>
                         </tr>
                     </thead>
                 </table>
@@ -51,55 +73,19 @@
             <div class="tbl-content">
                 <table cellpadding="0" cellspacing="0" border="0">
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Playstation 5 </td>
-                            <td>1</td>
-                            <td>Rp. 5.000.000</td>
-                            <td>12-01-2022</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Playstation 5 </td>
-                            <td>1</td>
-                            <td>Rp. 5.000.000</td>
-                            <td>12-01-2022</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Playstation 5 </td>
-                            <td>1</td>
-                            <td>Rp. 5.000.000</td>
-                            <td>12-01-2022</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Playstation 5 </td>
-                            <td>1</td>
-                            <td>Rp. 5.000.000</td>
-                            <td>12-01-2022</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Playstation 5 </td>
-                            <td>1</td>
-                            <td>Rp. 5.000.000</td>
-                            <td>12-01-2022</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Playstation 5 </td>
-                            <td>1</td>
-                            <td>Rp. 5.000.000</td>
-                            <td>12-01-2022</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Playstation 5 </td>
-                            <td>1</td>
-                            <td>Rp. 5.000.000</td>
-                            <td>12-01-2022</td>
-                        </tr>
+                        <?php foreach($histories as $history):?>
+                            <tr>
+                                <td><?= $history['id'] ?></td>
+                                <td><?= $history['product_name'] ?></td>
+                                <td><?= $history['date'] ?></td>
+                                <td><?= $history['total_price'] ?></td>
+                                <td><?= $history['status'] ?></td>
+                                <td>Playstation 5 </td>
+                                <td>1</td>
+                                <td>Rp. 5.000.000</td>
+                                <td>12-01-2022</td>
+                            </tr>
+                        <?php endforeach?>
                     </tbody>
                 </table>
             </div>
