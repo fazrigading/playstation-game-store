@@ -42,7 +42,7 @@
               <input type="text" id="name" name="name" placeholder="Name" value="<?= $product['name'] ?>">
 
               <label for="price">Price</label>
-              <input type="text" id="price" name="user" placeholder="Price" value="<?= $product['price'] ?>">
+              <input type="text" id="price" name="price" placeholder="Price" value="<?= $product['price'] ?>">
 
               <label for="category">Category</label>
               <input type="text" id="category" name="category" placeholder="Category" value="<?= $product['category'] ?>">

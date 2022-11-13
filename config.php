@@ -37,8 +37,8 @@ function login($data) {
     global $db;
     $result = mysqli_query($db, "SELECT * FROM users");
     
-        $username = $data["username"];
-        $password = $data["password"];
+        $username = mysqli_real_escape_string($db, $data["username"]); 
+        $password = mysqli_real_escape_string($db, $data["password"]);
         $result = mysqli_query($db, "SELECT * FROM users WHERE username = '$username'");
         if ( mysqli_num_rows($result) === 1 ){
             $rows = mysqli_fetch_assoc($result);
@@ -72,9 +72,9 @@ function register($data){
     global $db;
     // $photo = upload();
     // if (!$photo) return false;
-    $name = stripslashes($data["fullname"]);
-    $username = stripslashes($data["user"]);
-    $email = stripslashes($data["email"]);
+    $name = mysqli_real_escape_string($db, $data["fullname"]);
+    $username = mysqli_real_escape_string($db, $data["user"]);
+    $email = mysqli_real_escape_string($db, $data["email"]);
     $password = mysqli_real_escape_string($db, $data["pass"]);
     $confirm_password = mysqli_real_escape_string($db, $data["cpass"]);
     $result = mysqli_query($db, "SELECT username FROM users WHERE username = '$username'");
@@ -136,14 +136,14 @@ function updateUser($data){
     } else {
         $photo = upload();
     }
-    $id = htmlspecialchars($data["id"]);
-    $fullname = htmlspecialchars($data["fullname"]);
-    $address = htmlspecialchars($data["address"]);
-    $username = htmlspecialchars($data["user"]);
-    $email = htmlspecialchars($data["email"]);
-    $oldPassword = htmlspecialchars($data["oldPass"]);
-    $newPassword = htmlspecialchars($data["newPass"]);
-    $confirmNewPassword = htmlspecialchars($data["confirmNewPass"]);
+    $id = $data["id"];
+    $fullname = mysqli_escape_string($db, htmlspecialchars($data["fullname"]));
+    $address = mysqli_escape_string($db, htmlspecialchars($data["address"]));
+    $username = mysqli_escape_string($db, htmlspecialchars($data["user"]));
+    $email = mysqli_escape_string($db, htmlspecialchars($data["email"]));
+    $oldPassword = mysqli_escape_string($db, htmlspecialchars($data["oldPass"]));
+    $newPassword = mysqli_escape_string($db, htmlspecialchars($data["newPass"]));
+    $confirmNewPassword = mysqli_escape_string($db, htmlspecialchars($data["confirmNewPass"]));
     if ($newPassword == '') {
         $newPassword = $oldPassword;
     } else {
@@ -181,11 +181,12 @@ function addProduct($data){
     global $db;
     $photo = upload();
     if (!$photo) return false;
-    $name = stripslashes($data["name"]);
-    $price = $data["price"];
-    $stock = $data["stock"];
-    $descriptions = stripslashes($data["descriptions"]);
-    $category = stripslashes($data["category"]);
+    $name = mysqli_escape_string($db, $data["name"]);
+    $price = mysqli_escape_string($db, $data["price"]);
+    $stock = mysqli_escape_string($db, $data["stock"]);
+    $descriptions = mysqli_escape_string($db, $data["descriptions"]);
+    $category = mysqli_escape_string($db, $data["category"]);
+    
     $query = "INSERT INTO products (
         name, 
         price, 
@@ -204,6 +205,7 @@ function addProduct($data){
     mysqli_query($db, $query);
     return (mysqli_affected_rows($db));
 };
+
 function updateProduct($data){
     global $db;
     $samePhoto = htmlspecialchars($data["samePhoto"]);
@@ -212,12 +214,12 @@ function updateProduct($data){
     } else {
         $photo = upload();
     }
-    $id = stripslashes($data["id"]);
-    $name = stripslashes($data["name"]);
-    $price = $data["price"];
-    $stock = $data["stock"];
-    $descriptions = stripslashes($data["descriptions"]);
-    $category = stripslashes($data["category"]);
+    $id = mysqli_escape_string($db, $data["id"]);
+    $name = mysqli_escape_string($db, $data["name"]);
+    $price = mysqli_escape_string($db, $data["price"]);
+    $stock = mysqli_escape_string($db, $data["stock"]);
+    $descriptions = mysqli_escape_string($db, $data["descriptions"]);
+    $category = mysqli_escape_string($db, $data["category"]);
     $result = $db->query("SELECT * FROM products WHERE id = '$id'");
     if (mysqli_num_rows($result) === 1){
         try { 
