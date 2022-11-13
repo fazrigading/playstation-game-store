@@ -48,7 +48,7 @@
     <tr>
       <td><?= $i ?></td>
       <td><img src="../../resources/img/<?= $product["photo"]?>" alt="" width="100px"></td>
-      <td><?= $product['name'] ?></td>
+      <td><?= $product['product_name'] ?></td>
       <td>Rp.<?= number_format($product['price'],2, ',', '.') ?></td>
       <td><?= $product['stock'] ?></td>
       <td><?= substr($product['descriptions'], 0, 100) ?> ...</td>
