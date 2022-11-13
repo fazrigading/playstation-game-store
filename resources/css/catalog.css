@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;700;900&display=swap');
 .container{
   width: 100%;
   min-width: 100vh;
@@ -11,6 +11,7 @@
   overflow: hidden;
 }
 .navbar{
+  background: #e9eeff;
   width: 100%;
   padding-left: 8%;
   padding-right: 8%;
@@ -41,14 +42,13 @@ body{
   font-family: "Inter", serif;
   background-color: var(--bg-primary);
 }
-h1, h2, h3, h4, h5, h6, p .h1, .h2, .h3, .h4, .h5, .h6 {
+h1, h2, h3, h4, h5, h6, p, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: 'Inter', sans-serif;
-  /* font-weight: 500; */
-  /* font-style: normal; */
-  /* color: #000; */
   font-variant-ligatures: common-ligatures;
   text-rendering: optimizeLegibility;
+  color: var(--warna-h1)
 }
+
 nav{
   font-family: 'Poppins';
   flex: 1;
@@ -136,6 +136,7 @@ h1{
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+  margin-bottom: 50px;
 }
 .col-1{
   flex-basis: 40%;
@@ -171,26 +172,31 @@ h1{
   flex-basis: 30%;
   min-width: 250px;
   margin-bottom: 30px;
+  transition: transform 0.5s;
 }
 
 .col-3 img{
   width: 100%;
 }
 
+.col-3:hover{
+  transform: translateY(-5px);
+}
+
 .col-4{
   flex-basis: 25%;
   padding: 10px;
   min-width: 200px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   transition: transform 0.5s;
-}
-
-.col-4:hover{
-  transform: translateY(-5px);
 }
 
 .col-4 img{
   width: 100%;
+}
+
+.col-4:hover{
+  transform: translateY(-5px);
 }
 
 .col-4 h4{
@@ -204,14 +210,14 @@ h1{
 
 .title-category{
   text-align: center;
-  margin: 0 auto 80px;
+  margin: 0 auto 30px;
   position: relative;
   line-height: 60px;
 }
 
 .title-category::after{
   content: '';
-  background: #ff523b;
+  background: #1c317c;
   width: 80px;
   height: 5px;
   border-radius: 5px;
@@ -222,7 +228,7 @@ h1{
 }
 
 button{
-  width: 140px;
+  width: 170px;
   border: 0;
   padding: 12px 10px;
   outline: none;
@@ -233,15 +239,26 @@ button{
   transition: width 2.0s;
 }
 button img{
-  width: 30px;
+  width: 25px;
   display: none;
 }
 button:hover img{
   display: block;
 }
 button:hover{
-  width: 180px;
+  width: 220px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+}
+.color-box{
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: linear-gradient(#526bfb, #1c317c);
+  border-radius: 20px 0 0 20px;
+  height: 100%;
+  width: 80%;
+  z-index: -1;
+  transform: translateX(150px);
 }
