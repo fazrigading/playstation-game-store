@@ -55,14 +55,14 @@ $i = 1;
   <div class="container">
     <!-- FEATURED CONSOLES -->
     <div class="categories">
-      <h3 class="title-category">Featured Consoles</h3>
       <div class="small-container">
+        <h3 class="title-category">Featured Consoles</h3>
         <div class="row">
-          <?php foreach($consoles as $console):?>
-            <div class="col-3" onclick="redirectTo(<?= $console['id'] ?>)">
+          <?php foreach ($consoles as $console) : ?>
+            <div class="col-4" onclick="redirectTo(<?= $console['id'] ?>)">
               <img src="resources/img/<?= $console['photo'] ?>">
               <h4><?= substr($console['name'], 0, 46) ?></h4>
-              <p>Rp<?= number_format($console['price'],2, ',', '.') ?></p>
+              <p>Rp<?= number_format($console['price'], 2, ',', '.') ?></p>
             </div>
           <?php endforeach ?>
         </div>
@@ -74,11 +74,11 @@ $i = 1;
         <h3 class="title-category">Featured Games</h3>
         <div class="row">
 
-          <?php foreach($games as $game):?>
+          <?php foreach ($games as $game) : ?>
             <div class="col-4" onclick="redirectTo(<?= $game['id'] ?>)">
               <img src="resources/img/<?= $game['photo'] ?>">
               <h4><?= substr($game['name'], 0, 26) ?></h4>
-              <p>Rp<?= number_format($game['price'],2, ',', '.') ?></p>
+              <p>Rp<?= number_format($game['price'], 2, ',', '.') ?></p>
             </div>
           <?php endforeach ?>
           <button type="button" id="explore-games">Explore Games</button>
@@ -87,16 +87,16 @@ $i = 1;
         <!-- FEATURED ACCESSORIES -->
         <h3 class="title-category">Featured Accessories</h3>
         <div class="row">
-          <?php foreach($accessories as $accessory):?>
+          <?php foreach ($accessories as $accessory) : ?>
             <div class="col-4" onclick="redirectTo(<?= $accessory['id'] ?>)">
               <img src="resources/img/<?= $accessory['photo'] ?>">
               <h4><?= substr($accessory['name'], 0, 26) ?></h4>
-              <p>Rp<?= number_format($accessory['price'],2, ',', '.') ?></p>
+              <p>Rp<?= number_format($accessory['price'], 2, ',', '.') ?></p>
             </div>
           <?php endforeach ?>
           <button type="button" id="explore-accs">Explore Accessories</button>
         </div>
-        
+
 
       </div>
     </div>
@@ -112,7 +112,7 @@ $i = 1;
       </ul>
     </div>
   </footer>
-  
+
   <script src="resources/js/catalog.js"></script>
   <script>
     const redirectTo = (id) => {
