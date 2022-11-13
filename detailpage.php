@@ -53,8 +53,7 @@ if (isset($_POST['btnBuy'])) {
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="resources/css/detailpage.css?v=<?php echo time(); ?>">
-  
-  <link rel="stylesheet" href="resources/css/catalog.css">
+  <link rel="stylesheet" href="resources/css/catalog.css?v=<?php echo time(); ?>">
   <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
   <title><?= $product["category"] ?></title>
 </head>
@@ -122,7 +121,7 @@ if (isset($_POST['btnBuy'])) {
         </span>
         <br><br>
         <ul>
-          <li>Stock: (<?= $product["stock"] ?>)</li>
+          <li>Stock: <?= $product["stock"] ?></li>
           <li><?= $product["descriptions"] ?></li>
         </ul>
       </div>
@@ -142,6 +141,17 @@ if (isset($_POST['btnBuy'])) {
     </div>
   </main>
   <script src="resources/js/detailpage.js"></script>
+
+  <footer>
+    <div class="footer-logo">Copyright © Fazri Gading 2022</div>
+    <div class="footer-list">
+      <ul>
+        <li>2009106031</li>
+        <li>Informatika A 20</li>
+        <li>Machine Learning Developer</li>
+      </ul>
+    </div>
+  </footer>
 
 </body>
 
