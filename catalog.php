@@ -55,7 +55,7 @@ $i = 1;
   <div class="container">
     <!-- FEATURED CONSOLES -->
     <div class="categories">
-      <h3 class="title-category">Featured Consoles</h3>
+      <h3 class="title-category" id="featured-consoles">Featured Consoles</h3>
       <div class="small-container">
         <div class="row">
           <?php foreach($consoles as $console):?>
@@ -71,11 +71,11 @@ $i = 1;
       <!-- FEATURED PRODUCTS -->
       <div class="small-container">
         <!-- FEATURED GAMES -->
-        <h3 class="title-category">Featured Games</h3>
+        <h3 class="title-category" id="featured-games">Featured Games</h3>
         <div class="row">
 
           <?php foreach($games as $game):?>
-            <div class="col-4" onclick="redirectTo(<?= $game['id'] ?>)">
+            <div class="col-4" role="button" onclick="redirectTo(<?= $game['id'] ?>)">
               <img src="resources/img/<?= $game['photo'] ?>">
               <h4><?= substr($game['name'], 0, 26) ?></h4>
               <p>Rp<?= number_format($game['price'],2, ',', '.') ?></p>
@@ -85,10 +85,10 @@ $i = 1;
         </div>
 
         <!-- FEATURED ACCESSORIES -->
-        <h3 class="title-category">Featured Accessories</h3>
+        <h3 class="title-category" id="featured-accesories">Featured Accessories</h3>
         <div class="row">
           <?php foreach($accessories as $accessory):?>
-            <div class="col-4" onclick="redirectTo(<?= $accessory['id'] ?>)">
+            <div class="col-4" role="button" onclick="redirectTo(<?= $accessory['id'] ?>)">
               <img src="resources/img/<?= $accessory['photo'] ?>">
               <h4><?= substr($accessory['name'], 0, 26) ?></h4>
               <p>Rp<?= number_format($accessory['price'],2, ',', '.') ?></p>
