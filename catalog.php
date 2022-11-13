@@ -4,7 +4,9 @@ require 'config.php';
 
 $consoles = query("SELECT * FROM products WHERE category = 'Console'");
 $games = query("SELECT * FROM products WHERE category = 'Games'");
+$games = array_slice($games, 0, 8);
 $accessories = query("SELECT * FROM products WHERE category = 'Accessories'");
+$accessories = array_slice($accessories, 0, 4);
 $i = 1;
 
 ?>
@@ -81,7 +83,7 @@ $i = 1;
               <p>Rp<?= number_format($game['price'],2, ',', '.') ?></p>
             </div>
           <?php endforeach ?>
-          <button type="button" id="explore-games">Explore Games</button>
+          <a href="games.php"><button type="button" id="explore-games">Explore Games</button></a>
         </div>
 
         <!-- FEATURED ACCESSORIES -->
@@ -94,7 +96,7 @@ $i = 1;
               <p>Rp<?= number_format($accessory['price'],2, ',', '.') ?></p>
             </div>
           <?php endforeach ?>
-          <button type="button" id="explore-accs">Explore Accessories</button>
+          <a href="accessories.php"><button  id="explore-accs">Explore Accessories</button></a>
         </div>
         
 

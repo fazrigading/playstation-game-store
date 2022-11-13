@@ -14,7 +14,7 @@ Bagian ini menunjukkan hasil perkembangan pengerjaan proyek dengan beberapa emoj
 > 15/18 = 83% of 100%
 > 
 > System:
-> 17/23 = 73% of 100%
+> 20/23 = 83% of 100%
 
 ## Keterangan:
 - 🟡 Design Not Started
@@ -35,8 +35,8 @@ Bagian ini menunjukkan hasil perkembangan pengerjaan proyek dengan beberapa emoj
 - 🟢[Alex] 🟩[Alex] - About Us
 - 🟢[Gading] 🟩[Risky] - Catalog
 - 🔵[Gading] 🟦[Risky] - Catalog: Console
-- 🟢[Gading] 🟦[Risky] - Catalog: Game 
-- 🟢[Gading] 🟦[Risky] - Catalog: Accessories 
+- 🟢[Gading] 🟩[Risky] - Catalog: Game 
+- 🟢[Gading] 🟩[Risky] - Catalog: Accessories 
 - 🟢[Alex]   🟩[Risky] - Detail Page 
 
 ## Auth:

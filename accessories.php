@@ -1,7 +1,12 @@
 <?php
 session_start();
 require 'config.php';
+$accessories = query("SELECT * FROM products WHERE category = 'Accessories'");
+$accessories = array_slice($accessories, 0, 4);
+$i = 1;
+
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -61,27 +66,15 @@ require 'config.php';
         </div>
 
         <div class="row">
-          <div class="col-4">
-            <img src="resources/img/IMG_11132022_093808.jpg">
-            <h4>PlayStation 5 DualSense Wireless Controller</h4>
-            <p>Rp729.000</p>
-          </div>
-          <div class="col-4">
-            <img src="resources/img/IMG_11132022_093815.jpg">
-            <h4>PlayStation PULSE 3D Wireless Headset - Midnight Black</h4>
-            <p>Rp1.699.000</p>
-          </div>
-          <div class="col-4">
-          <img src="resources/img/IMG_11132022_093824.jpg">
-            <h4>PlayStation PULSE 3D Wireless Headset - Midnight Black</h4>
-            <p>Rp1.729.000</p>
-          </div>
-          <div class="col-4">
-            <img src="resources/img/IMG_11132022_094804.jpg">
-            <h4>Dualshock 4 Wireless Controller - Glacier White</h4>
-            <p>Rp1.029.000</p>
-          </div>
+          <?php foreach($accessories as $accessory):?>
+            <div class="col-4" role="button" onclick="redirectTo(<?= $accessory['id'] ?>)">
+              <img src="resources/img/<?= $accessory['photo'] ?>">
+              <h4><?= substr($accessory['name'], 0, 26) ?></h4>
+              <p>Rp<?= number_format($accessory['price'],2, ',', '.') ?></p>
+            </div>
+          <?php endforeach ?>
         </div>
+        
       </div>
     </div>
   </div>
@@ -98,6 +91,11 @@ require 'config.php';
   </footer>
 
   <script src="resources/js/catalog.js"></script>
+  <script>
+    const redirectTo = (id) => {
+      document.location.href = 'detailpage.php?id=' + id;
+    };
+  </script>
 </body>
 
 </html>
