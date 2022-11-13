@@ -1,6 +1,12 @@
 <?php
 session_start();
 require 'config.php';
+
+$consoles = query("SELECT * FROM products WHERE category = 'Console'");
+$games = query("SELECT * FROM products WHERE category = 'Games'");
+$accessories = query("SELECT * FROM products WHERE category = 'Accessories'");
+$i = 1;
+
 ?>
 
 <!DOCTYPE html>
@@ -51,14 +57,13 @@ require 'config.php';
       <h3 class="title-category">Featured Consoles</h3>
       <div class="small-container">
         <div class="row">
-          <div class="col-3">
-            <img src="resources/img/ps5-small.png">
-            <h2>Buy PlayStation 5</h2>
-          </div>
-          <div class="col-3">
-            <img src="resources/img/ps4-small.png">
-            <h2>Buy PlayStation 4</h2>
-          </div>
+          <?php foreach($consoles as $console):?>
+            <div class="col-3" onclick="redirectTo(<?= $console['id'] ?>)">
+              <img src="resources/img/<?= $console['photo'] ?>">
+              <h4><?= substr($console['name'], 0, 46) ?></h4>
+              <p>Rp<?= number_format($console['price'],2, ',', '.') ?></p>
+            </div>
+          <?php endforeach ?>
         </div>
       </div>
 
@@ -67,52 +72,27 @@ require 'config.php';
         <!-- FEATURED GAMES -->
         <h3 class="title-category">Featured Games</h3>
         <div class="row">
-          <div class="col-4">
-            <img src="resources/img/gowr-ps5.jpg">
-            <h4>(PS5) God of War: Ragnarok</h4>
-            <p>Rp1.029.000</p>
-          </div>
-          <div class="col-4">
-            <img src="resources/img/sackboy-ps5.jpg">
-            <h4>(PS5) Sackboy: A Big Adventure</h4>
-            <p>Rp879.000</p>
-          </div>
-          <div class="col-4">
-            <img src="resources/img/miles-ps5.jpg">
-            <h4>(PS5) Marvel's Spider-Man: Miles Morales</h4>
-            <p>Rp729.000</p>
-          </div>
-          <div class="col-4">
-            <img src="resources/img/demon-ps5.jpg">
-            <h4>(PS5) Demon's Souls</h4>
-            <p>Rp1.029.000</p>
-          </div>
+
+          <?php foreach($games as $game):?>
+            <div class="col-4" onclick="redirectTo(<?= $game['id'] ?>)">
+              <img src="resources/img/<?= $game['photo'] ?>">
+              <h4><?= substr($game['name'], 0, 26) ?></h4>
+              <p>Rp<?= number_format($game['price'],2, ',', '.') ?></p>
+            </div>
+          <?php endforeach ?>
           <button type="button" id="explore-games">Explore Games</button>
         </div>
 
         <!-- FEATURED ACCESSORIES -->
         <h3 class="title-category">Featured Accessories</h3>
         <div class="row">
-          <div class="col-4">
-            <img src="resources/img/ps5controller.jpg">
-            <h4>DualSense Wireless Controller</h4>
-            <p>Rp1.269.000</p>
-          </div>
-          <div class="col-4">
-            <img src="resources/img/pulse-white.jpg">
-            <h4>PlayStation PULSE 3D Wireless Headset - White</h4>
-            <p>Rp1.729.000</p>
-          </div>
-          <div class="col-4">
-            <img src="resources/img/pulse-black.jpg">
-            <h4>PlayStation PULSE 3D Wireless Headset - Black</h4>
-            <p>Rp1.729.000</p>
-          </div>
-          <div class="col-4">
-            <img src="resources/img/chargingdock.jpg">
-            <h4>Playstation DualSense Charging Station</h4>
-            <p>Rp449.000</p>
-          </div>
+          <?php foreach($accessories as $accessory):?>
+            <div class="col-4" onclick="redirectTo(<?= $accessory['id'] ?>)">
+              <img src="resources/img/<?= $accessory['photo'] ?>">
+              <h4><?= substr($accessory['name'], 0, 26) ?></h4>
+              <p>Rp<?= number_format($accessory['price'],2, ',', '.') ?></p>
+            </div>
+          <?php endforeach ?>
           <button type="button" id="explore-accs">Explore Accessories</button>
         </div>
         
@@ -133,6 +113,11 @@ require 'config.php';
   </footer>
   
   <script src="resources/js/catalog.js"></script>
+  <script>
+    const redirectTo = (id) => {
+      document.location.href = 'detailpage.php?id=' + id;
+    };
+  </script>
 </body>
 
 </html>
