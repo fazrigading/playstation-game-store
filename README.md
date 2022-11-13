@@ -11,27 +11,29 @@ Kontributor proyek ini terdiri dari 1 programmer back-end dan 2 programmer front
 Bagian ini menunjukkan hasil perkembangan pengerjaan proyek dengan beberapa emoji yang melambangkan tingkat kelengkapan.
 
 > Design: 
-> 9/16 = 56.2% of 100%
+> 12/16 = 75% of 100%
 > 
 > System:
-> 9/20 = 45% of 100%
+> 11/17 = 65% of 100%
 
 ## Keterangan:
-- ❓ Dipertanyakan
+- ❓ Considerable
 - 🟡 UI Not Started
 - 🔵 UI On Progress
 - 🟢 UI Done
 - 🟨 System Not Started
 - 🟦 System On Progress
 - 🟩 System Done
-- (B) Back-End
-- (F) Front-End
+
+## Prequisites
+- 🟩[Gading] Database Completeness
+- 🟨[Gading] Clean redundant items from Post-tests
 
 ## Pre-Auth:
 - 🟢[Alex] 🟨[Risky] - About Us (Team Page) 
-- 🔵[Gading] 🟨[Risky] - Homepage
-  - 🔵 Featured Items (Bisa scroll) 
-  - 🔵 Tombol Explore Catalog tiap featured item 
+- 🟢[Gading] 🟨[Risky] - Homepage
+  - 🟢[Gading] Scroll Featured Catalog
+  - 🟢[Gading] Explore Catalog Buttons  
 - 🔵[Gading] 🟨[Risky] - Catalog: Console
 - 🔵[Gading] 🟨[Risky] - Catalog: Game 
 - 🔵[Gading] 🟨[Risky] - Catalog: Accessories 
@@ -55,7 +57,7 @@ Bagian ini menunjukkan hasil perkembangan pengerjaan proyek dengan beberapa emoj
 - 🔵[Alex] 🟦[Risky] - Edit Account Page (Personal Info & Address)
 
 ## Admin:
-- 🟡[-] 🟨[-] Dashboard (?) (Grafik Penjualan) ❓(Considerable) 
 - 🟢[Alex] 🟩[Risky] - User Panel (Kelola User) 
 - 🟢[Alex] 🟩[Risky] - Item Panel (CRUD Barang) 
+- 🟡[-] 🟨[-] Dashboard (?) (Grafik Penjualan) ❓(Considerable) 
 
