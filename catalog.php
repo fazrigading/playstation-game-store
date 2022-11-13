@@ -52,11 +52,11 @@ require 'config.php';
       <div class="small-container">
         <div class="row">
           <div class="col-3">
-            <img src="resources/img/ps5.jpg">
+            <img src="resources/img/ps5-small.png">
             <h2>Buy PlayStation 5</h2>
           </div>
           <div class="col-3">
-            <img src="resources/img/ps4.jpg">
+            <img src="resources/img/ps4-small.png">
             <h2>Buy PlayStation 4</h2>
           </div>
         </div>
@@ -87,7 +87,7 @@ require 'config.php';
             <h4>(PS5) Demon's Souls</h4>
             <p>Rp1.029.000</p>
           </div>
-          <button type="button" id="explore-games">Explore Games<img src="resources/assets/arrow.png"></button>
+          <button type="button" id="explore-games">Explore Games</button>
         </div>
 
         <!-- FEATURED ACCESSORIES -->
@@ -113,13 +113,25 @@ require 'config.php';
             <h4>Playstation DualSense Charging Station</h4>
             <p>Rp449.000</p>
           </div>
-          <button type="button" id="explore-accs">Explore Accessories<img src="resources/assets/arrow.png"></button>
+          <button type="button" id="explore-accs">Explore Accessories</button>
         </div>
         
 
       </div>
     </div>
   </div>
+
+  <footer>
+    <div class="footer-logo">Copyright © Fazri Gading 2022</div>
+    <div class="footer-list">
+      <ul>
+        <li>2009106031</li>
+        <li>Informatika A 20</li>
+        <li>Machine Learning Developer</li>
+      </ul>
+    </div>
+  </footer>
+  
   <script src="resources/js/catalog.js"></script>
 </body>
 

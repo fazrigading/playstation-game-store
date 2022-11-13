@@ -3,12 +3,34 @@
   padding: 0;
 }
 
+:root {
+  --bg-primary: #fff;
+  --bg-secondary: #fcfcfc;
+  --warna-h1: #000;
+  --offer-h1: #1734a0;
+  --text-offer: #000;
+  --btn-color1: #3f56da;
+  --btn-color2: #365ff0;
+}
+
+.dark-mode {
+  --bg-primary: #0f1734;
+  --bg-secondary: #0a1025;
+  --warna-h1: #fff;
+  --offer-h1: #fff;
+  --text-offer: #f7f7f7;
+  --btn-color1: #3f56da;
+  --btn-color2: #365ff0;
+}
+
+
 .container {
   width: 100%;
   min-width: 100vh;
   padding-left: 8%;
-  box-sizing: border-box;
+  box-sizing: border-box; 
   overflow: hidden;
+  background-color: var(--bg-primary);
 }
 
 .navbar {
@@ -26,38 +48,25 @@
   margin: 30px 0;
 }
 
-.menu-icon {
-  width: 25px;
-  cursor: pointer;
-  display: none;
-}
-
-:root {
-  --bg-primary: #fff;
-  --bg-offer1: #f1f1f1;
-  --warna-h1: #000;
-  --offer-h1: #1734a0;
-  --text-offer: #000;
-  --btn-color1: #3f56da;
-  --btn-color2: #365ff0;
-}
-
-.dark-mode {
-  --bg-primary: #0f1734;
-  --bg-offer1: #131e44;
-  --warna-h1: #fff;
-  --offer-h1: #fff;
-  --text-offer: #f7f7f7;
-  --btn-color1: #3f56da;
-  --btn-color2: #365ff0;
-}
-
 body {
   font-family: "Inter", serif;
-  background-color: var(--bg-primary);
+  background-color: var(--bg-secondary);
 }
 
-h1,h2,h3,h4,h5,h6,p,.h1,.h2,.h3,.h4,.h5,.h6, small{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+small {
   font-family: 'Inter', sans-serif;
   font-variant-ligatures: common-ligatures;
   text-rendering: optimizeLegibility;
@@ -140,10 +149,16 @@ input[type="checkbox"]:checked~.check:before {
 .row {
   display: flex;
   justify-content: space-between;
-  padding-right: -8%;
   align-items: center;
-  margin: 20px 0;
 }
+
+.row2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
 
 button {
   width: 140px;
@@ -157,15 +172,6 @@ button {
   transition: width 2.0s;
 }
 
-button img {
-  width: 30px;
-  display: none;
-}
-
-button:hover img {
-  display: block;
-}
-
 button:hover {
   width: 180px;
   display: flex;
@@ -173,23 +179,27 @@ button:hover {
   justify-content: space-evenly;
 }
 
-.small-container{
+.small-container {
   max-width: 1080px;
   margin: auto;
   padding-left: 25px;
   padding-right: 25px;
 }
 
-.offer{
-  background: var(--bg-offer1);
-  padding: 30px 0;
+.offer {
+  background: var(--bg-primary);
+  padding: 60px 0;
 }
 
-.offer-img{
+.offer-img {
   margin-right: 40px;
 }
 
-.col-offer h1{
+.offer-img2 {
+  margin-left: 40px;
+}
+
+.col-offer h1 {
   font-size: 64px;
   line-height: 74px;
   margin: 20px 0;
@@ -197,12 +207,12 @@ button:hover {
   color: var(--offer-h1);
 }
 
-.col-offer h4{
+.col-offer h4 {
   font-size: 24px;
   color: var(--text-offer);
 }
 
-.col-offer small{
+.col-offer small {
   color: var(--text-offer);
   margin-bottom: 10px;
 }
