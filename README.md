@@ -11,7 +11,7 @@ Kontributor proyek ini terdiri dari 1 programmer back-end dan 2 programmer front
 Bagian ini menunjukkan hasil perkembangan pengerjaan proyek dengan beberapa emoji yang melambangkan tingkat kelengkapan.
 
 > Design: 
-> 8/16 = 50% of 100%
+> 9/16 = 56.2% of 100%
 > 
 > System:
 > 9/20 = 45% of 100%
