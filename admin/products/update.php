@@ -15,7 +15,6 @@
     }
   }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,57 +24,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
   <title>Update Profile</title>
-  <link rel="stylesheet" href="../../resources/css/auth.css">
+  <link rel="stylesheet" href="../../resources/css/userpanel.css?v=<?php echo time(); ?>">
 </head>
 
 <body>
-  <div class="container">
-    <div class="forms-edit">
-      <div class="form">
-        <span class="title">Update Product</span>
-        <form action="#" method="post" enctype="multipart/form-data">
-          <div class="input-field-photo">
-            <table>
-              <td>
-                <img src="../../resources/img/<?= $product["photo"] ?>" alt="Your photo" width="100">
-              </td>
-              <td>
-                <input type="file" name="photo" placeholder="Add Picture...">
-                <input type="hidden" name="id" value="<?= $product['id'] ?>">
-                <input type="hidden" name="samePhoto" value="<?= $product["photo"] ?>"><br>
-                <input type="hidden" name="id" value="<?= $product['id'] ?>">
-              </td>
-            </table>
-          </div>
-          <div class="input-field">
-            <input type="text" id="name" name="name" placeholder="Name" value="<?= $product['name'] ?>" required>
-            <!-- <i class="uil uil-user"></i> -->
-          </div>
-          <div class="input-field">
-            <input type="text" id="price" name="price" placeholder="Price" value="<?= $product['price'] ?>" required>
-            <!-- <i class="uil uil-user"></i> -->
-          </div>
-          <div class="input-field">
-            <input type="text" id="stock" name="stock" placeholder="Stock" value="<?= $product['stock'] ?>" required>
-            <!-- <i class="uil uil-user"></i> -->
-          </div>
-          <div class="input-field">
-            <textarea type="text" id="descriptions" name="descriptions" placeholder="Descriptions" required> <?= $product['descriptions'] ?> </textarea>
-            <!-- <i class="uil uil-user"></i> -->
-          </div>
-          <div class="input-field">
-            <input type="text" id="category" name="category" placeholder="Category" value="<?= $product['category'] ?>" required>
-            <!-- <i class="uil uil-user"></i> -->
-          </div>
-          
-          <div class="input-field button">
-            <input type="submit" name="submitupdate" value="Update Product">
-          </div>
-        </form>
-      </div>
+  <div class="container-half">
+    <div class="edit">
+      <form method="POST" enctype="multipart/form-data">
+          <fieldset>
+            <legend>Masukkan Data</legend>
+              <input type="hidden" name="id" value="<?= $product['id'] ?>">
+              <input type="hidden" name="samePhoto" value="<?= $product["photo"] ?>"><br>
+              <input type="hidden" name="id" value="<?= $product['id'] ?>">
+              <img src="../../resources/img/<?= $product["photo"] ?>" alt="Your photo" width="100">
+              <input type="file" name="photo" placeholder="Add Picture...">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Name" value="<?= $product['name'] ?>">
+
+              <label for="price">Price</label>
+              <input type="text" id="price" name="user" placeholder="Price" value="<?= $product['price'] ?>">
+
+              <label for="category">Category</label>
+              <input type="text" id="category" name="category" placeholder="Category" value="<?= $product['category'] ?>">
+              
+              <label for="stock">Stock</label>
+              <input type="number" id="stock" name="stock" placeholder="Stock" value="<?= $product["stock"] ?>">
+              
+              <label for="descriptions">Descriptions</label>
+              <textarea rows="4"  id="descriptions" name="descriptions" placeholder="Descriptions"><?= $product['descriptions'] ?></textarea>
+          </fieldset>
+          <button type="submit" name="submitupdate" class="button-submit">Submit</button>
+      </form>
     </div>
-  </div>
-  <script src="login.js"></script>
-  
+  <script src="../../resources//js/login.js"></script>
 </body>
 </html>

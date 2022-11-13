@@ -11,7 +11,16 @@
     --warna-h1: rgb(15, 23, 52);
     --bg-border: rgba(28, 49, 124, 0.1);
 }
-
+.container-half {
+    position: relative;
+    top: 20%;
+    margin: auto;
+    max-width: 720px;
+}
+textarea {
+    resize: vertical;
+    min-height: 150px;
+}
 .sidebar {
     margin: 0;
     padding: 0;
@@ -104,7 +113,7 @@ table {
 }
 
 .tbl-content {
-    height: 300px;
+    height: 600px;
     overflow-x: auto;
     margin-top: 0px;
     border: 1px solid var(--warna-h1);
@@ -222,10 +231,6 @@ button:hover {
 }
 
 /* FORM */
-.edit {
-    display: none;
-}
-
 fieldset {
     margin-bottom: 30px;
     border: none;
@@ -246,6 +251,7 @@ form {
 
 input[type="text"],
 input[type="password"],
+input[type="number"],
 input[type="email"],
 input[type="file"],
 textarea,
