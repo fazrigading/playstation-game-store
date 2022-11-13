@@ -1,7 +1,7 @@
 <?php
 session_start();
 require 'config.php';
-$accessories = query("SELECT * FROM products WHERE category = 'Accessories'");
+$consoles = query("SELECT * FROM products WHERE category = 'Console'");
 $i = 1;
 
 ?>
@@ -14,7 +14,7 @@ $i = 1;
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Accessories Catalog</title>
+  <title>Console Catalog</title>
   <link rel="stylesheet" href="resources/css/catalog.css?v=<?php echo time(); ?>">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;700;900&display=swap" rel="stylesheet">
 </head>
@@ -54,7 +54,7 @@ $i = 1;
     <div class="categories">
       <div class="small-container">
         <div class="row row-2">
-          <h2>Accessories</h2>
+          <h2>Consoles</h2>
           <select name="Sort" id="">
             <option value="default">Default</option>
             <option value="name-asc">Name Ascending</option>
@@ -65,25 +65,15 @@ $i = 1;
         </div>
 
         <div class="row">
-          <?php foreach($accessories as $accessory):?>
-            <div class="col-4" role="button" onclick="redirectTo(<?= $accessory['id'] ?>)">
-              <img src="resources/img/<?= $accessory['photo'] ?>">
-              <h4><?= substr($accessory['name'], 0, 26) ?></h4>
-              <p>Rp<?= number_format($accessory['price'],2, ',', '.') ?></p>
+          <?php foreach($consoles as $console):?>
+            <div class="col-4" role="button" onclick="redirectTo(<?= $console['id'] ?>)">
+              <img src="resources/img/<?= $console['photo'] ?>">
+              <h4><?= substr($console['name'], 0, 26) ?></h4>
+              <p>Rp<?= number_format($console['price'],2, ',', '.') ?></p>
             </div>
           <?php endforeach ?>
         </div>
-
-        <div class="pagination">
-          <a href="#">&laquo;</a>
-          <a class="active" href="#">1</a>
-          <a href="#">2</a>
-          <a href="#">3</a>
-          <a href="#">4</a>
-          <a href="#">5</a>
-          <a href="#">6</a>
-          <a href="#">&raquo;</a>
-        </div>
+        
       </div>
     </div>
   </div>

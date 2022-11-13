@@ -1,6 +1,9 @@
 <?php
 session_start();
 require 'config.php';
+$games = query("SELECT * FROM products WHERE category = 'games'");
+$i = 1;
+
 ?>
 
 <!DOCTYPE html>
@@ -61,72 +64,13 @@ require 'config.php';
         </div>
 
         <div class="row">
-          <div class="col-4">
-            <img src="resources/img/gowr-ps5.jpg">
-            <h4>God of War: Ragnarok</h4>
-            <p>Rp1.029.000</p>
-          </div>
-          <div class="col-4">
-            <img src="resources/img/sackboy-ps5.jpg">
-            <h4>Sackboy: A Big Adventure</h4>
-            <p>Rp879.000</p>
-          </div>
-          <div class="col-4">
-            <img src="resources/img/miles-ps5.jpg">
-            <h4>Marvel's Spider-Man: Miles Morales</h4>
-            <p>Rp729.000</p>
-          </div>
-          <div class="col-4">
-            <img src="resources/img/demon-ps5.jpg">
-            <h4>Demon's Souls</h4>
-            <p>Rp1.029.000</p>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-4">
-            <img src="resources/img/IMG_11132022_104003.jpg">
-            <h4>Call of Duty: Modern Warfare II</h4>
-            <p>Rp1.029.000</p>
-          </div>
-          <div class="col-4">
-            <img src="resources/img/IMG_11132022_104100.jpg">
-            <h4>Gran Turismo 7</h4>
-            <p>Rp1.029.000</p>
-          </div>
-          <div class="col-4">
-            <img src="resources/img/IMG_11132022_104930.jpg">
-            <h4>One Piece Odyssey</h4>
-            <p>Rp1.029.000</p>
-          </div>
-          <div class="col-4">
-            <img src="resources/img/IMG_11132022_104847.jpg">
-            <h4>Resident Evil 4 (Pre-Order)</h4>
-            <p>Rp1.229.000</p>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-4">
-            <img src="resources/img/IMG_11132022_104332.jpg">
-            <h4>FIFA 23</h4>
-            <p>Rp999.000</p>
-          </div>
-          <div class="col-4">
-            <img src="resources/img/IMG_11132022_104520.jpg">
-            <h4>Dying Light 2 Stay Human</h4>
-            <p>Rp499.000</p>
-          </div>
-          <div class="col-4">
-            <img src="resources/img/IMG_11132022_105942.jpg">
-            <h4>Assassin's Creed: Valhalla</h4>
-            <p>Rp499.000</p>
-          </div>
-          <div class="col-4">
-            <img src="resources/img/IMG_11132022_105019.jpg">
-            <h4>Resident Evil: Village</h4>
-            <p>Rp499.000</p>
-          </div>
+          <?php foreach($games as $game):?>
+            <div class="col-4" role="button" onclick="redirectTo(<?= $game['id'] ?>)">
+              <img src="resources/img/<?= $game['photo'] ?>">
+              <h4><?= substr($game['name'], 0, 26) ?></h4>
+              <p>Rp<?= number_format($game['price'],2, ',', '.') ?></p>
+            </div>
+          <?php endforeach ?>
         </div>
 
         <div class="pagination">
@@ -155,6 +99,11 @@ require 'config.php';
   </footer>
 
   <script src="resources/js/catalog.js"></script>
+  <script>
+    const redirectTo = (id) => {
+      document.location.href = 'detailpage.php?id=' + id;
+    };
+  </script>
 </body>
 
 </html>
