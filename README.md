@@ -17,21 +17,23 @@ Bagian ini menunjukkan hasil perkembangan pengerjaan proyek dengan beberapa emoj
 > 9/20 = 45% of 100%
 
 ## Keterangan:
-- ❓ Dipertanyakan
+- ❓ Considerable
 - 🟡 UI Not Started
 - 🔵 UI On Progress
 - 🟢 UI Done
 - 🟨 System Not Started
 - 🟦 System On Progress
 - 🟩 System Done
-- (B) Back-End
-- (F) Front-End
+
+## Prequisites
+- 🟩[Gading] Database Completeness
+- 🟨[Gading] Clean redundant items from Post-tests
 
 ## Pre-Auth:
 - 🟢[Alex] 🟨[Risky] - About Us (Team Page) 
-- 🔵[Gading] 🟨[Risky] - Homepage
-  - 🔵 Featured Items (Bisa scroll) 
-  - 🔵 Tombol Explore Catalog tiap featured item 
+- 🟢[Gading] 🟨[Risky] - Homepage
+  - 🟢[Gading] Scroll Featured Catalog
+  - 🟢[Gading] Explore Catalog Buttons  
 - 🔵[Gading] 🟨[Risky] - Catalog: Console
 - 🔵[Gading] 🟨[Risky] - Catalog: Game 
 - 🔵[Gading] 🟨[Risky] - Catalog: Accessories 
