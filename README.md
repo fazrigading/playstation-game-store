@@ -51,8 +51,8 @@ Bagian ini menunjukkan hasil perkembangan pengerjaan proyek dengan beberapa emoj
 - 🟢[Alex]   🟩[Risky] History
 
 ## User:
-- 🔵[Gading] 🟦[Risky] - Profile Page (Display Info) 
-- 🔵[Gading] 🟦[Risky] - Edit Account Page (Personal Info & Address)
+- 🔵[Alex] 🟦[Risky] - Profile Page (Display Info) 
+- 🔵[Alex] 🟦[Risky] - Edit Account Page (Personal Info & Address)
 
 ## Admin:
 - 🟡[-] 🟨[-] Dashboard (?) (Grafik Penjualan) ❓(Considerable) 
