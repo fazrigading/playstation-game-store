@@ -14,7 +14,7 @@ Bagian ini menunjukkan hasil perkembangan pengerjaan proyek dengan beberapa emoj
 > 15/18 = 83% of 100%
 > 
 > System:
-> 16/22 = 78% of 100%
+> 17/23 = 73% of 100%
 
 ## Keterangan:
 - 🟡 Design Not Started
@@ -29,10 +29,10 @@ Bagian ini menunjukkan hasil perkembangan pengerjaan proyek dengan beberapa emoj
 - 🟩[Gading] Clean redundant items from Post-tests
 
 ## Pre-Auth:
-- 🟢[Alex]
 - 🟢[Gading] 🟩[Risky] - Homepage
   - 🟢[Gading] Scroll Featured Catalog
   - 🟢[Gading] Explore Catalog Buttons  
+- 🟢[Alex] 🟩[Alex] - About Us
 - 🟢[Gading] 🟩[Risky] - Catalog
 - 🔵[Gading] 🟦[Risky] - Catalog: Console
 - 🟢[Gading] 🟦[Risky] - Catalog: Game 
@@ -40,18 +40,18 @@ Bagian ini menunjukkan hasil perkembangan pengerjaan proyek dengan beberapa emoj
 - 🟢[Alex]   🟩[Risky] - Detail Page 
 
 ## Auth:
-- 🟢[Gading]   🟩[Risky] - Login
-- 🟢[Gading]   🟩[Risky] - Register
+- 🟢[Gading] 🟩[Risky] - Login
+- 🟢[Gading] 🟩[Risky] - Register
 - 🟩[Risky] Auth Cookies 
 - 🟩[Risky] Auth Session
 
 ## Post-Auth:
-- 🟢[Alex]   🟩[Risky] Cart
-  - 🟩[Risky] Remove
-- 🟢[Alex]   🟩[Risky] Payment
-  - 🟩[Risky] Checkout
-- 🟢[Alex]   🟩[Risky] History
-  - 🟩[Risky] Items
+- 🟢[Alex] 🟩[Risky] - Cart
+  - 🟩[Risky] - Remove
+- 🟢[Alex] 🟩[Risky] - Payment
+  - 🟩[Risky] - Checkout
+- 🟢[Alex] 🟩[Risky] - History
+  - 🟩[Risky] - Items
 
 ## User:
 - 🔵[Alex] 🟦[Risky] - Profile Page (Display Info) 
