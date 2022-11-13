@@ -11,23 +11,22 @@ Kontributor proyek ini terdiri dari 1 programmer back-end dan 2 programmer front
 Bagian ini menunjukkan hasil perkembangan pengerjaan proyek dengan beberapa emoji yang melambangkan tingkat kelengkapan.
 
 > Design: 
-> 13/18 = 75% of 100%
+> 15/18 = 83% of 100%
 > 
 > System:
-> 15/21 = 75% of 100%
+> 16/22 = 78% of 100%
 
 ## Keterangan:
-- ❓ Considerable
-- 🟡 UI Not Started
-- 🔵 UI On Progress
-- 🟢 UI Done
+- 🟡 Design Not Started
+- 🔵 Design On Progress
+- 🟢 Design Done
 - 🟨 System Not Started
 - 🟦 System On Progress
 - 🟩 System Done
 
 ## Prequisites
 - 🟩[Gading] Database Completeness
-- 🟨[Gading] Clean redundant items from Post-tests
+- 🟩[Gading] Clean redundant items from Post-tests
 
 ## Pre-Auth:
 - 🟢[Alex]
@@ -36,8 +35,8 @@ Bagian ini menunjukkan hasil perkembangan pengerjaan proyek dengan beberapa emoj
   - 🟢[Gading] Explore Catalog Buttons  
 - 🟢[Gading] 🟩[Risky] - Catalog
 - 🔵[Gading] 🟦[Risky] - Catalog: Console
-- 🔵[Gading] 🟦[Risky] - Catalog: Game 
-- 🔵[Gading] 🟦[Risky] - Catalog: Accessories 
+- 🟢[Gading] 🟦[Risky] - Catalog: Game 
+- 🟢[Gading] 🟦[Risky] - Catalog: Accessories 
 - 🟢[Alex]   🟩[Risky] - Detail Page 
 
 ## Auth:
@@ -52,6 +51,7 @@ Bagian ini menunjukkan hasil perkembangan pengerjaan proyek dengan beberapa emoj
 - 🟢[Alex]   🟩[Risky] Payment
   - 🟩[Risky] Checkout
 - 🟢[Alex]   🟩[Risky] History
+  - 🟩[Risky] Items
 
 ## User:
 - 🔵[Alex] 🟦[Risky] - Profile Page (Display Info) 
@@ -60,5 +60,3 @@ Bagian ini menunjukkan hasil perkembangan pengerjaan proyek dengan beberapa emoj
 ## Admin:
 - 🟢[Alex] 🟩[Risky] - User Panel (Kelola User) 
 - 🟢[Alex] 🟩[Risky] - Item Panel (CRUD Barang) 
-<!-- - 🟡[-] 🟨[-] Dashboard (?) (Grafik Penjualan) ❓(Considerable)  -->
-
