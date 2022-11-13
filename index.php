@@ -18,7 +18,7 @@ require 'config.php';
 <body>
   <!-- NAVBAR -->
   <div class="navbar">
-    <img src="./resources/assets/logo.png" class="logo">
+    <img src="./resources/assets/logo.png" class="logo" title="Playstation Game Store">
     <nav>
       <ul id="menuList">
         <li><a href="index.php">Home</a></li>
@@ -38,7 +38,7 @@ require 'config.php';
         ?>
         <li>
           <label>
-            <input type="checkbox" class="checkbox" id="modegelap">
+            <input type="checkbox" class="checkbox" id="modegelap" title="Dark Mode">
             <span class="check"></span>
           </label>
         </li>
@@ -58,7 +58,24 @@ require 'config.php';
           <h1>PlayStation 5</h1>
           <small>Experience lightning-fast loading with an ultra-high speed SSD, deeper immersion with support for haptic feedback, adaptive triggers and 3D Audio, and an all-new generation of incredible PlayStation games.</small>
           <br><br>
-          <button type="button" id="buynow">Order Now<img src="resources/assets/arrow.png"></button>
+          <button type="button" id="buynow">Order Now<img src="resources/assets/arrow.png" title="Arrow"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="offer">
+    <div class="small-container">
+      <div class="row">
+        <div class="col-offer">
+          <h4>Greatness Awaits</h4>
+          <h1>PlayStation 4</h1> 
+          <small>The PS4 console, delivering awesome gaming power, incredible entertainment and vibrant HDR technology. Store your games, apps, screenshots and videos with up to 1TB storage inside the PS4 console - slimmer and lighter and available in Jet Black and more colours.</small>
+          <br><br>
+          <button type="button" id="buynow">Order Now<img src="resources/assets/arrow.png" title="Arrow"></button>
+        </div>
+        <div class="col-offer">
+          <img src="resources/img/ps4.png" alt="Playstation 5 Console" class="offer-img">
         </div>
       </div>
     </div>
@@ -74,7 +91,7 @@ require 'config.php';
       </ul>
     </div>
   </footer>
-  <script src="resources/js/script-index.js"></script>
+  <script src="resources/js/index.js"></script>
 </body>
 
 </html>

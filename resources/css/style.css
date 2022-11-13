@@ -34,8 +34,7 @@
 
 :root {
   --bg-primary: #fff;
-  --bg-offer1: #f7f8ff;
-  --bg-offer2: #e9eeff;
+  --bg-offer1: #f1f1f1;
   --warna-h1: #000;
   --offer-h1: #1734a0;
   --text-offer: #000;
@@ -46,7 +45,6 @@
 .dark-mode {
   --bg-primary: #0f1734;
   --bg-offer1: #131e44;
-  --bg-offer2: #0f1734;
   --warna-h1: #fff;
   --offer-h1: #fff;
   --text-offer: #f7f7f7;
@@ -144,7 +142,7 @@ input[type="checkbox"]:checked~.check:before {
   justify-content: space-between;
   padding-right: -8%;
   align-items: center;
-  margin: 100px 0;
+  margin: 20px 0;
 }
 
 button {
@@ -183,7 +181,7 @@ button:hover {
 }
 
 .offer{
-  background: radial-gradient(var(--bg-offer1), var(--bg-offer2));
+  background: var(--bg-offer1);
   padding: 30px 0;
 }
 
