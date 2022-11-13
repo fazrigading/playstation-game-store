@@ -12,9 +12,11 @@ require 'config.php';
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Playstation Game Store</title>
   <link rel="stylesheet" href="resources/css/style.css?v=<?php echo time(); ?>">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;700;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
+  <!-- NAVBAR -->
   <div class="navbar">
     <img src="./resources/assets/logo.png" class="logo">
     <nav>
@@ -44,53 +46,21 @@ require 'config.php';
     </nav>
   </div>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-1">
-        <h2>PS4 V2<br>Dualshock 4</h2>
-        <h3>Stick PS Tanpa Kabel untuk Playstation 4</h3>
-        <p>(Kompatibel/Original)</p>
-        <h4>Rp500.000</h4>
-        <button type="button" id="buynow">Beli Sekarang<img src="resources/assets/arrow.png"></button>
-      </div>
-      <div class="col-2">
-        <img src="resources/assets/controller.png" class="controller">
-        <div class="color-box"></div>
-        <div class="add-btn" id="addCart">
-          <img src="resources/assets/add.png">
-          <p><small>Add to Cart</small></p>
+  <!-- OFFERS -->
+  <div class="offer">
+    <div class="small-container">
+      <div class="row">
+        <div class="col-offer">
+          <img src="resources/img/ps5-featured-small.png" alt="Playstation 5 Console" class="offer-img">
+        </div>
+        <div class="col-offer">
+          <h4>Play Has No Limits</h4>
+          <h1>PlayStation 5</h1>
+          <small>Experience lightning-fast loading with an ultra-high speed SSD, deeper immersion with support for haptic feedback, adaptive triggers and 3D Audio, and an all-new generation of incredible PlayStation games.</small>
+          <br><br>
+          <button type="button" id="buynow">Order Now<img src="resources/assets/arrow.png"></button>
         </div>
       </div>
-    </div>
-
-    <div class="row">
-      <div class="col-1">
-        <h2>PS4 V2<br>Dualshock 4</h2>
-        <h3>Stick PS Tanpa Kabel untuk Playstation 4</h3>
-        <p>(Kompatibel/Original)</p>
-        <h4>Rp500.000</h4>
-        <button type="button" id="buynow">Beli Sekarang<img src="resources/assets/arrow.png"></button>
-      </div>
-      <div class="col-2">
-        <img src="resources/assets/controller.png" class="controller">
-        <div class="color-box"></div>
-        <div class="add-btn" id="addCart">
-          <img src="resources/assets/add.png">
-          <p><small>Add to Cart</small></p>
-        </div>
-      </div>
-    </div>
-
-    <div class="social-links">
-      <a href="https://www.facebook.com/fazrigading">
-        <img src="resources/assets/fb.png">
-      </a>
-      <a href="https://twitter.com/fazrigading">
-        <img src="resources/assets/tw.png">
-      </a>
-      <a href="https://instagram.com/fazrigading">
-        <img src="resources/assets/ig.png">
-      </a>
     </div>
   </div>
   

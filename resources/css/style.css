@@ -3,8 +3,6 @@
   padding: 0;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;700;900&display=swap');
-
 .container {
   width: 100%;
   min-width: 100vh;
@@ -36,12 +34,24 @@
 
 :root {
   --bg-primary: #fff;
+  --bg-offer1: #f7f8ff;
+  --bg-offer2: #e9eeff;
   --warna-h1: #000;
+  --offer-h1: #1734a0;
+  --text-offer: #000;
+  --btn-color1: #3f56da;
+  --btn-color2: #365ff0;
 }
 
 .dark-mode {
   --bg-primary: #0f1734;
+  --bg-offer1: #131e44;
+  --bg-offer2: #0f1734;
   --warna-h1: #fff;
+  --offer-h1: #fff;
+  --text-offer: #f7f7f7;
+  --btn-color1: #3f56da;
+  --btn-color2: #365ff0;
 }
 
 body {
@@ -49,7 +59,7 @@ body {
   background-color: var(--bg-primary);
 }
 
-h1,h2,h3,h4,h5,h6,p,.h1,.h2,.h3,.h4,.h5,.h6 {
+h1,h2,h3,h4,h5,h6,p,.h1,.h2,.h3,.h4,.h5,.h6, small{
   font-family: 'Inter', sans-serif;
   font-variant-ligatures: common-ligatures;
   text-rendering: optimizeLegibility;
@@ -72,7 +82,6 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   color: var(--warna-h1);
-  ;
   font-size: 14px;
   vertical-align: text-top;
 }
@@ -130,13 +139,6 @@ input[type="checkbox"]:checked~.check:before {
   width: 40px;
 }
 
-h1 {
-  padding-left: 24px;
-  font-size: 24px;
-  font-weight: 700;
-  color: var(--warna-h1);
-}
-
 .row {
   display: flex;
   justify-content: space-between;
@@ -145,46 +147,13 @@ h1 {
   margin: 100px 0;
 }
 
-.col-1 {
-  flex-basis: 40%;
-  position: relative;
-  margin-left: 50px;
-  color: var(--warna-h1);
-}
-
-.col-1 h2 {
-  font-size: 54px;
-  font-weight: 700;
-
-}
-
-.col-1 h3 {
-  font-size: 30px;
-  color: #707070;
-  font-weight: 300;
-  margin: 20px 0 10px;
-  color: var(--warna-h1);
-}
-
-.col-1 p {
-  font-size: 16px;
-  color: #b7b7b7;
-  font-weight: 200;
-  color: var(--warna-h1);
-}
-
-.col-1 h4 {
-  margin: 30px 0;
-  font-size: 20px;
-}
-
 button {
   width: 140px;
   border: 0;
   padding: 12px 10px;
   outline: none;
   color: #fff;
-  background: linear-gradient(to right, #526bfb, #1c317c);
+  background: linear-gradient(to right, var(--btn-color1), var(--btn-color2));
   border-radius: 6px;
   cursor: pointer;
   transition: width 2.0s;
@@ -206,60 +175,38 @@ button:hover {
   justify-content: space-evenly;
 }
 
-.col-1::after {
-  content: '';
-  width: 10px;
-  height: 57%;
-  background: linear-gradient(#526bfb, #1c317c);
-  position: absolute;
-  left: -40px;
-  top: 8px;
+.small-container{
+  max-width: 1080px;
+  margin: auto;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
-.col-2 {
-  position: relative;
-  right: 60px;
-  flex-basis: 60%;
-  display: flex;
-  align-items: center;
+.offer{
+  background: radial-gradient(var(--bg-offer1), var(--bg-offer2));
+  padding: 30px 0;
 }
 
-.col-2 .controller {
-  width: 90%;
+.offer-img{
+  margin-right: 40px;
 }
 
-.col-3 {
-  position: relative;
-  flex-basis: 50%;
-  display: flex;
-  align-items: center;
+.col-offer h1{
+  font-size: 64px;
+  line-height: 74px;
+  margin: 20px 0;
+  font-weight: 700;
+  color: var(--offer-h1);
 }
 
-.col-3 .gambar {
-  width: 90%;
+.col-offer h4{
+  font-size: 24px;
+  color: var(--text-offer);
 }
 
-.color-box {
-  position: absolute;
-  right: 0;
-  top: 0;
-  background: linear-gradient(#526bfb, #1c317c);
-  border-radius: 20px 0 0 20px;
-  height: 100%;
-  width: 80%;
-  z-index: -1;
-  transform: translateX(150px);
-}
-
-.add-btn img {
-  width: 35px;
-  margin-bottom: 5px;
-}
-
-.add-btn {
-  text-align: center;
-  color: #fff;
-  cursor: pointer;
+.col-offer small{
+  color: var(--text-offer);
+  margin-bottom: 10px;
 }
 
 .social-links {
