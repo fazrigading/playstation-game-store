@@ -5,7 +5,7 @@ require 'config.php';
 $consoles = query("SELECT * FROM products WHERE category = 'Console'");
 $consoles = array_slice($consoles, 0, 3);
 $games = query("SELECT * FROM products WHERE category = 'Games'");
-$games = array_slice($games, 0, 8);
+$games = array_slice($games, 0, 4);
 $accessories = query("SELECT * FROM products WHERE category = 'Accessories'");
 $accessories = array_slice($accessories, 0, 4);
 $i = 1;
