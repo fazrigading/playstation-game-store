@@ -93,6 +93,7 @@ require 'config.php';
       </a>
     </div>
   </div>
+  
   <footer>
     <div class="footer-logo">Copyright © Fazri Gading 2022</div>
     <div class="footer-list">
