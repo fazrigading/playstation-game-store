@@ -18,7 +18,7 @@ require 'config.php';
 
 <body>
   <div class="navbar">
-    <img src="./resources/assets/logo.png" class="logo">
+    <a href="index.php"><img src="./resources/assets/logo.png" class="logo"></a>
     <nav>
       <ul id="menuList">
         <li><a href="index.php">Home</a></li>
@@ -55,8 +55,7 @@ require 'config.php';
           <img src="resources/img/10-29-2022 01-36-37 am.jpg" alt="" height="100px">
           <div class="names">Fazri Gading</div>
           <div class="design">Front End</div>
-          <div class="about">lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepteur sint occaecat
-            cupiditatnon proident,</div>
+          <div class="about">Repository Owner. Interested in C++, Design UI/UX, Computer Vision & Deep Learning</div>
 
           <div class="social-links">
             <a href="https://www.linkedin.com/in/fazrigading/" target="_blank"><i class="fa fa-linkedin"></i></a>
@@ -74,27 +73,23 @@ require 'config.php';
             non proident,</div>
 
           <div class="social-links">
-            <a href="https://www.linkedin.com/in/alexander-januar-1a29a9219/" target="_blank"><i
-                class="fa fa-linkedin"></i></a>
+            <a href="https://www.linkedin.com/in/alexander-januar-1a29a9219/" target="_blank"><i class="fa fa-linkedin"></i></a>
             <a href="https://www.instagram.com/allx_jnr/" target="_blank"><i class="fa fa-instagram"></i></a>
-            <a href="https://twitter.com/Alex73337519?t=cXJ16rHJYBR9X_W_tnIA-Q&s=08" target="_blank"><i
-                class="fa fa-twitter"></i></a>
+            <a href="https://twitter.com/Alex73337519" target="_blank"><i class="fa fa-twitter"></i></a>
             <a href="https://github.com/alexanderjanuar" target="_blank"><i class="fa fa-github"></i></a>
           </div>
         </div>
 
         <div class="teams">
           <img src="resources/img/FotoRiski.jfif" alt="" height="100px">
-          <div class="names">Rizki Kurniawan</div>
+          <div class="names">Risky Kurniawan</div>
           <div class="design">Back End</div>
           <div class="about">lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepteur sint occaecat cupiditat
             non proident,</div>
           <div class="social-links">
-            <a href="https://www.linkedin.com/in/riskykrnawan/" target="_blank"><i
-                class="fa fa-linkedin"></i></a>
+            <a href="https://www.linkedin.com/in/riskykrnawan/" target="_blank"><i class="fa fa-linkedin"></i></a>
             <a href="https://www.instagram.com/_riskykrnawan/" target="_blank"><i class="fa fa-instagram"></i></a>
-            <a href="https://twitter.com/riskykrnawan" target="_blank"><i
-                class="fa fa-twitter"></i></a>
+            <a href="https://twitter.com/riskykrnawan" target="_blank"><i class="fa fa-twitter"></i></a>
             <a href="https://github.com/riskykrnawan" target="_blank"><i class="fa fa-github"></i></a>
           </div>
         </div>
@@ -102,7 +97,7 @@ require 'config.php';
     </div>
   </div>
 
-  <script src="resources/js/script-index.js"></script>
+  <script src="resources/js/index.js"></script>
 </body>
 
 </html>
