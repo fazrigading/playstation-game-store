@@ -48,7 +48,7 @@ Bagian ini menunjukkan hasil perkembangan pengerjaan proyek dengan beberapa emoj
   - 🟩[Risky] Remove
 - 🟢[Alex]   🟩[Risky] Payment
   - 🟩[Risky] Checkout
-- 🟢[Alex]   🟦[Risky] History
+- 🟢[Alex]   🟩[Risky] History
 
 ## User:
 - 🔵[Gading] 🟦[Risky] - Profile Page (Display Info) 
