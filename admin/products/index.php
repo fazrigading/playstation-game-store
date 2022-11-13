@@ -29,6 +29,7 @@
         <a class='main'>
             <h2>Panel Admin</h2>
         </a>
+        <a href="../../index.php">Home</a>
         <a href="../users/">User Panel</a>
         <a class="active">Product Panel</a>
         <a href="../../logout.php">Logout</a>
