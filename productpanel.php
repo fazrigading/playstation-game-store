@@ -57,8 +57,9 @@
                             <td>3</td>
                             <td>Anjas Gurinjay Terkinjai kinjai</td>
                             <td>Console</td>
-                            <td><button class="button-delete">Hapus</button>
-                                <button class="button-update">Ubah</button>
+                            <td>
+                              <button class="button-update">Ubah</button>
+                              <button class="button-delete">Hapus</button>
                             </td>
                         </tr>
                     </tbody>
