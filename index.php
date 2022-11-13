@@ -62,6 +62,25 @@ require 'config.php';
         </div>
       </div>
     </div>
+
+    <div class="row">
+      <div class="col-1">
+        <h2>PS4 V2<br>Dualshock 4</h2>
+        <h3>Stick PS Tanpa Kabel untuk Playstation 4</h3>
+        <p>(Kompatibel/Original)</p>
+        <h4>Rp500.000</h4>
+        <button type="button" id="buynow">Beli Sekarang<img src="resources/assets/arrow.png"></button>
+      </div>
+      <div class="col-2">
+        <img src="resources/assets/controller.png" class="controller">
+        <div class="color-box"></div>
+        <div class="add-btn" id="addCart">
+          <img src="resources/assets/add.png">
+          <p><small>Add to Cart</small></p>
+        </div>
+      </div>
+    </div>
+
     <div class="social-links">
       <a href="https://www.facebook.com/fazrigading">
         <img src="resources/assets/fb.png">
@@ -74,37 +93,6 @@ require 'config.php';
       </a>
     </div>
   </div>
-
-  <div class="row">
-    <div class="col-1">
-      <h2>PS4 V2<br>Dualshock 4</h2>
-      <h3>Stick PS Tanpa Kabel untuk Playstation 4</h3>
-      <p>(Kompatibel/Original)</p>
-      <h4>Rp500.000</h4>
-      <button type="button" id="buynow">Beli Sekarang<img src="resources/assets/arrow.png"></button>
-    </div>
-    <div class="col-2">
-      <img src="resources/assets/controller.png" class="controller">
-      <div class="color-box"></div>
-      <div class="add-btn" id="addCart">
-        <img src="resources/assets/add.png">
-        <p><small>Add to Cart</small></p>
-      </div>
-    </div>
-  </div>
-  <div class="social-links">
-    <a href="https://www.facebook.com/fazrigading">
-      <img src="resources/assets/fb.png">
-    </a>
-    <a href="https://twitter.com/fazrigading">
-      <img src="resources/assets/tw.png">
-    </a>
-    <a href="https://instagram.com/fazrigading">
-      <img src="resources/assets/ig.png">
-    </a>
-  </div>
-  </div>
-
   <footer>
     <div class="footer-logo">Copyright © Fazri Gading 2022</div>
     <div class="footer-list">
