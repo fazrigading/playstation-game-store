@@ -2,7 +2,6 @@
 session_start();
 require 'config.php';
 $accessories = query("SELECT * FROM products WHERE category = 'Accessories'");
-$accessories = array_slice($accessories, 0, 4);
 $i = 1;
 
 ?>

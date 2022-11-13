@@ -3,6 +3,7 @@ session_start();
 require 'config.php';
 
 $consoles = query("SELECT * FROM products WHERE category = 'Console'");
+$consoles = array_slice($consoles, 0, 3);
 $games = query("SELECT * FROM products WHERE category = 'Games'");
 $games = array_slice($games, 0, 8);
 $accessories = query("SELECT * FROM products WHERE category = 'Accessories'");
@@ -67,6 +68,7 @@ $i = 1;
               <p>Rp<?= number_format($console['price'],2, ',', '.') ?></p>
             </div>
           <?php endforeach ?>
+          <a href="console.php"><button  id="explore-cons">Explore Consoles</button></a>
         </div>
       </div>
 
