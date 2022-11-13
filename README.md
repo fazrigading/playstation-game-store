@@ -28,7 +28,7 @@ Bagian ini menunjukkan hasil perkembangan pengerjaan proyek dengan beberapa emoj
 - (F) Front-End
 
 ## Pre-Auth:
-- 🟡[Gading] 🟨[Risky] - About Us (Team Page) 
+- 🔵[Alex] 🟨[Risky] - About Us (Team Page) 
 - 🔵[Gading] 🟨[Risky] - Homepage
   - Featured Items (Bisa slideshow/scroll) 
   - Tombol Explore Catalog tiap featured item 
