@@ -11,10 +11,10 @@ Kontributor proyek ini terdiri dari 1 programmer back-end dan 2 programmer front
 Bagian ini menunjukkan hasil perkembangan pengerjaan proyek dengan beberapa emoji yang melambangkan tingkat kelengkapan.
 
 > Design: 
-> 9/16 = 56.2% of 100%
+> 12/16 = 75% of 100%
 > 
 > System:
-> 9/20 = 45% of 100%
+> 11/17 = 65% of 100%
 
 ## Keterangan:
 - ❓ Considerable
@@ -57,7 +57,7 @@ Bagian ini menunjukkan hasil perkembangan pengerjaan proyek dengan beberapa emoj
 - 🔵[Alex] 🟦[Risky] - Edit Account Page (Personal Info & Address)
 
 ## Admin:
-- 🟡[-] 🟨[-] Dashboard (?) (Grafik Penjualan) ❓(Considerable) 
 - 🟢[Alex] 🟩[Risky] - User Panel (Kelola User) 
 - 🟢[Alex] 🟩[Risky] - Item Panel (CRUD Barang) 
+- 🟡[-] 🟨[-] Dashboard (?) (Grafik Penjualan) ❓(Considerable) 
 
