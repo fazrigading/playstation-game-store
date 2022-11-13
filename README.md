@@ -30,11 +30,11 @@ Bagian ini menunjukkan hasil perkembangan pengerjaan proyek dengan beberapa emoj
 ## Pre-Auth:
 - 🟢[Alex] 🟨[Risky] - About Us (Team Page) 
 - 🔵[Gading] 🟨[Risky] - Homepage
-  - Featured Items (Bisa slideshow/scroll) 
-  - Tombol Explore Catalog tiap featured item 
-- 🟡[Gading] 🟨[Risky] - Catalog: Console
-- 🟡[Gading] 🟨[Risky] - Catalog: Game 
-- 🟡[Gading] 🟨[Risky] - Catalog: Accessories 
+  - 🔵 Featured Items (Bisa scroll) 
+  - 🔵 Tombol Explore Catalog tiap featured item 
+- 🔵[Gading] 🟨[Risky] - Catalog: Console
+- 🔵[Gading] 🟨[Risky] - Catalog: Game 
+- 🔵[Gading] 🟨[Risky] - Catalog: Accessories 
 - 🟢[Alex]   🟩[Risky] - Detail Page 
 
 ## Auth:
