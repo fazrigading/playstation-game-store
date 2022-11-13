@@ -246,6 +246,24 @@ select:focus{
   outline: none;
 }
 
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination a.active {
+  background-color: #3f56da;
+  color: white;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+
 /* FOOTER */
 footer {
   background-color: #1c317c;
