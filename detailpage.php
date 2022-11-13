@@ -52,7 +52,7 @@ if (isset($_POST['btnBuy'])) {
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="resources/css/DetailStyle.css?v=<?php echo time(); ?>">
+  <link rel="stylesheet" href="resources/css/detailpage.css?v=<?php echo time(); ?>">
   
   <link rel="stylesheet" href="resources/css/catalog.css">
   <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
@@ -141,7 +141,7 @@ if (isset($_POST['btnBuy'])) {
       </div>
     </div>
   </main>
-  <script src="resources/js/DetailJS.js"></script>
+  <script src="resources/js/detailpage.js"></script>
 
 </body>
 
