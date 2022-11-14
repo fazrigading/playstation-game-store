@@ -83,7 +83,7 @@ require 'config.php';
           <img src="resources/assets/risky.jfif" alt="" height="100px">
           <div class="names"><h2>Risky Kurniawan</h2></div>
           <div class="design"><h5>Back-End</h5></div>
-          <div class="about"><p>Web System Contributor. Full-stack Web Developer. Hidup ini memang tidak adil. Jadi biasakanlah dirimu.</p></div>
+          <div class="about"><p>Web System Contributor. Interested in Full-Stack Web, Cloud Computing, & Android. Hidup ini memang tidak adil. Jadi biasakanlah dirimu.</p></div>
           <div class="social-links">
             <a href="https://www.linkedin.com/in/riskykrnawan/" target="_blank"><i class="fa fa-linkedin"></i></a>
             <a href="https://www.instagram.com/_riskykrnawan/" target="_blank"><i class="fa fa-instagram"></i></a>
