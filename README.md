@@ -14,7 +14,7 @@ Bagian ini menunjukkan hasil perkembangan pengerjaan proyek dengan beberapa emoj
 > 18/18 = 100% of 100%
 > 
 > System:
-> 23/24 = 96% of 100%
+> 24/24 = 100% of 100%
 
 ## Keterangan:
 - 🟡 Design Not Started
