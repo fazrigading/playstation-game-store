@@ -69,7 +69,7 @@ require 'config.php';
     </div>
 
     <!-- PLAYSTATION 4 -->
-    <div class="offer">
+    <div class="offer reveal">
       <div class="small-container">
         <div class="row2">
           <div class="col-offer">
@@ -87,7 +87,7 @@ require 'config.php';
     </div>
 
     <!-- GAMES -->
-    <div class="offer">
+    <div class="offer reveal">
       <div class="small-container">
         <div class="row">
           <div class="col-offer">
@@ -105,7 +105,7 @@ require 'config.php';
     </div>
 
     <!-- ACCESSORIES -->
-    <div class="offer">
+    <div class="offer reveal">
       <div class="small-container">
         <div class="row2">
           <div class="col-offer">

@@ -37,6 +37,8 @@
   padding-right: 8%;
   display: flex;
   align-items: center;
+  position: fixed;
+  z-index: 1;
 }
 
 .logo {
@@ -285,4 +287,28 @@ footer {
   font-size: 14px;
   word-spacing: 2px;
   text-transform: capitalize;
+}
+
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+
+.sticky + .content {
+  padding-top: 60px;
 }

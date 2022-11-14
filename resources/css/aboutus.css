@@ -4,6 +4,27 @@
   font-family: 'Inter';
 }
 
+:root {
+  --bg-primary: #fff;
+  --bg-secondary: #fcfcfc;
+  --warna-h1: #000;
+  --offer-h1: #1734a0;
+  --text-offer: #000;
+  --btn-color1: #3f56da;
+  --btn-color2: #365ff0;
+}
+
+.dark-mode {
+  --bg-primary: #0f1734;
+  --bg-secondary: #0a1025;
+  --warna-h1: #fff;
+  --offer-h1: #fff;
+  --text-offer: #f7f7f7;
+  --btn-color1: #3f56da;
+  --btn-color2: #365ff0;
+}
+
+
 .navbar {
   width: 100%;
   padding-left: 8%;
@@ -11,6 +32,7 @@
   display: flex;
   align-items: center;
   box-sizing: border-box;
+  background-color: var(--bg-secondary);
 }
 
 .logo {
@@ -25,15 +47,6 @@
   display: none;
 }
 
-:root {
-  --bg-primary: #fff;
-  --warna-h1: #000;
-}
-
-.dark-mode {
-  --bg-primary: #0f1734;
-  --warna-h1: #fff;
-}
 
 body {
   background-color: var(--bg-primary);
@@ -181,6 +194,7 @@ h1 {
 }
 
 .names {
+  color: var(--warna-h1);
   padding: 12px;
   font-weight: bold;
   font-size: 20px;
@@ -196,7 +210,7 @@ h1 {
 .about {
   margin: 20px 0;
   font-weight: lighter;
-  color: #4e4e4e;
+  color: var(--warna-h1);
   font-size: 16px;
 }
 
