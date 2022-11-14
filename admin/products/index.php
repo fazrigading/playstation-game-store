@@ -31,7 +31,8 @@
         </a>
         <a href="../../index.php">Home</a>
         <a href="../users/">User Panel</a>
-        <a class="active">Product Panel</a>
+        <a class="active" href="#">Product Panel</a>
+        <a href="../history/">History Panel</a>
         <a href="../../logout.php">Logout</a>
     </div>
 

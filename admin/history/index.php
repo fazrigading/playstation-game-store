@@ -5,7 +5,7 @@
       header('Location: ../../auth.php');
       exit;
     } 
-    $users = query("SELECT * FROM users");
+    $histories = query("SELECT history.*, users.fullname FROM history LEFT JOIN users ON users.id = history.id_user ");
     $i = 1;
 ?>
 
@@ -29,9 +29,9 @@
             <h2>Panel Admin</h2>
         </a>
         <a href="../../index.php">Home</a>
-        <a class="active" href="#">User Panel</a>
+        <a href="#home">User Panel</a>
         <a href="../products/">Product Panel</a>
-        <a href="../history/">History Panel</a>
+        <a href class="active">History Panel</a>
         <a href="../../logout.php">Logout</a>
     </div>
 
@@ -47,12 +47,11 @@
                     <thead>
                         <tr>
                             <th>No.</th>
-                            <th>Photo</th>
-                            <th colspan="3">Nama Lengkap</th>
-                            <th colspan="2">Username</th>
-                            <th colspan="2">Email</th>
-                            <th colspan="3">Alamat</th>
-                            <th colspan="2">Aksi</th>
+                            <th colspan="2">Nama Pembeli</th>
+                            <th colspan="3">Nama Produk</th>
+                            <th colspan="2">Tanggal</th>
+                            <th colspan="2">Total Harga</th>
+                            <th colspan="1">Status</th>
                         </tr>
                     </thead>
                 </table>
@@ -60,23 +59,14 @@
             <div class="tbl-content">
                 <table cellpadding="0" cellspacing="0" border="0">
                     <tbody>
-                        <?php foreach ($users as $user): ?>
+                        <?php foreach ($histories as $history): ?>
                             <tr>
                                 <td><?= $i++ ?></td>
-                                <td><img src="../../resources/img/<?= $user['photo'] ?>" alt="Avatar" class="avatar"></td>
-                                <td colspan="3"><?= $user['fullname'] ?></td>
-                                <td colspan="2"><?= $user['username'] ?></td>     
-                                <td colspan="2"><?= $user['email'] ?></td>
-                                <td colspan="3"><?= $user['address'] ?></td>
-                                <td colspan="2">
-                                    <a href="update.php?id=<?= $user["id"]?>" class="text-black fs-15px">
-                                        <button class="button-update">Ubah</button>
-                                    </a>
-                                    <a href="delete.php?id=<?= $user["id"]?>" 
-                                    onclick = "return confirm('Apakah anda ingin menghapus File?')" class="text-black fs-15px">
-                                        <button class="button-delete">Hapus</button>
-                                    </a>
-                                </td>
+                                <td colspan="2"><?= $history['fullname'] ?></td>     
+                                <td colspan="3"><?= substr($history['product_name'], 0, 50) ?></td>
+                                <td colspan="3"><?= $history['date'] ?></td>
+                                <td colspan="2"><?= $history['total_price'] ?></td>
+                                <td colspan="1"><?= $history['status'] ?></td>
                             </tr>
                         <?php endforeach?>
                     </tbody>

@@ -60,3 +60,4 @@ Bagian ini menunjukkan hasil perkembangan pengerjaan proyek dengan beberapa emoj
 ## Admin:
 - 🟢[Alex] 🟩[Risky] - User Panel (Kelola User) 
 - 🟢[Alex] 🟩[Risky] - Item Panel (CRUD Barang) 
+- 🟢[Risky] 🟩[Risky] - History Panel (History Pembelian) 
