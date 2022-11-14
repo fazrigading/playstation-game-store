@@ -34,6 +34,7 @@
   --bg-border: rgba(28, 49, 124, 1);
   --bg-box: #fcfcfc;
   --bg-info: #ecf0f1;
+  --text-info: rgba(0, 0, 0, 0.5);
 }
 
 .dark-mode {
@@ -43,7 +44,8 @@
   --btn-color: #365ff0;
   --bg-border: rgba(255, 255, 255, 1);
   --bg-box: #0a1025;
-  --bg-info: #ecf0f1;
+  --bg-info: #0f1734;
+  --text-info: rgba(255, 255, 255, 0.5);
 }
 
 h1,
@@ -198,9 +200,9 @@ input[type="checkbox"]:checked~.check:before {
   margin-bottom: 20px;
   margin-top: 10px;
   padding: 8px 15px;
-  background-color: #ecf0f1;
+  color: var(--text-info);
+  background-color: var(--bg-info);
   border-radius: 5px;
-  color: rgba(0, 0, 0, 0.5);
 }
 
 .info-update {
@@ -215,7 +217,7 @@ input {
   margin-bottom: 20px;
   margin-top: 10px;
   padding: 6px 0px 6px 10px;
-  background-color: #ecf0f1;
+  background-color: var(--bg-info);
   border-radius: 5px;
   border: none;
   color: rgba(0, 0, 0, 0.8);
@@ -240,12 +242,16 @@ input[type="file"] {
   font-size: 20px;
 }
 
+button.button-riwayat:hover,
+button.button-riwayat:focus {
+  background-color: #243fa0;
+}
 
-.button-submit {
+button.button-submit {
   padding: 5px 5px;
   color: #FFF;
-  background-color: #365ff0;
-  font-size: 16px;
+  background-color: #1c317c;
+  font-size: 18px;
   text-align: center;
   font-style: normal;
   border-radius: 5px;
@@ -259,7 +265,7 @@ input[type="file"] {
 button.button-riwayat {
   padding: 5px 5px;
   color: #FFF;
-  background-color: #365ff0;
+  background-color: #1c317c;
   font-size: 18px;
   text-align: center;
   font-style: normal;
@@ -267,8 +273,8 @@ button.button-riwayat {
   width: 100%;
   border: none;
   box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
-  cursor: pointer;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 
 .riwayat {
