@@ -55,6 +55,14 @@ strong {
 }
 
 h1 {
+  font-size: 26px;
+  color: var(--warna-h1);
+  font-weight: 600;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+h2 {
   font-size: 0.75rem;
   font-weight: normal;
   margin: 0;
@@ -113,7 +121,7 @@ main {
   font-size: 0.85rem;
   margin: 0 auto;
   overflow: hidden;
-  padding: 1rem 8rem;
+  padding: 1rem 9.5rem;
 }
 
 .basket,
@@ -262,7 +270,7 @@ aside {
   clear: both;
   margin: 1rem 0;
   overflow: hidden;
-  padding: 0.5rem 0;
+  padding: 0.5rem 0.75rem;
 }
 
 .subtotal-title,
