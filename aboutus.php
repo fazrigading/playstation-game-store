@@ -95,6 +95,21 @@ require 'config.php';
     </div>
   </div>
 
+  <footer>
+    <div class="footer-content">
+      <h2>Playstation Game Store</h2>
+      <p>This website created by:</p>
+      <p>Fazri Gading (2009106031), Alexander Januar (2009106035), dan Risky Kurniawan (2009106050).</p>
+      <p>Click Github icon below to check our repository.</p>
+      <ul class="socials">
+        <li><a href="https://github.com/fazrigading/playstation-game-store/" target="_blank"><i class="fa fa-github"></i></a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <p>Copyright &copy; 2022 Rigalex</p>
+    </div>
+  </footer>
+
   <script src="resources/js/index.js"></script>
 </body>
 
