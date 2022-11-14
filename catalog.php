@@ -62,7 +62,7 @@ $i = 1;
         <h3 class="title-category" id="featured-consoles">Featured Consoles</h3>
         <div class="row">
           <?php foreach ($consoles as $console) : ?>
-            <div class="col-4" onclick="redirectTo(<?= $console['id'] ?>)">
+            <div class="col-3" onclick="redirectTo(<?= $console['id'] ?>)">
               <img src="resources/img/<?= $console['photo'] ?>">
               <h4><?= substr($console['name'], 0, 46) ?></h4>
               <p>Rp<?= number_format($console['price'], 2, ',', '.') ?></p>

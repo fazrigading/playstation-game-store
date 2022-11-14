@@ -171,6 +171,7 @@ h1{
 }
 
 .col-4{
+  cursor: pointer;
   flex-basis: 25%;
   padding: 10px;
   min-width: 200px;
