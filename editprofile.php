@@ -46,7 +46,7 @@ if (isset($_POST["submitupdate"])) {
         }
         if (isset($_SESSION["loginUser"]) || isset($_SESSION["loginAdmin"])) {
           echo "<li><a href='payment/'>Cart</a></li>";
-          echo "<li><a href='riwayat.php'>Riwayat</a></li>";
+          echo "<li><a href='riwayat.php'>History</a></li>";
           echo "<li><a href='profile.php'>Profile</a></li>";
           echo "<li><a href='logout.php'>Logout</a></li>";
         }
@@ -60,36 +60,55 @@ if (isset($_POST["submitupdate"])) {
       </ul>
     </nav>
   </div>
+
+  <div class="container">
     <div class="container-half">
       <form method="POST" enctype="multipart/form-data">
         <fieldset>
           <legend>Edit Profile</legend>
-            <input type="hidden" name="samePhoto" value="<?= $user["photo"] ?>"><br>
-            <input type="hidden" name="id" value="<?= $user['id'] ?>">
-            <img src="resources/img/<?= $user["photo"] ?>" alt="Your photo" width="100">
-            <input type="file" name="photo" placeholder="Add Picture...">
-            <label for="fullname">Fullname</label>
-            <input type="text" id="fullname" name="fullname" placeholder="Fullname" value="<?= $user["fullname"] ?>">
+          <input type="hidden" name="samePhoto" value="<?= $user["photo"] ?>"><br>
+          <input type="hidden" name="id" value="<?= $user['id'] ?>">
+          <img src="resources/img/<?= $user["photo"] ?>" alt="Your photo" width="100">
+          <input type="file" name="photo" placeholder="Add Picture...">
+          <label for="fullname">Fullname</label>
+          <input type="text" id="fullname" name="fullname" placeholder="Fullname" value="<?= $user["fullname"] ?>">
 
-            <label for="username">Username</label>
-            <input type="text" id="username" name="user" placeholder="Username" value="<?= $user["username"] ?>">
-            
-            <label for="password">Password baru: (Abaikan jika tidak mengganti password)</label>
-            <input type="password" id="password" name="newPass" placeholder="Password                                       `">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="user" placeholder="Username" value="<?= $user["username"] ?>">
 
-            <label for="cNewPass">Konfirmasi Password baru: (Abaikan jika tidak mengganti password)</label>
-            <input type="password" id="cNewPass" name="confirmNewPass" placeholder="Password">
-            <input type="hidden" name="oldPass", value="<?= $user['password'] ?>">
-            
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Email" value="<?= $user["email"] ?>">
-            
-            <label for="address">Address</label>
-            <textarea rows="4"  id="address" name="address" placeholder="Address"><?= $user["address"] ?></textarea>
+          <label for="password">Password baru: (Abaikan jika tidak mengganti password)</label>
+          <input type="password" id="password" name="newPass" placeholder="Password                                       `">
+
+          <label for="cNewPass">Konfirmasi Password baru: (Abaikan jika tidak mengganti password)</label>
+          <input type="password" id="cNewPass" name="confirmNewPass" placeholder="Password">
+          <input type="hidden" name="oldPass" , value="<?= $user['password'] ?>">
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Email" value="<?= $user["email"] ?>">
+
+          <label for="address">Address</label>
+          <textarea rows="4" id="address" name="address" placeholder="Address"><?= $user["address"] ?></textarea>
         </fieldset>
         <button type="submit" name="submitupdate" class="button-submit">Submit</button>
       </form>
     </div>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <h2>Playstation Game Store</h2>
+      <p>This website created by:</p>
+      <p>Fazri Gading (2009106031), Alexander Januar (2009106035), dan Risky Kurniawan (2009106050).</p>
+      <p>Click Github icon below to check our repository.</p>
+      <ul class="socials">
+        <li><a href="https://github.com/fazrigading/playstation-game-store/" target="_blank"><i class="fa fa-github"></i></a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <p>Copyright &copy; 2022 Rigalex</p>
+    </div>
+  </footer>
+  <script src="resources/js/index.js"></script>
 </body>
 
 </html>
