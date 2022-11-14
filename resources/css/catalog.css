@@ -91,7 +91,7 @@ nav ul li a{
   vertical-align: text-top;
 }
 nav ul li a:hover{
-  color: var(--btn-color2);
+  color: #365ff0;
 }
 check-box{
   justify-content: center;
