@@ -12,7 +12,7 @@ $sum = 0;
 $idToCheckout = array();
 $productName = '';
 foreach ($carts as $cart) {
-  $productName .= $cart['name'] . ',';
+  $productName .= $cart['name'] . ', ';
   $sum += $cart['price'];
   array_push($idToCheckout, $cart['id']);
 }
