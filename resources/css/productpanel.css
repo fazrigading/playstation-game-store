@@ -1,8 +1,7 @@
-/* The side navigation menu */
 * {
-    font-family: 'Inter';
-    margin: 0;
-    padding: 0;
+  font-family: 'Inter';
+  margin: 0;
+  padding: 0;
 }
 
 ::-webkit-scrollbar {
@@ -20,231 +19,223 @@
 }
 
 :root {
-    --linearbg-Primary: linear-gradient(#F5F7FA, #B8C6DB);
-    --bg-primary: #fff;
-    --warna-h1: rgb(15, 23, 52);
-    --bg-border: rgba(28, 49, 124, 0.1);
+  --linearbg-Primary: linear-gradient(#F5F7FA, #B8C6DB);
+  --bg-primary: #fff;
+  --warna-h1: rgb(15, 23, 52);
+  --bg-border: rgba(28, 49, 124, 0.1);
 }
 
 .sidebar {
-    margin: 0;
-    padding: 0;
-    width: 200px;
-    background-color: #f1f1f1;
-    position: fixed;
-    height: 100%;
-    overflow: auto;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
 }
 
-/* Sidebar links */
 .sidebar a {
-    display: block;
-    color: black;
-    padding: 16px;
-    text-decoration: none;
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
 }
 
-/* Active/current link */
 .sidebar a.active {
-    background-color:#0f1734;
-    color: white;
+  background-color: #0f1734;
+  color: white;
 }
 
-/* Links on mouse-over */
 .sidebar a:hover:not(.active) {
-    background-color: #555;
-    color: white;
+  background-color: #555;
+  color: white;
 }
 
-.main{
-    pointer-events: none;
+.main {
+  pointer-events: none;
 }
 
-.main h2{
-    font-weight:500;
+.main h2 {
+  font-weight: 500;
 }
 
-/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
 div.content {
-    margin-left: 200px;
-    padding: 1px 16px;
-    height: 1000px;
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
 }
 
-/* On screens that are less than 700px wide, make the sidebar into a topbar */
 @media screen and (max-width: 700px) {
-    .sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
-    }
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
 
-    .sidebar a {
-        float: left;
-    }
+  .sidebar a {
+    float: left;
+  }
 
-    div.content {
-        margin-left: 0;
-    }
+  div.content {
+    margin-left: 0;
+  }
 }
 
-/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
 @media screen and (max-width: 400px) {
-    .sidebar a {
-        text-align: center;
-        float: none;
-    }
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
 }
 
 
-/*TABEL */
+/* TABEL */
 
 h1 {
-    font-size: 26px;
-    color: var(--warna-h1);
-    text-transform: uppercase;
-    font-weight: 300;
-    margin-bottom: 15px;
+  font-size: 26px;
+  color: var(--warna-h1);
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-bottom: 15px;
 }
 
 table {
-    width: 100%;
-    table-layout: fixed;
+  width: 100%;
+  table-layout: fixed;
 }
 
 .tbl-header {
-    background-color: #0f1734;
-    border: 1px solid rgb(15, 23, 52, 0.5);
+  background-color: #0f1734;
+  border: 1px solid rgb(15, 23, 52, 0.5);
 }
 
 .tbl-content {
-    height: 600px;
-    overflow-x: auto;
-    margin-top: 0px;
-    border: 1px solid var(--warna-h1);
+  height: 600px;
+  overflow-x: auto;
+  margin-top: 0px;
+  border: 1px solid var(--warna-h1);
 }
 
 th {
-    padding: 20px 15px;
-    text-align: left;
-    font-weight: 500;
-    font-size: 12px;
-    color: white;
-    text-transform: uppercase;
+  padding: 20px 15px;
+  text-align: left;
+  font-weight: 500;
+  font-size: 12px;
+  color: white;
+  text-transform: uppercase;
 }
 
 td {
-    padding: 15px;
-    text-align: left;
-    vertical-align: middle;
-    font-weight: 300;
-    font-size: 12px;
-    color: var(--warna-h1);
-    border-bottom: solid 1px var(--bg-border);
+  padding: 15px;
+  text-align: left;
+  vertical-align: middle;
+  font-weight: 300;
+  font-size: 12px;
+  color: var(--warna-h1);
+  border-bottom: solid 1px var(--bg-border);
 }
 
 td img {
-    width: 50px;
-    height: 50px;
-    padding: 5px;
-    border-radius: 50%;
-    border: 1px solid rgb(15, 23, 52, 0.5)
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 50%;
+  border: 1px solid rgb(15, 23, 52, 0.5)
 }
 
-
-/* demo styles */
 body {
-    background: var(--bg-primary);
+  background: var(--bg-primary);
 }
 
 section {
-    margin: 50px;
+  margin: 50px;
 }
 
 @media only screen and (max-width:700px) {
-    nav ul {
-        width: 100%;
-        background: var(--bg-primary);
-        position: absolute;
-        top: 75px;
-        right: 0;
-        z-index: 2;
-    }
+  nav ul {
+    width: 100%;
+    background: var(--bg-primary);
+    position: absolute;
+    top: 75px;
+    right: 0;
+    z-index: 2;
+  }
 
-    nav ul li {
-        display: block;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
+  nav ul li {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
 
-    nav ul li a {
-        color: red;
-    }
+  nav ul li a {
+    color: red;
+  }
 
-    .menu-icon {
-        display: block;
-    }
+  .menu-icon {
+    display: block;
+  }
 
 }
 
 button {
-    /* Green */
-    border: none;
-    width: 100px;
-    margin-bottom: 5px;
-    color: white;
-    padding: 10px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 14px;
-    cursor: pointer;
-    border-radius: 5px
+  /* Green */
+  border: none;
+  width: 100px;
+  margin-bottom: 5px;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px
 }
 
 button.button-delete {
-    background-color: rgb(207, 16, 16);
+  background-color: rgb(207, 16, 16);
 }
 
 button.button-update {
-    background-color: rgb(28, 100, 209);
+  background-color: rgb(28, 100, 209);
 }
 
 button.button-add {
-    background-color: rgb(28, 189, 28);
+  background-color: rgb(28, 189, 28);
 }
 
 button:hover {
-    box-shadow: 0 0 11px rgba(33, 33, 33, .2);
+  box-shadow: 0 0 11px rgba(33, 33, 33, .2);
 }
 
 .warp {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px
 }
 
 /* FORM */
 .edit {
-    display: none;
+  display: none;
 }
 
 fieldset {
-    margin-bottom: 30px;
-    border: none;
+  margin-bottom: 30px;
+  border: none;
 }
 
 legend {
-    font-size: 1.4em;
-    margin-bottom: 10px;
+  font-size: 1.4em;
+  margin-bottom: 10px;
 }
 
 form {
-    max-width: 100%;
-    margin: 20px auto;
-    padding: 10px 20px;
-    background: #f4f7f8;
-    border-radius: 8px;
+  max-width: 100%;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background: #f4f7f8;
+  border-radius: 8px;
 }
 
 input[type="text"],
@@ -254,34 +245,34 @@ input[type="number"],
 input[type="file"],
 textarea,
 select {
-    background: rgba(255, 255, 255, 0.1);
-    border: none;
-    font-size: 16px;
-    padding-left: 10px;
-    height: 40px;
-    margin: 0;
-    outline: 0;
-    width: 100%;
-    background-color: #e8eeef;
-    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
-    margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  font-size: 16px;
+  padding-left: 10px;
+  height: 40px;
+  margin: 0;
+  outline: 0;
+  width: 100%;
+  background-color: #e8eeef;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+  margin-bottom: 20px;
 }
 
 input:focus {
-    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
 
 
 button.button-submit {
-    padding: 5px 5px;
-    color: #FFF;
-    background-color: #0f1734;
-    font-size: 18px;
-    text-align: center;
-    font-style: normal;
-    border-radius: 5px;
-    width: 100%;
-    border: 1px solid #3ac162;
-    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
-    margin-bottom: 10px;
+  padding: 5px 5px;
+  color: #FFF;
+  background-color: #0f1734;
+  font-size: 18px;
+  text-align: center;
+  font-style: normal;
+  border-radius: 5px;
+  width: 100%;
+  border: 1px solid #3ac162;
+  box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+  margin-bottom: 10px;
 }

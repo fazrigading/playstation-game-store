@@ -16,7 +16,7 @@ $i = 1;
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;700;900&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../../resources/css/productpanel.css?v=<?php echo time(); ?>">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
@@ -38,7 +38,7 @@ $i = 1;
   <div class="content">
     <section>
       <div class="warp">
-        <h1>tabel product</h1>
+        <h1>Products Table</h1>
         <div>
           <a href="create.php" role="button"><button class="button-add">Tambah</button></a>
         </div>
