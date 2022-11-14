@@ -19,7 +19,7 @@ require 'config.php';
 <body>
   <!-- NAVBAR -->
   <div class="navbar">
-    <img src="./resources/assets/logo.png" class="logo" title="Playstation Game Store">
+    <a href="index.php"><img src="./resources/assets/logo.png" class="logo"></a>
     <nav>
       <ul id="menuList">
         <li><a href="index.php">Home</a></li>
@@ -33,7 +33,7 @@ require 'config.php';
         }
         if (isset($_SESSION["loginUser"]) || isset($_SESSION["loginAdmin"])) {
           echo "<li><a href='payment/'>Cart</a></li>";
-          echo "<li><a href='riwayat.php'>Riwayat</a></li>";
+          echo "<li><a href='riwayat.php'>History</a></li>";
           echo "<li><a href='profile.php'>Profile</a></li>";
           echo "<li><a href='logout.php'>Logout</a></li>";
         }

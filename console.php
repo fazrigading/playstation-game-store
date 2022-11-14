@@ -37,7 +37,7 @@ $i = 1;
         }
         if (isset($_SESSION["loginUser"]) || isset($_SESSION["loginAdmin"])) {
           echo "<li><a href='payment/'>Cart</a></li>";
-          echo "<li><a href='riwayat.php'>Riwayat</a></li>";
+          echo "<li><a href='riwayat.php'>History</a></li>";
           echo "<li><a href='profile.php'>Profile</a></li>";
           echo "<li><a href='logout.php'>Logout</a></li>";
         }
