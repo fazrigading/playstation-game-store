@@ -1,185 +1,189 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins';
-    overflow-x: hidden;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins';
+  overflow-x: hidden;
 }
 
-body {
-    margin-left: 20px;
+li {
+  list-style: none;
 }
 
-li{
-    list-style: none;
-}
-.container-header{
-    margin-right:80px;
+.container-header {
+  margin-right: 80px;
 
-    padding-top:30px;
-    width: 1300px;
-    height: 50px;
-
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0; /* required */
-    background-color: white
+  padding-top: 30px;
+  width: 1300px;
+  height: 50px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  /* required */
+  background-color: white
 }
 
 
-.container-header li{
-    position: relative;
-    float:right;
-    width:110px;
-    height: 35px;
-    list-style: none;
-    font-size:16px;
-    margin-left: 10px;
-    margin-right: 10px;
-    text-align: center;
-    padding-top:10px;
-    cursor: pointer;
-    transition: 0.2s ease-in-out;
+.container-header li {
+  position: relative;
+  float: right;
+  width: 110px;
+  height: 35px;
+  list-style: none;
+  font-size: 16px;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: center;
+  padding-top: 10px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
 }
 
-.text::after{
-    content: '';
-    position: absolute;
-    background-color:#208bff;
-    left: 0;bottom: 0;
-    width:110px;height:2px;
-    opacity: 0;
-    transition: .3s ease;
+.text::after {
+  content: '';
+  position: absolute;
+  background-color: #208bff;
+  left: 0;
+  bottom: 0;
+  width: 110px;
+  height: 2px;
+  opacity: 0;
+  transition: .3s ease;
 }
 
-.text:hover::after{
-    opacity: 1;
-    transform: translateY(1px);
+.text:hover::after {
+  opacity: 1;
+  transform: translateY(1px);
 }
 
-.sign-in{
-    background-color:#208bff;
-    border-radius: 5px;
-    color:white;
+.sign-in {
+  background-color: #208bff;
+  border-radius: 5px;
+  color: white;
 }
 
 /* MAIN  */
 
-main{
-    padding-top: 80px;
+main {
+  padding: 80px 40px;
 }
 
 
-.main-container{
-    width: 1200px;
-    margin-left:100px;
-    height:500px;
-    margin-bottom:20px;
+.main-container {
+  width: 1200px;
+  margin-left: 100px;
+  height: 500px;
+  margin-bottom: 20px;
 }
 
-.image-container{
-    width: 75%;
-    float:left;
-    height:500px;
+.image-container {
+  width: 75%;
+  float: left;
+  height: 500px;
 }
 
-.image-container img{
+.image-container img {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-.product-title h1{
-    font-weight:400;
-    font-size:24px;
-    margin-left:100px;
+.product-title h1 {
+  font-weight: 400;
+  font-size: 24px;
+  margin-left: 100px;
 }
 
-.side-image-container{
-    width: 25%;
-    height:500px;
-    float:right;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+.side-image-container {
+  width: 25%;
+  height: 500px;
+  float: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
-.side-image{
-    height:150px;
+.side-image {
+  height: 150px;
 }
 
-.side-image img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width:100%;
-    max-height:100%;
+.side-image img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  max-height: 100%;
 }
 
-.product{
-    width: 1200px;
-    margin-left:100px;
+.product {
+  width: 1200px;
+  margin-left: 100px;
 }
 
-.product-detail{
-    float: left;
-    width: 65%;
+.product-detail {
+  float: left;
+  width: 65%;
 }
 
-.product-detail h2{
-    font-size:24;
-    font-weight:500;
+.product-detail h5 {
+  font-size: 18;
+  font-weight: 700;
 }
 
-.product-price{
-    font-size:18;
-    font-weight:400;
-    color:#FF7158;
+.product-detail h2 {
+  font-size: 48;
+  font-weight: 700;
 }
 
-.product-detail li{
-    padding:5px 0px;
+.product-price {
+  font-size: 24;
+  font-weight: 400;
+  color: #FF7158;
 }
 
-.product-button{
-    float: right;
-    width: 35%;
+.product-detail li {
+  padding: 5px 0px;
 }
 
-#add-cart{
-    width: 50%;
-    height:45px;
-    background-color: #208bff;
-    border: none;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    font-size: 14px;
-    border-radius: 5px;
-    cursor: pointer;
-    display:block;
-    margin-left: auto;
-    margin-right: auto;
-    transition: 0.3s ease-in-out;
+.product-button {
+  float: right;
+  width: 35%;
 }
 
-#buy-now{
-    width: 50%;
-    height:45px;
-    background-color: #208bff;
-    border: none;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    font-size: 14px;
-    border-radius: 5px;
-    cursor: pointer;
-    display:block;
-    margin-left: auto;
-    margin-right: auto;
-    transition: 0.3s ease-in-out;
+#add-cart {
+  width: 50%;
+  height: 45px;
+  background-color: #208bff;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transition: 0.3s ease-in-out;
 }
 
-h1{
+#buy-now {
+  width: 50%;
+  height: 45px;
+  background-color: #208bff;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transition: 0.3s ease-in-out;
+}
+
+h1 {
   font-size: 30px;
   color: #fff;
   text-transform: uppercase;
@@ -187,20 +191,24 @@ h1{
   text-align: center;
   margin-bottom: 15px;
 }
-table{
-  width:100%;
+
+table {
+  width: 100%;
   table-layout: fixed;
 }
-.tbl-header{
-  background-color: rgba(255,255,255,0.3);
- }
-.tbl-content{
-  height:300px;
-  overflow-x:auto;
-  margin-top: 0px;
-  border: 1px solid rgba(255,255,255,0.3);
+
+.tbl-header {
+  background-color: rgba(255, 255, 255, 0.3);
 }
-th{
+
+.tbl-content {
+  height: 300px;
+  overflow-x: auto;
+  margin-top: 0px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+th {
   padding: 20px 8px;
   text-align: left;
   font-weight: 500;
@@ -208,21 +216,23 @@ th{
   color: #fff;
   text-transform: uppercase;
 }
-td{
+
+td {
   padding: 8px;
   text-align: left;
-  vertical-align:middle;
+  vertical-align: middle;
   font-weight: 300;
   font-size: 12px;
   color: #fff;
-  border-bottom: solid 1px rgba(255,255,255,0.1);
+  border-bottom: solid 1px rgba(255, 255, 255, 0.1);
 }
 
-.panel-container{
+.panel-container {
   background: linear-gradient(to right, #232526, #414345);
   font-family: 'Roboto', sans-serif;
 }
-section{
+
+section {
   margin: 50px;
 }
 
@@ -237,4 +247,3 @@ section{
 .fs-15px {
   font-size: 15px;
 }
-

@@ -11,10 +11,10 @@ Kontributor proyek ini terdiri dari 1 programmer back-end dan 2 programmer front
 Bagian ini menunjukkan hasil perkembangan pengerjaan proyek dengan beberapa emoji yang melambangkan tingkat kelengkapan.
 
 > Design: 
-> 15/18 = 83% of 100%
+> 16/18 = 88% of 100%
 > 
 > System:
-> 17/23 = 73% of 100%
+> 21/23 = 91% of 100%
 
 ## Keterangan:
 - 🟡 Design Not Started
@@ -34,9 +34,9 @@ Bagian ini menunjukkan hasil perkembangan pengerjaan proyek dengan beberapa emoj
   - 🟢[Gading] Explore Catalog Buttons  
 - 🟢[Alex] 🟩[Alex] - About Us
 - 🟢[Gading] 🟩[Risky] - Catalog
-- 🔵[Gading] 🟦[Risky] - Catalog: Console
-- 🟢[Gading] 🟦[Risky] - Catalog: Game 
-- 🟢[Gading] 🟦[Risky] - Catalog: Accessories 
+- 🟢[Gading] 🟩[Risky] - Catalog: Console
+- 🟢[Gading] 🟩[Risky] - Catalog: Game 
+- 🟢[Gading] 🟩[Risky] - Catalog: Accessories 
 - 🟢[Alex]   🟩[Risky] - Detail Page 
 
 ## Auth:
@@ -60,3 +60,4 @@ Bagian ini menunjukkan hasil perkembangan pengerjaan proyek dengan beberapa emoj
 ## Admin:
 - 🟢[Alex] 🟩[Risky] - User Panel (Kelola User) 
 - 🟢[Alex] 🟩[Risky] - Item Panel (CRUD Barang) 
+- 🟢[Risky] 🟩[Risky] - History Panel (History Pembelian) 

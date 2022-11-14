@@ -54,8 +54,8 @@ require 'config.php';
         <div class="teams">
           <img src="resources/img/10-29-2022 01-36-37 am.jpg" alt="" height="100px">
           <div class="names">Fazri Gading</div>
-          <div class="design">Front End</div>
-          <div class="about">Repository Owner. Interested in C++, Design UI/UX, Computer Vision & Deep Learning</div>
+          <div class="design">Front-End</div>
+          <div class="about">Repository Owner. Interested in Computer Vision and C++ Programming. Prefers Bootstrap than full native.</div>
 
           <div class="social-links">
             <a href="https://www.linkedin.com/in/fazrigading/" target="_blank"><i class="fa fa-linkedin"></i></a>
@@ -68,7 +68,7 @@ require 'config.php';
         <div class="teams">
           <img src="resources/img/FotoAlex.png" alt="">
           <div class="names">Alexander Januar</div>
-          <div class="design">Front End</div>
+          <div class="design">Front-End</div>
           <div class="about">lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepteur sint occaecat cupiditat
             non proident,</div>
 
@@ -83,7 +83,7 @@ require 'config.php';
         <div class="teams">
           <img src="resources/img/FotoRiski.jfif" alt="" height="100px">
           <div class="names">Risky Kurniawan</div>
-          <div class="design">Back End</div>
+          <div class="design">Back-End</div>
           <div class="about">lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepteur sint occaecat cupiditat
             non proident,</div>
           <div class="social-links">

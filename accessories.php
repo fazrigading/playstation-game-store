@@ -1,7 +1,11 @@
 <?php
 session_start();
 require 'config.php';
+$accessories = query("SELECT * FROM products WHERE category = 'Accessories'");
+$i = 1;
+
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,6 +17,7 @@ require 'config.php';
   <title>Accessories Catalog</title>
   <link rel="stylesheet" href="resources/css/catalog.css?v=<?php echo time(); ?>">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;700;900&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/5bbbb39d34.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -61,43 +66,50 @@ require 'config.php';
         </div>
 
         <div class="row">
-          <div class="col-4">
-            <img src="resources/img/IMG_11132022_093808.jpg">
-            <h4>PlayStation 5 DualSense Wireless Controller</h4>
-            <p>Rp729.000</p>
-          </div>
-          <div class="col-4">
-            <img src="resources/img/IMG_11132022_093815.jpg">
-            <h4>PlayStation PULSE 3D Wireless Headset - Midnight Black</h4>
-            <p>Rp1.699.000</p>
-          </div>
-          <div class="col-4">
-          <img src="resources/img/IMG_11132022_093824.jpg">
-            <h4>PlayStation PULSE 3D Wireless Headset - Midnight Black</h4>
-            <p>Rp1.729.000</p>
-          </div>
-          <div class="col-4">
-            <img src="resources/img/IMG_11132022_094804.jpg">
-            <h4>Dualshock 4 Wireless Controller - Glacier White</h4>
-            <p>Rp1.029.000</p>
-          </div>
+          <?php foreach($accessories as $accessory):?>
+            <div class="col-4" role="button" onclick="redirectTo(<?= $accessory['id'] ?>)">
+              <img src="resources/img/<?= $accessory['photo'] ?>">
+              <h4><?= substr($accessory['name'], 0, 26) ?></h4>
+              <p>Rp<?= number_format($accessory['price'],2, ',', '.') ?></p>
+            </div>
+          <?php endforeach ?>
+        </div>
+
+        <div class="pagination">
+          <a href="#">&laquo;</a>
+          <a class="active" href="#">1</a>
+          <a href="#">2</a>
+          <a href="#">3</a>
+          <a href="#">4</a>
+          <a href="#">5</a>
+          <a href="#">6</a>
+          <a href="#">&raquo;</a>
         </div>
       </div>
     </div>
   </div>
 
   <footer>
-    <div class="footer-logo">Copyright © Fazri Gading 2022</div>
-    <div class="footer-list">
-      <ul>
-        <li>2009106031</li>
-        <li>Informatika A 20</li>
-        <li>Machine Learning Developer</li>
+    <div class="footer-content">
+      <h2>Playstation Game Store</h2>
+      <p>This website created by:</p>
+      <p>Fazri Gading (2009106031), Alexander Januar (2009106035), dan Risky Kurniawan (2009106050).</p>
+      <p>Click Github icon below to check our repository.</p>
+      <ul class="socials">
+        <li><a href="https://github.com/fazrigading/playstation-game-store/" target="_blank"><i class="fa fa-github"></i></a></li>
       </ul>
+    </div>
+    <div class="footer-bottom">
+      <p>Copyright &copy; 2022 Rigalex</p>
     </div>
   </footer>
 
   <script src="resources/js/catalog.js"></script>
+  <script>
+    const redirectTo = (id) => {
+      document.location.href = 'detailpage.php?id=' + id;
+    };
+  </script>
 </body>
 
 </html>

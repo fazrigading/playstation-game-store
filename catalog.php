@@ -3,8 +3,11 @@ session_start();
 require 'config.php';
 
 $consoles = query("SELECT * FROM products WHERE category = 'Console'");
+$consoles = array_slice($consoles, 0, 3);
 $games = query("SELECT * FROM products WHERE category = 'Games'");
+$games = array_slice($games, 0, 4);
 $accessories = query("SELECT * FROM products WHERE category = 'Accessories'");
+$accessories = array_slice($accessories, 0, 4);
 $i = 1;
 
 ?>
@@ -19,6 +22,7 @@ $i = 1;
   <title>Catalog Page</title>
   <link rel="stylesheet" href="resources/css/catalog.css?v=<?php echo time(); ?>">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;700;900&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/5bbbb39d34.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -53,66 +57,71 @@ $i = 1;
   </div>
 
   <div class="container">
-    <!-- FEATURED CONSOLES -->
     <div class="categories">
-      <h3 class="title-category">Featured Consoles</h3>
+      <!-- FEATURED CONSOLES -->
       <div class="small-container">
+        <h3 class="title-category" id="featured-consoles">Featured Consoles</h3>
         <div class="row">
-          <?php foreach($consoles as $console):?>
+          <?php foreach ($consoles as $console) : ?>
             <div class="col-3" onclick="redirectTo(<?= $console['id'] ?>)">
               <img src="resources/img/<?= $console['photo'] ?>">
               <h4><?= substr($console['name'], 0, 46) ?></h4>
-              <p>Rp<?= number_format($console['price'],2, ',', '.') ?></p>
+              <p>Rp<?= number_format($console['price'], 2, ',', '.') ?></p>
             </div>
           <?php endforeach ?>
+          <a href="console.php"><button id="explore-cons">Explore Consoles</button></a>
         </div>
       </div>
 
       <!-- FEATURED PRODUCTS -->
       <div class="small-container">
         <!-- FEATURED GAMES -->
-        <h3 class="title-category">Featured Games</h3>
+        <h3 class="title-category" id="featured-games">Featured Games</h3>
         <div class="row">
 
-          <?php foreach($games as $game):?>
-            <div class="col-4" onclick="redirectTo(<?= $game['id'] ?>)">
+          <?php foreach ($games as $game) : ?>
+            <div class="col-4" role="button" onclick="redirectTo(<?= $game['id'] ?>)">
               <img src="resources/img/<?= $game['photo'] ?>">
               <h4><?= substr($game['name'], 0, 26) ?></h4>
-              <p>Rp<?= number_format($game['price'],2, ',', '.') ?></p>
+              <p>Rp<?= number_format($game['price'], 2, ',', '.') ?></p>
             </div>
           <?php endforeach ?>
-          <button type="button" id="explore-games">Explore Games</button>
+          <a href="games.php"><button type="button" id="explore-games">Explore Games</button></a>
         </div>
 
         <!-- FEATURED ACCESSORIES -->
-        <h3 class="title-category">Featured Accessories</h3>
+        <h3 class="title-category" id="featured-accesories">Featured Accessories</h3>
         <div class="row">
-          <?php foreach($accessories as $accessory):?>
-            <div class="col-4" onclick="redirectTo(<?= $accessory['id'] ?>)">
+          <?php foreach ($accessories as $accessory) : ?>
+            <div class="col-4" role="button" onclick="redirectTo(<?= $accessory['id'] ?>)">
               <img src="resources/img/<?= $accessory['photo'] ?>">
               <h4><?= substr($accessory['name'], 0, 26) ?></h4>
-              <p>Rp<?= number_format($accessory['price'],2, ',', '.') ?></p>
+              <p>Rp<?= number_format($accessory['price'], 2, ',', '.') ?></p>
             </div>
           <?php endforeach ?>
-          <button type="button" id="explore-accs">Explore Accessories</button>
+          <a href="accessories.php"><button id="explore-accs">Explore Accessories</button></a>
         </div>
-        
+
 
       </div>
     </div>
   </div>
 
   <footer>
-    <div class="footer-logo">Copyright © Fazri Gading 2022</div>
-    <div class="footer-list">
-      <ul>
-        <li>2009106031</li>
-        <li>Informatika A 20</li>
-        <li>Machine Learning Developer</li>
+    <div class="footer-content">
+      <h2>Playstation Game Store</h2>
+      <p>This website created by:</p>
+      <p>Fazri Gading (2009106031), Alexander Januar (2009106035), dan Risky Kurniawan (2009106050).</p>
+      <p>Click Github icon below to check our repository.</p>
+      <ul class="socials">
+        <li><a href="https://github.com/fazrigading/playstation-game-store/" target="_blank"><i class="fa fa-github"></i></a></li>
       </ul>
     </div>
+    <div class="footer-bottom">
+      <p>Copyright &copy; 2022 Rigalex</p>
+    </div>
   </footer>
-  
+
   <script src="resources/js/catalog.js"></script>
   <script>
     const redirectTo = (id) => {

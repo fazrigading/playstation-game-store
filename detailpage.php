@@ -53,9 +53,9 @@ if (isset($_POST['btnBuy'])) {
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="resources/css/detailpage.css?v=<?php echo time(); ?>">
-  
-  <link rel="stylesheet" href="resources/css/catalog.css">
+  <link rel="stylesheet" href="resources/css/catalog.css?v=<?php echo time(); ?>">
   <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <script src="https://kit.fontawesome.com/5bbbb39d34.js" crossorigin="anonymous"></script>
   <title><?= $product["category"] ?></title>
 </head>
 
@@ -122,7 +122,7 @@ if (isset($_POST['btnBuy'])) {
         </span>
         <br><br>
         <ul>
-          <li>Stock: (<?= $product["stock"] ?>)</li>
+          <li>Stock: <?= $product["stock"] ?></li>
           <li><?= $product["descriptions"] ?></li>
         </ul>
       </div>
@@ -142,6 +142,21 @@ if (isset($_POST['btnBuy'])) {
     </div>
   </main>
   <script src="resources/js/detailpage.js"></script>
+
+  <footer>
+    <div class="footer-content">
+      <h2>Playstation Game Store</h2>
+      <p>This website created by:</p>
+      <p>Fazri Gading (2009106031), Alexander Januar (2009106035), dan Risky Kurniawan (2009106050).</p>
+      <p>Click Github icon below to check our repository.</p>
+      <ul class="socials">
+        <li><a href="https://github.com/fazrigading/playstation-game-store/" target="_blank"><i class="fa fa-github"></i></a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <p>Copyright &copy; 2022 Rigalex</p>
+    </div>
+  </footer>
 
 </body>
 
