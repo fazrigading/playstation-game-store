@@ -1,198 +1,226 @@
-*{
-    margin: 0;
-    padding: 0; 
-    font-family: 'Poppins';
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter';
 }
 
-.navbar{
-    width: 100%;
-    padding-left: 8%;
-    padding-right: 8%;
-    display: flex;
-    align-items: center;
-    box-sizing: border-box;
+.navbar {
+  width: 100%;
+  padding-left: 8%;
+  padding-right: 8%;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
 }
-.logo{
-    width: 50px;
-    cursor: pointer;
-    margin: 30px 0;
+
+.logo {
+  width: 50px;
+  cursor: pointer;
+  margin: 30px 0;
 }
-.menu-icon{
-    width: 25px;
-    cursor: pointer;
-    display: none;
+
+.menu-icon {
+  width: 25px;
+  cursor: pointer;
+  display: none;
 }
-:root{
-    --bg-primary: #fff;
-    --warna-h1: #000;
+
+:root {
+  --bg-primary: #fff;
+  --warna-h1: #000;
 }
-.dark-mode{
-    --bg-primary: #0f1734;
-    --warna-h1: #fff;
+
+.dark-mode {
+  --bg-primary: #0f1734;
+  --warna-h1: #fff;
 }
-body{
-    background-color: var(--bg-primary);
+
+body {
+  background-color: var(--bg-primary);
 }
-h1, h2, h3, h4, h5, h6, p .h1, .h2, .h3, .h4, .h5, .h6 {
-    /* font-weight: 500; */
-    /* font-style: normal; */
-    /* color: #000; */
-    font-variant-ligatures: common-ligatures;
-    text-rendering: optimizeLegibility;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p .h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  /* font-weight: 500; */
+  /* font-style: normal; */
+  /* color: #000; */
+  font-variant-ligatures: common-ligatures;
+  text-rendering: optimizeLegibility;
 }
-nav{
-    font-family: 'Poppins';
-    flex: 1;
-    text-align: right;
-    vertical-align: text-top;
+
+nav {
+  font-family: 'Inter';
+  flex: 1;
+  text-align: right;
+  vertical-align: text-top;
 }
-nav ul li{
-    list-style: none;
-    display: inline-block;
-    margin-right: 30px;
-    vertical-align: text-top;
+
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 30px;
+  vertical-align: text-top;
 }
-nav ul li a{
-    text-decoration: none;
-    color: var(--warna-h1);;
-    font-size: 14px;
-    vertical-align: text-top;
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--warna-h1);
+  ;
+  font-size: 14px;
+  vertical-align: text-top;
 }
-nav ul li a:hover{
-    color: #1c317c;
+
+nav ul li a:hover {
+  color: #1c317c;
 }
-check-box{
-    justify-content: center;
-    display: flex;
-    align-items: center;
+
+check-box {
+  justify-content: center;
+  display: flex;
+  align-items: center;
 }
-input[type="checkbox"]{
-    display: none;
-    visibility: hidden;
+
+input[type="checkbox"] {
+  display: none;
+  visibility: hidden;
 }
-input[type="checkbox"]:checked ~ .check:before{
-    transform: translateX(20px);
+
+input[type="checkbox"]:checked~.check:before {
+  transform: translateX(20px);
 }
-input[type="checkbox"]:checked ~ .check:before{
-    background-color: #1c317c;
-    box-shadow: 0 0 0 50000px #ffffff;
+
+input[type="checkbox"]:checked~.check:before {
+  background-color: #1c317c;
+  box-shadow: 0 0 0 50000px #ffffff;
 }
+
 .check:before,
 .check:after {
-    border-radius: 50%;
-    content: '';
-    height: 16px;
-    position: absolute;
-    top: 2px;
-    transition: transform 1.5s ease;
-    width: 16px;
+  border-radius: 50%;
+  content: '';
+  height: 16px;
+  position: absolute;
+  top: 2px;
+  transition: transform 1.5s ease;
+  width: 16px;
 }
+
 .check:before {
-    background-color: #ffffff;
-    left: 2px;
+  background-color: #ffffff;
+  left: 2px;
 }
+
 .check {
-    background-color: #1c317c;
-    border-radius: 20px;
-    cursor: pointer;
-    display: block;
-    height: 20px;
-    overflow: hidden;
-    position: relative;
-    transition: background-color 0.5s ease-in, box-shadow 0.5s ease-in;
-    margin-left: 20px;
-    width: 40px;
-}
-h1{
-    padding-left: 24px;
-    font-size: 24px;
-    font-weight: 700;
-    color: var(--warna-h1);
+  background-color: #1c317c;
+  border-radius: 20px;
+  cursor: pointer;
+  display: block;
+  height: 20px;
+  overflow: hidden;
+  position: relative;
+  transition: background-color 0.5s ease-in, box-shadow 0.5s ease-in;
+  margin-left: 20px;
+  width: 40px;
 }
 
-.container{
-    text-align: center;
+h1 {
+  padding-left: 24px;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--warna-h1);
 }
 
-.header{
-    padding-top: 60px;
-    font-size:24px;
-    margin: auto;
-    line-height: 40px;
+.container {
+  text-align: center;
 }
 
-.sub-container{
-    max-width:1200px;
-    margin: auto;
-    padding:48px 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content:center;
+.header {
+  padding-top: 60px;
+  font-size: 24px;
+  margin: auto;
+  line-height: 40px;
 }
 
-.teams{
-    margin: 10px;
-    padding:22px;
-    max-width: 30%;
-    cursor: pointer;
-    transition: 0.4s;
-    box-sizing: border-box;
+.sub-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 48px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.teams:hover{
-    background:#ddd;
-    border-radius:12px;
+.teams {
+  margin: 10px;
+  padding: 22px;
+  max-width: 30%;
+  cursor: pointer;
+  transition: 0.4s;
+  box-sizing: border-box;
 }
 
-.teams img{
-    width:200px;
-    height:200px;
-    border-radius:50%;
+.teams:hover {
+  background: #ddd;
+  border-radius: 12px;
 }
 
-.names{
-    padding: 12px;
-    font-weight: bold;
-    font-size:20px;
-    text-transform: uppercase;
+.teams img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
 }
 
-.design{
-    font-style: italic;
-    color:#888;
-    font-size:16px;
+.names {
+  padding: 12px;
+  font-weight: bold;
+  font-size: 20px;
+  text-transform: uppercase;
 }
 
-.about{
-    margin:20px 0;
-    font-weight: lighter;
-    color:#4e4e4e;
-    font-size:16px;
+.design {
+  font-style: italic;
+  color: #888;
+  font-size: 16px;
 }
 
-.social-links{
-    margin:14px;
+.about {
+  margin: 20px 0;
+  font-weight: lighter;
+  color: #4e4e4e;
+  font-size: 16px;
 }
 
-.social-links a{
-    display: inline-block;
-    height:30px;
-    width: 30px;
-    transition:.4s;
+.social-links {
+  margin: 14px;
 }
 
-.social-links a:hover{
-    transform:scale(1.5);
+.social-links a {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  transition: .4s;
 }
 
-.social-links i{
-    color:#444;
+.social-links a:hover {
+  transform: scale(1.5);
 }
 
-@media screen and (max-width:600px){
-    .teams{
-        max-width:100%
-    }
+.social-links i {
+  color: #444;
 }
 
-
+@media screen and (max-width:600px) {
+  .teams {
+    max-width: 100%
+  }
+}

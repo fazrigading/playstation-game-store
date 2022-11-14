@@ -1,195 +1,198 @@
-/* ===== Google Font Import - Poformsins ===== */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
 }
 
-body{
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #1c317c;
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1c317c;
 }
 
-.container{
-    position: relative;
-    max-width: 430px;
-    width: 100%;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    margin: 0 20px;
+.container {
+  position: relative;
+  max-width: 430px;
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 0 20px;
 }
 
-.container .forms{
-    display: flex;
-    align-items: center;
-    height: 450px;
-    width: 200%;
-    transition: height 0.2s ease;
+.container .forms {
+  display: flex;
+  align-items: center;
+  height: 450px;
+  width: 200%;
+  transition: height 0.2s ease;
 }
 
 
-.container .form{
-    width: 50%;
-    padding: 30px;
-    overflow-x: hidden;
-    background-color: #fff;
-    transition: margin-left 0.18s ease;
+.container .form {
+  width: 50%;
+  padding: 30px;
+  overflow-x: hidden;
+  background-color: #fff;
+  transition: margin-left 0.18s ease;
 }
 
-.container.active .login{
-    margin-left: -50%;
-    opacity: 0;
-    transition: margin-left 0.18s ease, opacity 0.15s ease;
+.container.active .login {
+  margin-left: -50%;
+  opacity: 0;
+  transition: margin-left 0.18s ease, opacity 0.15s ease;
 }
 
-.container .signup{
-    opacity: 0;
-    transition: opacity 0.09s ease;
-}
-.container.active .signup{
-    opacity: 1;
-    transition: opacity 0.2s ease;
+.container .signup {
+  opacity: 0;
+  transition: opacity 0.09s ease;
 }
 
-.container.active .forms{
-    height: 650px;
-}
-.container .form .title{
-    position: relative;
-    font-size: 27px;
-    font-weight: 900;
+.container.active .signup {
+  opacity: 1;
+  transition: opacity 0.2s ease;
 }
 
-.form .title::before{
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 3px;
-    width: 30px;
-    background-color: #1c317c;
-    border-radius: 25px;
+.container.active .forms {
+  height: 650px;
 }
 
-.form .input-field{
-    position: relative;
-    height: 50px;
-    width: 100%;
-    margin-top: 30px;
+.container .form .title {
+  position: relative;
+  font-size: 27px;
+  font-weight: 900;
 }
 
-.input-field input{
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    padding: 0 35px;
-    border: none;
-    outline: none;
-    font-size: 16px;
-    border-bottom: 2px solid #ccc;
-    border-top: 2px solid transparent;
-    transition: all 0.2s ease;
+.form .title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  background-color: #1c317c;
+  border-radius: 25px;
 }
 
-.input-field input:is(:focus, :valid){
-    border-bottom-color: #1c317c;
+.form .input-field {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  margin-top: 30px;
 }
 
-.input-field i{
-    position: absolute;
-    top: 50%;
-    /* transform: translateY(-50%); */
-    transform: translate(25%, -50%);
-    color: #999;
-    font-size: 23px;
-    transition: all 0.2s ease;
+.input-field input {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 0 35px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  border-bottom: 2px solid #ccc;
+  border-top: 2px solid transparent;
+  transition: all 0.2s ease;
 }
 
-.input-field input:is(:focus, :valid) ~ i{
-    color: #1c317c;
+.input-field input:is(:focus, :valid) {
+  border-bottom-color: #1c317c;
 }
 
-.input-field i.icon{
-    left: 0;
+.input-field i {
+  position: absolute;
+  top: 50%;
+  /* transform: translateY(-50%); */
+  transform: translate(25%, -50%);
+  color: #999;
+  font-size: 23px;
+  transition: all 0.2s ease;
 }
+
+.input-field input:is(:focus, :valid)~i {
+  color: #1c317c;
+}
+
+.input-field i.icon {
+  left: 0;
+}
+
 /* Ikon mata */
-.input-field i.showHidePw{
-    right: 0;
-    cursor: pointer;
-    padding: 10px 20px 10px 10px;
+.input-field i.showHidePw {
+  right: 0;
+  cursor: pointer;
+  padding: 10px 20px 10px 10px;
 }
 
-.form .checkbox-text{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 20px;
+.form .checkbox-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
 }
 
-.checkbox-text .checkbox-content{
-    display: flex;
-    align-items: center;
-    color: #999;
+.checkbox-text .checkbox-content {
+  display: flex;
+  align-items: center;
+  color: #999;
 }
 
-.checkbox-content input{
-    margin: 0 8px -2px 4px;
-    accent-color: #1c317c;
+.checkbox-content input {
+  margin: 0 8px -2px 4px;
+  accent-color: #1c317c;
 }
 
-.form .text{
-    color: #333;
-    font-size: 14px;
+.form .text {
+  color: #333;
+  font-size: 14px;
 }
 
-.form a.text{
-    color: #1c317c;
-    text-decoration: none;
-}
-.form a:hover{
-    text-decoration: underline;
+.form a.text {
+  color: #1c317c;
+  text-decoration: none;
 }
 
-.form .button{
-    margin-top: 35px;
+.form a:hover {
+  text-decoration: underline;
 }
 
-.form .button input{
-    border: none;
-    color: #fff;
-    font-size: 17px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    border-radius: 6px;
-    background-color: #1c3388;
-    cursor: pointer;
-    transition: all 0.3s ease;
+.form .button {
+  margin-top: 35px;
 }
 
-.button input:hover{
-    background-color: #304bad;
+.form .button input {
+  border: none;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border-radius: 6px;
+  background-color: #1c3388;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.form .login-signup{
-    margin-top: 30px;
-    text-align: center;
+.button input:hover {
+  background-color: #304bad;
 }
+
+.form .login-signup {
+  margin-top: 30px;
+  text-align: center;
+}
+
 textarea {
-    width: 100%;
-    max-width: 100%;
-    height: 80px;
+  width: 100%;
+  max-width: 100%;
+  height: 80px;
 }
-.container .forms-edit{
-    display: flex;
-    align-items: center;
-    width: 200%;
-    transition: height 0.2s ease;
+
+.container .forms-edit {
+  display: flex;
+  align-items: center;
+  width: 200%;
+  transition: height 0.2s ease;
 }
