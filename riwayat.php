@@ -20,42 +20,43 @@ $histories = query($query);
   <link rel="stylesheet" href="resources/css/riwayat.css?v=<?php echo time(); ?>">
   <!-- Fontawesome CDN Link -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
-  <title>Document</title>
+  <script src="https://kit.fontawesome.com/5bbbb39d34.js" crossorigin="anonymous"></script>
+  <title>History</title>
 </head>
 
 <body>
-  <div class="container">
-    <div class="navbar">
-      <a href="index.php"><img src="./resources/assets/logo.png" class="logo"></a>
-      <nav>
-        <ul id="menuList">
-          <li><a href="index.php">Home</a></li>
-          <li><a href="catalog.php">Catalog</a></li>
-          <?php
-          if (isset($_SESSION["loginAdmin"])) {
-            echo "<li><a href='admin/products/'>Dashboard</a></li>";
-          } else if (!isset($_SESSION["loginUser"]) && !isset($_SESSION["loginAdmin"])) {
-            echo "<li><a href='auth.php'>Login</a></li>";
-          }
-          if (isset($_SESSION["loginUser"]) || isset($_SESSION["loginAdmin"])) {
-            echo "<li><a href='payment/'>Cart</a></li>";
-            echo "<li><a href='riwayat.php'>Riwayat</a></li>";
-            echo "<li><a href='profile.php'>Profile</a></li>";
-            echo "<li><a href='logout.php'>Logout</a></li>";
-          }
-          ?>
-          <li>
-            <label>
-              <input type="checkbox" class="checkbox" id="modegelap">
-              <span class="check"></span>
-            </label>
-          </li>
-        </ul>
-      </nav>
-    </div>
+  <div class="navbar">
+    <a href="index.php"><img src="./resources/assets/logo.png" class="logo"></a>
+    <nav>
+      <ul id="menuList">
+        <li><a href="index.php">Home</a></li>
+        <li><a href="catalog.php">Catalog</a></li>
+        <?php
+        if (isset($_SESSION["loginAdmin"])) {
+          echo "<li><a href='admin/products/'>Dashboard</a></li>";
+        } else if (!isset($_SESSION["loginUser"]) && !isset($_SESSION["loginAdmin"])) {
+          echo "<li><a href='auth.php'>Login</a></li>";
+        }
+        if (isset($_SESSION["loginUser"]) || isset($_SESSION["loginAdmin"])) {
+          echo "<li><a href='payment/'>Cart</a></li>";
+          echo "<li><a href='riwayat.php'>Riwayat</a></li>";
+          echo "<li><a href='profile.php'>Profile</a></li>";
+          echo "<li><a href='logout.php'>Logout</a></li>";
+        }
+        ?>
+        <li>
+          <label>
+            <input type="checkbox" class="checkbox" id="modegelap">
+            <span class="check"></span>
+          </label>
+        </li>
+      </ul>
+    </nav>
+  </div>
 
+  <div class="container">
     <section>
-      <h1>RIWAYAT PEMESANAN</h1>
+      <h1>History</h1>
       <div class="tbl-header">
         <table cellpadding="0" cellspacing="0" border="0">
           <thead>
@@ -85,11 +86,24 @@ $histories = query($query);
         </table>
       </div>
     </section>
+  </div>
+  
+  <footer>
+    <div class="footer-content">
+      <h2>Playstation Game Store</h2>
+      <p>This website created by:</p>
+      <p>Fazri Gading (2009106031), Alexander Januar (2009106035), dan Risky Kurniawan (2009106050).</p>
+      <p>Click Github icon below to check our repository.</p>
+      <ul class="socials">
+        <li><a href="https://github.com/fazrigading/playstation-game-store/" target="_blank"><i class="fa fa-github"></i></a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <p>Copyright &copy; 2022 Rigalex</p>
+    </div>
+  </footer>
 
-    <script src="resources/js/payment.js"></script>
-
+  <script src="resources/js/payment.js"></script>
 </body>
-
-
 
 </html>
