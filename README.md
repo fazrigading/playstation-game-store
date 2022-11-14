@@ -11,7 +11,7 @@ Kontributor proyek ini terdiri dari 1 programmer back-end dan 2 programmer front
 Bagian ini menunjukkan hasil perkembangan pengerjaan proyek dengan beberapa emoji yang melambangkan tingkat kelengkapan.
 
 > Design: 
-> 16/18 = 88% of 100%
+> 18/18 = 100% of 100%
 > 
 > System:
 > 21/23 = 91% of 100%
@@ -54,8 +54,8 @@ Bagian ini menunjukkan hasil perkembangan pengerjaan proyek dengan beberapa emoj
   - 🟩[Risky] - Items
 
 ## User:
-- 🔵[Alex] 🟦[Risky] - Profile Page (Display Info) 
-- 🔵[Alex] 🟦[Risky] - Edit Account Page (Personal Info & Address)
+- 🟢[Alex] 🟦[Risky] - Profile Page (Display Info) 
+- 🟢[Alex] 🟦[Risky] - Edit Account Page (Personal Info & Address)
 
 ## Admin:
 - 🟢[Alex] 🟩[Risky] - User Panel (Kelola User) 
