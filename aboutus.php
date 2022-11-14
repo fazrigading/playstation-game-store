@@ -32,7 +32,7 @@ require 'config.php';
         }
         if (isset($_SESSION["loginUser"]) || isset($_SESSION["loginAdmin"])) {
           echo "<li><a href='payment/'>Cart</a></li>";
-          echo "<li><a href='riwayat.php'>Riwayat</a></li>";
+          echo "<li><a href='riwayat.php'>History</a></li>";
           echo "<li><a href='profile.php'>Profile</a></li>";
           echo "<li><a href='logout.php'>Logout</a></li>";
         }
@@ -55,7 +55,7 @@ require 'config.php';
           <img src="resources/assets/gading.jpg" alt="" height="100px">
           <div class="names">Fazri Gading</div>
           <div class="design">Front-End</div>
-          <div class="about">Repository Owner. Interested in Computer Vision and C++ Programming. Aku mengira kau takdirku, ternyata keliru. Hadirmu adalah luka yang dibekukan waktu.</div>
+          <div class="about">Web System & Design Initiator. Interested in Computer Vision and C++. Apa bahasa Inggrisnya Ikan Sapu Sapu? Cleaning Share Fish.</div>
 
           <div class="social-links">
             <a href="https://www.linkedin.com/in/fazrigading/" target="_blank"><i class="fa fa-linkedin"></i></a>
@@ -69,7 +69,7 @@ require 'config.php';
           <img src="resources/assets/alex.jpg" alt="">
           <div class="names">Alexander Januar</div>
           <div class="design">Front-End</div>
-          <div class="about">Web Design Contributor. Interested in Machine Learning and Python Programming. Jangan semangat, tetap menyerah.</div>
+          <div class="about">Web Design Contributor. Interested in Machine Learning and Python. Jangan semangat, tetap menyerah.</div>
 
           <div class="social-links">
             <a href="https://www.linkedin.com/in/alexander-januar-1a29a9219/" target="_blank"><i class="fa fa-linkedin"></i></a>
@@ -83,7 +83,7 @@ require 'config.php';
           <img src="resources/assets/risky.jfif" alt="" height="100px">
           <div class="names">Risky Kurniawan</div>
           <div class="design">Back-End</div>
-          <div class="about">Full-stack Web Developer & Web System Contributor. </div>
+          <div class="about">Web System Contributor. Full-stack Web Developer. Hidup ini memang tidak adil. Jadi biasakanlah dirimu.</div>
           <div class="social-links">
             <a href="https://www.linkedin.com/in/riskykrnawan/" target="_blank"><i class="fa fa-linkedin"></i></a>
             <a href="https://www.instagram.com/_riskykrnawan/" target="_blank"><i class="fa fa-instagram"></i></a>
