@@ -54,8 +54,8 @@ Bagian ini menunjukkan hasil perkembangan pengerjaan proyek dengan beberapa emoj
   - 🟩[Risky] - Items
 
 ## User:
-- 🟢[Alex] 🟦[Risky] - Profile Page (Display Info) 
-- 🟢[Alex] 🟦[Risky] - Edit Account Page (Personal Info & Address)
+- 🟢[Alex] 🟩[Risky] - Profile Page (Display Info) 
+- 🟢[Alex] 🟩[Risky] - Edit Account Page (Personal Info & Address)
 
 ## Admin:
 - 🟢[Alex] 🟩[Risky] - User Panel (Kelola User) 
