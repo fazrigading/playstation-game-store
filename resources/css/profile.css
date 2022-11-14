@@ -1,0 +1,255 @@
+* {
+    font-family: 'Poppins';
+    padding: 0;
+    margin: 0;
+}
+
+/*NAVBAR */
+
+.navbar {
+    width: 100%;
+    padding-right: 8%;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.logo {
+    width: 50px;
+    cursor: pointer;
+    margin: 30px 0;
+}
+
+.menu-icon {
+    width: 25px;
+    cursor: pointer;
+    display: none;
+}
+
+:root {
+    --linearbg-Primary: linear-gradient(#F5F7FA, #B8C6DB);
+    --bg-primary: #fff;
+    --warna-h1: #0f1734;
+    --bg-border: rgba(28, 49, 124, 0.1);
+}
+
+.dark-mode {
+    --linearbg-Primary: linear-gradient(#526bfb, #1c317c);
+    --bg-primary: #0f1734;
+    --warna-h1: #fff;
+    --bg-border: rgba(255, 255, 255, 0.1);
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p .h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-variant-ligatures: common-ligatures;
+    text-rendering: optimizeLegibility;
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+    vertical-align: text-top;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 30px;
+    vertical-align: text-top;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--warna-h1);
+    ;
+    font-size: 14px;
+    vertical-align: text-top;
+}
+
+nav ul li a:hover {
+    color: #1c317c;
+}
+
+check-box {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+input[type="checkbox"] {
+    display: none;
+    visibility: hidden;
+}
+
+input[type="checkbox"]:checked~.check:before {
+    transform: translateX(20px);
+}
+
+input[type="checkbox"]:checked~.check:before {
+    background-color: #1c317c;
+    box-shadow: 0 0 0 50000px #ffffff;
+}
+
+.check:before,
+.check:after {
+    border-radius: 50%;
+    content: '';
+    height: 16px;
+    position: absolute;
+    top: 2px;
+    transition: transform 1.5s ease;
+    width: 16px;
+}
+
+.check:before {
+    background-color: #ffffff;
+    left: 2px;
+}
+
+
+
+.check {
+    background-color: #1c317c;
+    border-radius: 20px;
+    cursor: pointer;
+    display: block;
+    height: 20px;
+    overflow: hidden;
+    position: relative;
+    transition: background-color 0.5s ease-in, box-shadow 0.5s ease-in;
+    margin-left: 20px;
+    width: 40px;
+}
+
+.navbar h1 {
+    padding-left: 24px;
+    font-size: 21px;
+    font-weight: 600;
+    color: var(--warna-h1);
+}
+
+.container {
+    max-width: 100%;
+    margin: 30px 60px;
+}
+
+.header {
+    font-weight: 600;
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.profile-info {
+    margin-bottom: 30px;
+    border-top: 2px solid #0f1734;
+    border-radius: 5px;
+    padding: 15px 20px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.profile-info img{
+    width: 200px;
+    height: 200px;
+    border-radius:50%;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    padding: 8px 15px;
+}
+
+.info {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.info-fields {
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #ecf0f1;
+    border-radius: 5px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.info-update {
+    font-weight: 600;
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 100%;
+    font-size: 15px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    padding: 6px 0px 6px 10px;
+    background-color: #ecf0f1;
+    border-radius: 5px;
+    border: none;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+input[type="file"] {
+    margin-bottom: 20px;
+    margin-top: 10px;
+    position: relative;
+    width: 250px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px dashed #BBB;
+    text-align: center;
+    background-color: #DDD;
+    cursor: pointer;
+}
+
+.info-pass {
+    text-align: center;
+    color: gray;
+    font-size: 20px;
+}
+
+
+.button-submit {
+    padding: 5px 5px;
+    color: #FFF;
+    background-color: #3ac162;
+    font-size: 16px;
+    text-align: center;
+    font-style: normal;
+    border-radius: 5px;
+    width: 100px;
+    border:none;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+    margin-bottom: 10px;
+}
+
+button.button-riwayat {
+    padding: 5px 5px;
+    color: #FFF;
+    background-color: #3ac162;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    border-radius: 5px;
+    width: 100%;
+    border: none;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+    margin-bottom: 10px;
+}
+
+.riwayat{
+    font-size: 22px;
+    font-weight: 500;
+}
