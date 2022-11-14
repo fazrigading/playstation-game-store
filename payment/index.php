@@ -75,6 +75,7 @@ if (isset($_POST['btnCheckout'])) {
   </div>
 
   <main>
+    <h1>Cart</h1>
     <!-- <form action="" method="get"> -->
     <div class="basket">
       <div class="basket-labels">
@@ -92,11 +93,11 @@ if (isset($_POST['btnCheckout'])) {
               <img src="../resources/img/<?= $cart['photo'] ?>" alt="Placholder Image 2" class="product-frame">
             </div>
             <div class="product-details">
-              <h1>
+              <h2>
                 <span class="item-quantity">
                   <?= $cart['quantity'] ?>
                 </span> <?= $cart['name'] ?>
-              </h1>
+              </h2>
             </div>
           </div>
           <div class="price"><?= $cart['price'] ?></div>
@@ -121,7 +122,7 @@ if (isset($_POST['btnCheckout'])) {
       <input type="hidden" name="idToCheckout[]" value="<?= $idToCheckout ?>">
       <aside>
         <div class="summary">
-          <div class="summary-total-items"><span class="total-items"></span> Barang dalam Keranjang</div>
+          <div class="summary-total-items"><span class="total-items"></span>Item(s) in Cart</div>
           <div class="summary-subtotal">
             <div class="subtotal-title">Subtotal</div>
             <div class="subtotal-value final-value" id="basket-subtotal"><?= $sum ?></div>
