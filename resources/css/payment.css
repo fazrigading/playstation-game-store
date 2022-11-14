@@ -164,13 +164,14 @@ button {
 }
 
 button {
-  background-color: #208bff;
+  background-color: #1c317c;
   color: #fff;
+  border-radius: 5px;
 }
 
 button:hover,
 button:focus {
-  background-color: #1b70cc;
+  background-color: #243fa0;
 }
 
 img,
