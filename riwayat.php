@@ -55,7 +55,6 @@ $histories = query($query);
     </div>
 
     <section>
-      <!--for demo wrap-->
       <h1>RIWAYAT PEMESANAN</h1>
       <div class="tbl-header">
         <table cellpadding="0" cellspacing="0" border="0">
@@ -80,10 +79,6 @@ $histories = query($query);
                 <td><?= $history['date'] ?></td>
                 <td><?= $history['total_price'] ?></td>
                 <td><?= $history['status'] ?></td>
-                <td>Playstation 5 </td>
-                <td>1</td>
-                <td>Rp. 5.000.000</td>
-                <td>12-01-2022</td>
               </tr>
             <?php endforeach ?>
           </tbody>
