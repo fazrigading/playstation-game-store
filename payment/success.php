@@ -21,21 +21,21 @@ require '../config.php';
     <a href="index.php"><img src="../resources/assets/logo.png" class="logo"></a>
     <nav>
       <ul id="menuList">
-        <li><a href="index.php">Home</a></li>
-        <li><a href="aboutus.php">About Us</a></li>
-        <li><a href="catalog.php">Catalog</a></li>
+        <li><a href="../index.php">Home</a></li>
+        <li><a href="../aboutus.php">About Us</a></li>
+        <li><a href="../catalog.php">Catalog</a></li>
         <?php
         if (isset($_SESSION["loginUser"])) {
-          echo "<li><a href='payment/'>Cart</a></li>";
-          echo "<li><a href='riwayat.php'>History</a></li>";
+          echo "<li><a href='../payment/'>Cart</a></li>";
+          echo "<li><a href='../riwayat.php'>History</a></li>";
         } else if (isset($_SESSION["loginAdmin"])) {
-          echo "<li><a href='admin/products/'>Dashboard</a></li>";
+          echo "<li><a href='../admin/products/'>Dashboard</a></li>";
         } else if (!isset($_SESSION["loginUser"]) && !isset($_SESSION["loginAdmin"])) {
-          echo "<li><a href='auth.php'>Login</a></li>";
+          echo "<li><a href='../auth.php'>Login</a></li>";
         }
         if (isset($_SESSION["loginUser"]) || isset($_SESSION["loginAdmin"])) {
-          echo "<li><a href='profile.php'>Profile</a></li>";
-          echo "<li><a href='logout.php'>Logout</a></li>";
+          echo "<li><a href='../profile.php'>Profile</a></li>";
+          echo "<li><a href='../logout.php'>Logout</a></li>";
         }
         ?>
         <li>
@@ -57,12 +57,12 @@ require '../config.php';
         kami akan menginformasikan resi secepat mungkin!
       </h3>
       <div class="buttons">
-        <a href="index.php"><button class="close-btn">Home</button></a>
-        <a href="catalog.php"><button>Catalog</button></a>
+        <a href="../index.php"><button class="close-btn">Home</button></a>
+        <a href="../catalog.php"><button>Catalog</button></a>
       </div>
     </div>
   </div>
-  <script src="resources/js/payment.js"></script>
+  <script src="../resources/js/payment.js"></script>
 </body>
 
 </html>
