@@ -22,7 +22,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
   <title>Tambah User</title>
-  <link rel="stylesheet" href="../../resources/css/userpanel.css?v=<?php echo time(); ?>">
+  <link rel="stylesheet" href="../../resources/css/userpanel.css">
 </head>
 
 <body>

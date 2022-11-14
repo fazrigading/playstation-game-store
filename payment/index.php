@@ -33,7 +33,7 @@ if (isset($_POST['btnCheckout'])) {
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="stylesheet" href="../resources/css/payment.css?v=<?php echo time(); ?>">
+  <link rel="stylesheet" href="../resources/css/payment.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;700;900&display=swap" rel="stylesheet">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <script src="https://kit.fontawesome.com/5bbbb39d34.js" crossorigin="anonymous"></script>

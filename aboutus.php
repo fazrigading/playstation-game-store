@@ -12,7 +12,7 @@ require 'config.php';
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Playstation Game Store</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="resources/css/aboutus.css?v=<?php echo time(); ?>">
+  <link rel="stylesheet" href="resources/css/aboutus.css">
   <script src="https://kit.fontawesome.com/5bbbb39d34.js" crossorigin="anonymous"></script>
 </head>
 
