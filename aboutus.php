@@ -66,7 +66,7 @@ require 'config.php';
         </div>
 
         <div class="teams">
-          <img src="resources/assets/alex.png" alt="">
+          <img src="resources/assets/alex.jpg" alt="">
           <div class="names">Alexander Januar</div>
           <div class="design">Front-End</div>
           <div class="about">lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepteur sint occaecat cupiditat
