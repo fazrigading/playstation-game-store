@@ -27,7 +27,7 @@ Bagian ini menunjukkan hasil perkembangan pengerjaan proyek dengan beberapa emoj
 ## Prequisites
 - 🟩[Gading] Database Completeness
 - 🟩[Gading] Clean redundant items from Post-tests
-- 🟦[Risky] Hosting
+- 🟩[Risky] Hosting with SSL
 
 ## Pre-Auth:
 - 🟢[Gading] 🟩[Risky] - Homepage
