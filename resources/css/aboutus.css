@@ -27,6 +27,7 @@
   --btn-color1: #3f56da;
   --btn-color2: #365ff0;
   --teamhover: #ddd;
+  --social-links: #444;
 }
 
 .dark-mode {
@@ -38,6 +39,7 @@
   --btn-color1: #3f56da;
   --btn-color2: #365ff0;
   --teamhover: #0a1025;
+  --social-links: #dddddd;
 }
 
 .container {
@@ -197,7 +199,7 @@ h1 {
 .names {
   padding: 12px;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .design {
@@ -229,7 +231,7 @@ h1 {
 }
 
 .social-links i {
-  color: #444;
+  color: var(--social-links);
 }
 
 @media screen and (max-width:600px) {

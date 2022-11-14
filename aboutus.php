@@ -53,9 +53,9 @@ require 'config.php';
       <div class="sub-container">
         <div class="teams">
           <img src="resources/assets/gading.jpg" alt="" height="100px">
-          <div class="names">Fazri Gading</div>
-          <div class="design">Front-End</div>
-          <div class="about">Web System & Design Initiator. Interested in Computer Vision and C++. Apa bahasa Inggrisnya Ikan Sapu Sapu? Cleaning Share Fish.</div>
+          <div class="names"><h2>Fazri Gading</h2></div>
+          <div class="design"><h5>Front-End</h5></div>
+          <div class="about"><p>Web System & Design Initiator. Interested in Computer Vision and C++. Apa bahasa Inggrisnya Ikan Sapu Sapu? Cleaning Share Fish.</p></div>
 
           <div class="social-links">
             <a href="https://www.linkedin.com/in/fazrigading/" target="_blank"><i class="fa fa-linkedin"></i></a>
@@ -67,9 +67,9 @@ require 'config.php';
 
         <div class="teams">
           <img src="resources/assets/alex.jpg" alt="">
-          <div class="names">Alexander Januar</div>
-          <div class="design">Front-End</div>
-          <div class="about">Web Design Contributor. Interested in Machine Learning and Python. Jangan semangat, tetap menyerah.</div>
+          <div class="names"><h2>Alexander Januar</h2></div>
+          <div class="design"><h5>Front-End</h5></div>
+          <div class="about"><p>Web Design Contributor. Interested in Machine Learning and Python. Bubur, bubur apa yang paling gede? Bubur zoom zoom.</p></div>
 
           <div class="social-links">
             <a href="https://www.linkedin.com/in/alexander-januar-1a29a9219/" target="_blank"><i class="fa fa-linkedin"></i></a>
@@ -81,9 +81,9 @@ require 'config.php';
 
         <div class="teams">
           <img src="resources/assets/risky.jfif" alt="" height="100px">
-          <div class="names">Risky Kurniawan</div>
-          <div class="design">Back-End</div>
-          <div class="about">Web System Contributor. Full-stack Web Developer. Hidup ini memang tidak adil. Jadi biasakanlah dirimu.</div>
+          <div class="names"><h2>Risky Kurniawan</h2></div>
+          <div class="design"><h5>Back-End</h5></div>
+          <div class="about"><p>Web System Contributor. Full-stack Web Developer. Hidup ini memang tidak adil. Jadi biasakanlah dirimu.</p></div>
           <div class="social-links">
             <a href="https://www.linkedin.com/in/riskykrnawan/" target="_blank"><i class="fa fa-linkedin"></i></a>
             <a href="https://www.instagram.com/_riskykrnawan/" target="_blank"><i class="fa fa-instagram"></i></a>
