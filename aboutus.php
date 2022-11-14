@@ -52,7 +52,7 @@ require 'config.php';
       <h1>Our Team</h1>
       <div class="sub-container">
         <div class="teams">
-          <img src="resources/img/10-29-2022 01-36-37 am.jpg" alt="" height="100px">
+          <img src="resources/assets/gading.jpg" alt="" height="100px">
           <div class="names">Fazri Gading</div>
           <div class="design">Front-End</div>
           <div class="about">Repository Owner. Interested in Computer Vision and C++ Programming. Prefers Bootstrap than full native.</div>
@@ -66,7 +66,7 @@ require 'config.php';
         </div>
 
         <div class="teams">
-          <img src="resources/img/FotoAlex.png" alt="">
+          <img src="resources/assets/alex.png" alt="">
           <div class="names">Alexander Januar</div>
           <div class="design">Front-End</div>
           <div class="about">lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepteur sint occaecat cupiditat
@@ -81,7 +81,7 @@ require 'config.php';
         </div>
 
         <div class="teams">
-          <img src="resources/img/FotoRiski.jfif" alt="" height="100px">
+          <img src="resources/assets/risky.jfif" alt="" height="100px">
           <div class="names">Risky Kurniawan</div>
           <div class="design">Back-End</div>
           <div class="about">lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepteur sint occaecat cupiditat
