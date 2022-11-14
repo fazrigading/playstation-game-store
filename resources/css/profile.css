@@ -187,6 +187,7 @@ input[type="checkbox"]:checked~.check:before {
   margin-bottom: 20px;
   margin-top: 10px;
   padding: 8px 15px;
+  object-fit: cover;
 }
 
 .info {
