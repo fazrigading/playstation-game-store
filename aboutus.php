@@ -55,7 +55,7 @@ require 'config.php';
           <img src="resources/assets/gading.jpg" alt="" height="100px">
           <div class="names">Fazri Gading</div>
           <div class="design">Front-End</div>
-          <div class="about">Repository Owner. Interested in Computer Vision and C++ Programming. Prefers Bootstrap than full native.</div>
+          <div class="about">Repository Owner. Interested in Computer Vision and C++ Programming. Aku mengira kau takdirku, ternyata keliru. Hadirmu adalah luka yang dibekukan waktu.</div>
 
           <div class="social-links">
             <a href="https://www.linkedin.com/in/fazrigading/" target="_blank"><i class="fa fa-linkedin"></i></a>
@@ -69,8 +69,7 @@ require 'config.php';
           <img src="resources/assets/alex.jpg" alt="">
           <div class="names">Alexander Januar</div>
           <div class="design">Front-End</div>
-          <div class="about">lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepteur sint occaecat cupiditat
-            non proident,</div>
+          <div class="about">Web Design Contributor. Interested in Machine Learning and Python Programming. Jangan semangat, tetap menyerah.</div>
 
           <div class="social-links">
             <a href="https://www.linkedin.com/in/alexander-januar-1a29a9219/" target="_blank"><i class="fa fa-linkedin"></i></a>
@@ -84,8 +83,7 @@ require 'config.php';
           <img src="resources/assets/risky.jfif" alt="" height="100px">
           <div class="names">Risky Kurniawan</div>
           <div class="design">Back-End</div>
-          <div class="about">lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepteur sint occaecat cupiditat
-            non proident,</div>
+          <div class="about">Full-stack Web Developer & Web System Contributor. </div>
           <div class="social-links">
             <a href="https://www.linkedin.com/in/riskykrnawan/" target="_blank"><i class="fa fa-linkedin"></i></a>
             <a href="https://www.instagram.com/_riskykrnawan/" target="_blank"><i class="fa fa-instagram"></i></a>
