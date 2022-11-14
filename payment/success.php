@@ -1,3 +1,7 @@
+<?php 
+session_start();
+require '../config.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,45 +17,52 @@
 </head>
 
 <body>
+  <div class="navbar">
+    <a href="index.php"><img src="../resources/assets/logo.png" class="logo"></a>
+    <nav>
+      <ul id="menuList">
+        <li><a href="index.php">Home</a></li>
+        <li><a href="aboutus.php">About Us</a></li>
+        <li><a href="catalog.php">Catalog</a></li>
+        <?php
+        if (isset($_SESSION["loginUser"])) {
+          echo "<li><a href='payment/'>Cart</a></li>";
+          echo "<li><a href='riwayat.php'>History</a></li>";
+        } else if (isset($_SESSION["loginAdmin"])) {
+          echo "<li><a href='admin/products/'>Dashboard</a></li>";
+        } else if (!isset($_SESSION["loginUser"]) && !isset($_SESSION["loginAdmin"])) {
+          echo "<li><a href='auth.php'>Login</a></li>";
+        }
+        if (isset($_SESSION["loginUser"]) || isset($_SESSION["loginAdmin"])) {
+          echo "<li><a href='profile.php'>Profile</a></li>";
+          echo "<li><a href='logout.php'>Logout</a></li>";
+        }
+        ?>
+        <li>
+          <label>
+            <input type="checkbox" class="checkbox" id="modegelap" title="Dark Mode">
+            <span class="check"></span>
+          </label>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
   <div class="container">
-    <div class="navbar">
-      <img src="../resources/assets/logo.png" class="logo">
-      <h1>Playstation Game Store</h1>
-      <nav>
-        <ul id="menuList">
-          <li><a href="index.php">Beranda</a></li>
-          <li><a href="catalog.php">Catalog</a></li>
-          <li><a href="catalog.php">Profile</a></li>
-          <li>
-            <label>
-              <input type="checkbox" class="checkbox" id="modegelap">
-              <span class="check"></span>
-            </label>
-          </li>
-        </ul>
-      </nav>
-    </div>
-
-    <section>
-      <div class="modal-box">
-        <i class="fa-regular fa-circle-check"></i>
-        <h2>Pembayaran Berhasil!</h2>
-        <h3>
-          Silahkan tunggu konfirmasi email dari kami dan
-          kami akan menginformasikan resi secepat mungkin!
-        </h3>
-
-        <div class="buttons">
-          <a href="index.php"><button class="close-btn">Beranda</button></a>
-          <a href="catalog.php"><button>Beli Lagi</button></a>
-        </div>
+    <div class="modal-box">
+      <i class="fa-regular fa-circle-check"></i>
+      <h2>Pembayaran Berhasil!</h2>
+      <h3>
+        Silahkan tunggu konfirmasi email dari kami dan
+        kami akan menginformasikan resi secepat mungkin!
+      </h3>
+      <div class="buttons">
+        <a href="index.php"><button class="close-btn">Home</button></a>
+        <a href="catalog.php"><button>Catalog</button></a>
       </div>
-    </section>
-
-    <script src="resources/js/payment.js"></script>
-
+    </div>
+  </div>
+  <script src="resources/js/payment.js"></script>
 </body>
-
-
 
 </html>
