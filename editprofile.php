@@ -39,14 +39,15 @@ if (isset($_POST["submitupdate"])) {
         <li><a href="aboutus.php">About Us</a></li>
         <li><a href="catalog.php">Catalog</a></li>
         <?php
-        if (isset($_SESSION["loginAdmin"])) {
+        if (isset($_SESSION["loginUser"])) {
+          echo "<li><a href='payment/'>Cart</a></li>";
+          echo "<li><a href='riwayat.php'>History</a></li>";
+        } else if (isset($_SESSION["loginAdmin"])) {
           echo "<li><a href='admin/products/'>Dashboard</a></li>";
         } else if (!isset($_SESSION["loginUser"]) && !isset($_SESSION["loginAdmin"])) {
           echo "<li><a href='auth.php'>Login</a></li>";
         }
-        if (isset($_SESSION["loginUser"]) || isset($_SESSION["loginAdmin"])) {
-          echo "<li><a href='payment/'>Cart</a></li>";
-          echo "<li><a href='riwayat.php'>History</a></li>";
+        if (isset($_SESSION["loginUser"]) || isset($_SESSION["loginAdmin"])){
           echo "<li><a href='profile.php'>Profile</a></li>";
           echo "<li><a href='logout.php'>Logout</a></li>";
         }
