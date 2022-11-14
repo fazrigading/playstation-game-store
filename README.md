@@ -14,7 +14,7 @@ Bagian ini menunjukkan hasil perkembangan pengerjaan proyek dengan beberapa emoj
 > 18/18 = 100% of 100%
 > 
 > System:
-> 21/23 = 91% of 100%
+> 23/24 = 96% of 100%
 
 ## Keterangan:
 - 🟡 Design Not Started
@@ -27,6 +27,7 @@ Bagian ini menunjukkan hasil perkembangan pengerjaan proyek dengan beberapa emoj
 ## Prequisites
 - 🟩[Gading] Database Completeness
 - 🟩[Gading] Clean redundant items from Post-tests
+- 🟦[Risky] Hosting
 
 ## Pre-Auth:
 - 🟢[Gading] 🟩[Risky] - Homepage
