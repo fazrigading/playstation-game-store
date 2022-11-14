@@ -1,5 +1,6 @@
 # Playstation Game Store
 Playstation Game Store adalah judul dengan tema Game Console Store, yang merupakan proyek akhir dari Praktikum Web 2022 yang dibuat oleh Kelompok 3 dari kelas A 2020 Program Studi Informatika Fakultas Teknik Universitas Mulawarman.
+> COMPLETED ON: 14/11/2022 22:11 WITA
 
 # Contributors
 Kontributor proyek ini terdiri dari 1 programmer back-end dan 2 programmer front-end, yakni:
@@ -14,7 +15,7 @@ Bagian ini menunjukkan hasil perkembangan pengerjaan proyek dengan beberapa emoj
 > 18/18 = 100% of 100%
 > 
 > System:
-> 23/24 = 96% of 100%
+> 24/24 = 100% of 100%
 
 ## Keterangan:
 - 🟡 Design Not Started
