@@ -57,7 +57,7 @@
                 <span class="title">Masuk</span>
                 <form action="#" method="post">
                     <div class="input-field">
-                        <input type="text" name="username" placeholder="Your Username/Email" required>
+                        <input type="text" name="username" placeholder="Your Username" required>
                         <i class="uil uil-envelope icon"></i>
                     </div>
 
