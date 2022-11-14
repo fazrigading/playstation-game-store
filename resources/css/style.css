@@ -4,6 +4,20 @@
   box-sizing: border-box; 
 }
 
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
 :root {
   --bg-primary: #fff;
   --bg-secondary: #fcfcfc;
@@ -33,8 +47,7 @@
 
 .navbar {
   width: 100%;
-  padding-left: 8%;
-  padding-right: 8%;
+  padding: 0 8%;
   display: flex;
   align-items: center;
 }
