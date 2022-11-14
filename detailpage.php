@@ -131,7 +131,7 @@ if (isset($_POST['btnBuy'])) {
         <form action="" method="post">
           <input type="hidden" name="productName" value="<?= $product["name"] ?>">
           <input type="hidden" name="idProduct" value="<?= $product["id"] ?>">
-          <input type="hidden" name="price" value="<?= $product["price"] ?>">
+          <input type="hidden" name="totalPrice" value="<?= $product["price"] ?>">
           <!-- TOMBOL TAMBAH KE KERANJANG -->
           <button type="submit" name="btnCart" id="add-cart">Tambah Ke Keranjang</button><br>
 

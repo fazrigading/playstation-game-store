@@ -1,7 +1,6 @@
 html,
 html a {
   overflow-x: hidden;
-  overflow-y: hidden;
   -webkit-font-smoothing: antialiased;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
 }
@@ -35,7 +34,7 @@ html a {
 .container {
   width: 100%;
   min-width: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
   background-color: var(--bg-secondary);
 }
 
@@ -476,8 +475,9 @@ input[type="checkbox"]:checked~.check:before {
 }
 
 footer {
+  margin-top: 40px;
   background-color: #1c317c;
-  position: fixed;
+  position:fixed;
   bottom: 0;
   width: 100%;
   height: auto;

@@ -264,8 +264,8 @@ function deleteFromCart($id) {
 function buy($data) {
     global $db, $idToCheckout;
     $idUser = $_COOKIE['id'];
-    $productName = $data["productName"];
-    $totalPrice = $data["totalPrice"];
+    $productName = mysqli_escape_string($db, $data["productName"]);
+    $totalPrice = mysqli_escape_string($db, $data["totalPrice"]);
     $date = date('m/d/Y-h:i:s');
     $query = "INSERT INTO history (id_user, product_name, date, total_price, status) VALUES ('$idUser', '$productName', '$date', '$totalPrice', 'success')";
     mysqli_query($db, $query);

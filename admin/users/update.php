@@ -44,7 +44,7 @@
               <input type="text" id="username" name="user" placeholder="Username" value="<?= $user["username"] ?>">
               
               <label for="password">Password baru: (Abaikan jika tidak mengganti password)</label>
-              <input type="password" id="password" name="newPass" placeholder="Password">
+              <input type="password" id="password" name="newPass" placeholder="Password                                       `">
 
               <label for="cNewPass">Konfirmasi Password baru: (Abaikan jika tidak mengganti password)</label>
               <input type="password" id="cNewPass" name="confirmNewPass" placeholder="Password">
