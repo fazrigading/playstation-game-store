@@ -36,11 +36,11 @@ html a {
   width: 100%;
   min-width: 100vh;
   overflow: hidden;
-  background-color: var(--bg-primary);
+  background-color: var(--bg-secondary);
 }
 
 body {
-  background-color: var(--bg-secondary);
+  background-color: var(--bg-primary);
   font-family: 'Inter';
 }
 
@@ -223,7 +223,7 @@ li.subtotal:before {
 }
 
 .quantity-field {
-  background-color: var(--bg-primary);
+  background-color: var(--bg-secondary);
   border: 1px solid #aaa;
   border-radius: 4px;
   font-size: 0.625rem;
@@ -239,7 +239,7 @@ aside {
 }
 
 .summary {
-  background: var(--linearbg-Primary);
+  background: var(--bg-secondary);
   padding: 1rem;
   position: fixed;
   width: 250px;
