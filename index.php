@@ -59,10 +59,10 @@ require 'config.php';
     </div>
     <main class="my-5 py-5 px-lg-5">
       <div class="row align-items-center">
-        <div class="col float-start">
+        <div class="col-5 float-start">
           <img src="resources/img/ps5-small.png" alt="Playstation 5 Console" class="img-fluid">
         </div>
-        <div class="col">
+        <div class="col-7">
           <h4>Play Has No Limits</h4>
           <h1>PlayStation 5</h1>
           <small>Experience lightning-fast loading with an ultra-high speed SSD, deeper immersion with support for haptic feedback, adaptive triggers and 3D Audio, and an all-new generation of incredible PlayStation games.</small>
@@ -72,23 +72,23 @@ require 'config.php';
       </div>
 
       <div class="row align-items-center">
-        <div class="col">
+        <div class="col-7">
           <h4>Greatness Awaits</h4>
           <h1>PlayStation 4</h1>
           <small>The PS4 console, delivering awesome gaming power, incredible entertainment and vibrant HDR technology. Store your games, apps, screenshots and videos with up to 1TB storage inside the PS4 console - slimmer and lighter and available in Jet Black and more colours.</small>
           <br><br>
           <a href="catalog.php#featured-consoles"><button id="buynow" class="custom-button">Order Now</button></a>
         </div>
-        <div class="col text-end">
+        <div class="col-5 text-end">
           <img src="resources/img/ps4-small.png" alt="Playstation 4 Console" class="img-fluid">
         </div>
       </div>
 
       <div class="row align-items-center">
-        <div class="col">
+        <div class="col-5">
           <img src="resources/img/ps5games.png" alt="Playstation 5 Games" class="offer-img img-fluid">
         </div>
-        <div class="col">
+        <div class="col-7">
           <h4>Already have Playstation?</h4>
           <h1>Discover Games</h1>
           <small>Discover the extraordinary console exclusive games, from blockbusters to innovative indies, all brought to life with the power of the PS5™ console.</small>
@@ -98,14 +98,14 @@ require 'config.php';
       </div>
       
       <div class="row align-items-center">
-        <div class="col">
+        <div class="col-7">
           <h4>Need more tools?</h4>
           <h1>Discover Accessories</h1>
           <small>Build your perfect gaming setup with controllers, headsets and other accessories for your PS5™ or PS4™ console.</small>
           <br><br>
           <a href="catalog.php#featured-accesories"><button id="buynow" class="custom-button">See More</button></a>
         </div>
-        <div class="col text-end">
+        <div class="col-5 text-end">
           <img src="resources/img/ps5accessories.png" alt="Playstation 5 Accessories" class="offer-img2 img-fluid">
         </div>
       </div>

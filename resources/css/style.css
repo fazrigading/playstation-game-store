@@ -291,3 +291,36 @@ footer {
   word-spacing: 2px;
   text-transform: capitalize;
 }
+
+
+/* catalog */
+.h-400px {
+  max-height: 250px;
+  min-height: 250px;
+}
+
+.title-category{
+  text-align: center;
+  margin: 0 auto 30px;
+  position: relative;
+  line-height: 60px;
+}
+
+.title-category::after{
+  content: '';
+  background: #1c317c;
+  width: 80px;
+  height: 5px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.small-container{
+  max-width: 1080px;
+  margin: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+}

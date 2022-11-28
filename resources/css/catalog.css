@@ -1,4 +1,4 @@
-*{
+/* *{
   margin:0;
   padding: 0;
   box-sizing: border-box;
@@ -274,7 +274,6 @@ select:focus{
 
 .pagination a:hover:not(.active) {background-color: #ddd;}
 
-/* FOOTER */
 footer {
   background-color: #1c317c;
   height: auto;
@@ -341,4 +340,4 @@ footer {
   font-size: 14px;
   word-spacing: 2px;
   text-transform: capitalize;
-}
+} */
