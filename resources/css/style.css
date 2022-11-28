@@ -26,6 +26,7 @@
   --text-offer: #000;
   --btn-color1: #3f56da;
   --btn-color2: #365ff0;
+  --teamhover: #ddd;
 }
 
 .dark-mode {
@@ -323,4 +324,57 @@ footer {
   margin: auto;
   padding-left: 25px;
   padding-right: 25px;
+}
+
+
+
+/* about us */
+.teams {
+  padding: 40px 0px;
+  cursor: pointer;
+  transition: 0.4s;
+  box-sizing: border-box;
+}
+
+.teams:hover {
+  background: var(--teamhover);
+  border-radius: 12px;
+}
+
+.teams img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.names {
+  padding: 12px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.about {
+  margin: 20px 0;
+  font-weight: regular;
+  color: #252525;
+  font-size: 16px;
+}
+
+.social-links {
+  margin: 14px;
+}
+
+.social-links a {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  transition: .4s;
+}
+
+.social-links a:hover {
+  transform: scale(1.5);
+}
+
+.social-links i {
+  color: var(--social-links);
 }

@@ -1,4 +1,4 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box; 
@@ -149,7 +149,6 @@ input[type="checkbox"]:checked~.check:before {
   width: 40px;
 }
 
-/* Main */
 h1 {
   font-size: 24px;
   font-weight: 700;
@@ -240,7 +239,6 @@ h1 {
   }
 }
 
-/* Footer */
 footer {
   background-color: #1c317c;
   height: auto;
@@ -307,4 +305,4 @@ footer {
   font-size: 14px;
   word-spacing: 2px;
   text-transform: capitalize;
-}
+} */
