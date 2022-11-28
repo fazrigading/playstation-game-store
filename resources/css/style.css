@@ -1,8 +1,8 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box; 
-}
+} */
 
 ::-webkit-scrollbar {
   width: 6px;
@@ -38,25 +38,18 @@
   --btn-color2: #365ff0;
 }
 
-.container {
-  width: 100%;
-  min-width: 100vh;
-  overflow: hidden;
-  background-color: var(--bg-primary);
-}
-
-.navbar {
+/* .navbar {
   width: 100%;
   padding: 0 8%;
   display: flex;
   align-items: center;
-}
+} */
 
-.logo {
+/* .logo {
   width: 50px;
   cursor: pointer;
   margin: 30px 0;
-}
+} */
 
 body {
   font-family: "Inter", serif;
@@ -145,7 +138,7 @@ input[type="checkbox"]:checked~.check:before {
   width: 40px;
 }
 
-.row {
+/* .row {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -156,49 +149,48 @@ input[type="checkbox"]:checked~.check:before {
   justify-content: space-between;
   align-items: center;
   flex-direction: row-reverse;
-}
+} */
 
 
-button {
+.custom-button {
   width: 140px;
   border: 0;
   padding: 12px 10px;
   outline: none;
   color: #fff;
   background: linear-gradient(to right, var(--btn-color1), var(--btn-color2));
-  border-radius: 6px;
   cursor: pointer;
   transition: width 2.0s;
 }
 
-button:hover {
+.custom-button:hover {
   width: 180px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
 
-.small-container {
+/* .small-container {
   max-width: 1080px;
   margin: auto;
   padding-left: 25px;
   padding-right: 25px;
-}
+} */
 
-.offer {
+/* .offer {
   background: var(--bg-primary);
   padding: 60px 0;
-}
+} */
 
-.offer-img {
+/* .offer-img {
   margin-right: 40px;
 }
 
 .offer-img2 {
   margin-left: 40px;
-}
+} */
 
-.col-offer h1 {
+/* .col-offer h1 {
   font-size: 64px;
   line-height: 74px;
   margin: 20px 0;
@@ -214,7 +206,7 @@ button:hover {
 .col-offer small {
   color: var(--text-offer);
   margin-bottom: 10px;
-}
+} */
 
 .social-links {
   text-align: center;
@@ -239,7 +231,7 @@ footer {
   color: #fff;
 }
 
-.footer-content{
+/* .footer-content{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -260,17 +252,17 @@ footer {
   max-width: 750px;
   margin: 3px auto;
   font-size: 14px;
-}
+} */
 
-.socials{
+/* .socials{
   list-style: none;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 1rem 0 3rem 0;
-}
+} */
 
-.socials li{
+/* .socials li{
   margin: 0 10px;
 }
 
@@ -281,11 +273,11 @@ footer {
 
 .socials a i{
   font-size: 1.1rem;
-}
+} */
 
-.socials a:hover i{
+/* .socials a:hover i{
   color: #365ff0;
-}
+} */
 
 .footer-bottom{
   background-color:#0f1734;

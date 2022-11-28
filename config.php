@@ -1,6 +1,6 @@
 <?php
 define ('SITE_ROOT', realpath(dirname(__FILE__)));
-$db = mysqli_connect("sql311.epizy.com", "epiz_32996028", "gVzjignA39s", "epiz_32996028_playstation_game_store", '3306');
+$db = mysqli_connect("localhost", "root", "", "playstation-game-store", '3306');
 
 function query($query) {
     global $db;
