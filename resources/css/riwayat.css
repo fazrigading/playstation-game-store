@@ -28,7 +28,6 @@
   width: 100%;
   min-width: 100vh;
   overflow: hidden;
-  background-color: var(--bg-primary);
 }
 
 .navbar {
@@ -148,7 +147,6 @@ table {
 }
 
 .tbl-header {
-  background-color: #0f1734;
   border: 1px solid var(--warna-h1);
   table-layout: auto;
 }
@@ -165,7 +163,6 @@ th {
   text-align: left;
   font-weight: 600;
   font-size: 18px;
-  color: white;
   text-transform: uppercase;
 }
 
@@ -175,27 +172,13 @@ td {
   vertical-align: middle;
   font-weight: 400;
   font-size: 16px;
-  color: var(--warna-h1);
-  border-bottom: solid 1px var(--bg-border);
 }
 
 section {
   margin: 20px 150px;
 }
 
-::-webkit-scrollbar {
-  width: 6px;
-}
 
-::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-}
-
-::-webkit-scrollbar-thumb {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-}
 
 
 @media only screen and (max-width:700px) {

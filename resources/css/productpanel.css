@@ -105,24 +105,14 @@ table {
   table-layout: fixed;
 }
 
-.tbl-header {
-  background-color: #0f1734;
-  border: 1px solid rgb(15, 23, 52, 0.5);
-}
 
-.tbl-content {
-  height: 600px;
-  overflow-x: auto;
-  margin-top: 0px;
-  border: 1px solid var(--warna-h1);
-}
+
 
 th {
   padding: 20px 15px;
   text-align: left;
   font-weight: 500;
   font-size: 12px;
-  color: white;
   text-transform: uppercase;
 }
 

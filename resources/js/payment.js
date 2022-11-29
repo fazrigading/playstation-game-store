@@ -2,7 +2,9 @@
 
 var fadeTime = 300;
 
-/* Assign actions */
+
+
+
 $('.quantity input').change(function () {
     updateQuantity(this);
 });
@@ -15,27 +17,26 @@ $(document).ready(function () {
     updateSumItems();
 });
 
-/* Recalculate cart */
+
+
 function recalculateCart(onlyTotal) {
     var subtotal = 0;
 
-    /* Sum up row totals */
+
     $('.basket-product').each(function () {
         subtotal += parseFloat($(this).children('.subtotal').text());
     });
 
-    /* Calculate totals */
     var total = subtotal;
 
-    /*If switch for update only total, update only total display*/
     if (onlyTotal) {
-        /* Update total display */
+  
         $('.total-value').fadeOut(fadeTime, function () {
             $('#basket-total').html(total);
             $('.total-value').fadeIn(fadeTime);
         });
     } else {
-        /* Update summary display. */
+    
 
         $('.final-value').fadeOut(fadeTime, function () {
             $('#basket-subtotal').html(subtotal);
@@ -50,16 +51,16 @@ function recalculateCart(onlyTotal) {
     }
 }
 
-/* Update quantity */
+
 function updateQuantity(quantityInput) {
-    /* Calculate line price */
+ 
 
     var productRow = $(quantityInput).parent().parent();
     var price = parseFloat(productRow.children('.price').text());
     var quantity = $(quantityInput).val();
     var linePrice = price * quantity;
 
-    /* Update line price display and recalc cart totals */
+
     productRow.children('.subtotal').each(function () {
         $(this).fadeOut(fadeTime, function () {
             $(this).text(linePrice);
@@ -80,9 +81,8 @@ function updateSumItems() {
     $('.total-items').text(sumItems);
 }
 
-/* Remove item from cart */
 function removeItem(removeButton) {
-    /* Remove row from DOM and recalc cart total */
+
     var productRow = $(removeButton).parent().parent();
     productRow.slideUp(fadeTime, function () {
         productRow.remove();
@@ -98,5 +98,6 @@ const modeGelap = document.getElementById("modegelap");
 $(modeGelap).click(function () {
     document.body.classList.toggle("dark-mode");
 });
+
 
 

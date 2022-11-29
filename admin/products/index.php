@@ -20,6 +20,8 @@ $i = 1;
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../../resources/css/productpanel.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap5.min.css">
   <title>Products</title>
 </head>
 
@@ -43,35 +45,31 @@ $i = 1;
           <a href="create.php" role="button"><button class="button-add">Tambah</button></a>
         </div>
       </div>
-      <div class="tbl-header">
-        <table cellpadding="0" cellspacing="0" border="0">
+      <div class="container-fluid">
+      <table id="dtBasicExample" class="table table-hover" cellspacing="0" width="100%">
           <thead>
             <tr>
-              <th>Id</th>
-              <th>Photo</th>
-              <th colspan="2">Nama</th>
-              <th>Harga</th>
-              <th>Stok</th>
-              <th colspan="2">Deskripsi</th>
-              <th>Kategori</th>
-              <th colspan="2">Aksi</th>
+              <th scope="col">Id</th>
+              <th scope="col">Photo</th>
+              <th scope="col">Nama</th>
+              <th scope="col">Harga</th>
+              <th scope="col">Stok</th>
+              <th scope="col">Deskripsi</th>
+              <th scope="col">Kategori</th>
+              <th scope="col">Aksi</th>
             </tr>
           </thead>
-        </table>
-      </div>
-      <div class="tbl-content">
-        <table cellpadding="0" cellspacing="0" border="0">
           <tbody>
             <?php foreach ($products as $product) : ?>
               <tr>
                 <td><?= $i ?></td>
                 <td><img src="../../resources/img/<?= $product["photo"] ?>" alt="" width="100px"></td>
-                <td colspan="2"><?= $product['name'] ?></td>
+                <td ><?= $product['name'] ?></td>
                 <td>Rp.<?= number_format($product['price'], 2, ',', '.') ?></td>
                 <td><?= $product['stock'] ?></td>
-                <td colspan="2"><?= substr($product['descriptions'], 0, 100) ?> ...</td>
+                <td ><?= substr($product['descriptions'], 0, 100) ?> ...</td>
                 <td><?= $product['category'] ?></td>
-                <td colspan="2">
+                <td >
                   <a href="update.php?id=<?= $product["id"] ?>">
                     <button class="button-update">Ubah</button>
                   </a>
@@ -85,7 +83,7 @@ $i = 1;
           </tbody>
         </table>
       </div>
-
+    
       <div class="edit">
         <form>
           <fieldset>
@@ -113,10 +111,13 @@ $i = 1;
       </div>
     </section>
   </div>
-  <script src="resources/js/adminpanel.js"></script>
-
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js"></script>
+  <script>
+    $(document).ready(function () {
+    $('#dtBasicExample').DataTable();
+});
+  </script>
 </body>
-
-
-
 </html>

@@ -20,6 +20,8 @@ $i = 1;
   <link rel="stylesheet" href="../../resources/css/userpanel.css">
   <!-- Fontawesome CDN Link -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap5.min.css">
   <title>User Panel</title>
 </head>
 
@@ -42,31 +44,27 @@ $i = 1;
       <div class="warp">
         <h1>History Table</h1>
       </div>
-      <div class="tbl-header">
-        <table cellpadding="0" cellspacing="0" border="0">
+      <div class="container-fluid">
+      <table id="dtBasicExample" class="table table-hover" cellspacing="0" width="100%">
           <thead>
             <tr>
               <th>No.</th>
-              <th colspan="2">Nama Pembeli</th>
-              <th colspan="3">Nama Produk</th>
-              <th colspan="2">Tanggal</th>
-              <th colspan="2">Total Harga</th>
-              <th colspan="1">Status</th>
+              <th>Nama Pembeli</th>
+              <th>Nama Produk</th>
+              <th>Tanggal</th>
+              <th>Total Harga</th>
+              <th>Status</th>
             </tr>
           </thead>
-        </table>
-      </div>
-      <div class="tbl-content">
-        <table cellpadding="0" cellspacing="0" border="0">
           <tbody>
             <?php foreach ($histories as $history) : ?>
               <tr>
                 <td><?= $i++ ?></td>
-                <td colspan="2"><?= $history['fullname'] ?></td>
-                <td colspan="3"><?= substr($history['product_name'], 0, 50) ?></td>
-                <td colspan="3"><?= $history['date'] ?></td>
-                <td colspan="2"><?= $history['total_price'] ?></td>
-                <td colspan="1"><?= $history['status'] ?></td>
+                <td><?= $history['fullname'] ?></td>
+                <td><?= substr($history['product_name'], 0, 50) ?></td>
+                <td><?= $history['date'] ?></td>
+                <td><?= $history['total_price'] ?></td>
+                <td><?= $history['status'] ?></td>
               </tr>
             <?php endforeach ?>
           </tbody>
@@ -74,7 +72,14 @@ $i = 1;
       </div>
     </section>
   </div>
-  <script src="../../resources/js/adminpanel.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js"></script>
+  <script>
+    $(document).ready(function () {
+    $('#dtBasicExample').DataTable();
+  });
+  </script>
 
 </body>
 

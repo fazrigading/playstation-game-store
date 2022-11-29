@@ -20,6 +20,8 @@ $i = 1;
   <link rel="stylesheet" href="../../resources/css/userpanel.css">
   <!-- Fontawesome CDN Link -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap5.min.css">
   <title>User Panel</title>
 </head>
 
@@ -42,33 +44,29 @@ $i = 1;
       <div class="warp">
         <h1>Users Table</h1>
       </div>
-      <div class="tbl-header">
-        <table cellpadding="0" cellspacing="0" border="0">
+      <div class="container-fluid">
+        <table id="dtBasicExample" class="table table-hover" cellspacing="0" width="100%">
           <thead>
             <tr>
               <th>No.</th>
               <th>Photo</th>
-              <th colspan="3">Nama Lengkap</th>
-              <th colspan="2">Username</th>
-              <th colspan="2">Email</th>
-              <th colspan="3">Alamat</th>
-              <th colspan="2">Aksi</th>
+              <th>Nama Lengkap</th>
+              <th>Username</th>
+              <th>Email</th>
+              <th>Alamat</th>
+              <th>Aksi</th>
             </tr>
           </thead>
-        </table>
-      </div>
-      <div class="tbl-content">
-        <table cellpadding="0" cellspacing="0" border="0">
           <tbody>
             <?php foreach ($users as $user) : ?>
               <tr>
                 <td><?= $i++ ?></td>
                 <td><img src="../../resources/img/<?= $user['photo'] ?>" alt="Avatar" class="avatar"></td>
-                <td colspan="3"><?= $user['fullname'] ?></td>
-                <td colspan="2"><?= $user['username'] ?></td>
-                <td colspan="2"><?= $user['email'] ?></td>
-                <td colspan="3"><?= $user['address'] ?></td>
-                <td colspan="2">
+                <td><?= $user['fullname'] ?></td>
+                <td><?= $user['username'] ?></td>
+                <td><?= $user['email'] ?></td>
+                <td><?= $user['address'] ?></td>
+                <td>
                   <a href="update.php?id=<?= $user["id"] ?>" class="text-black fs-15px">
                     <button class="button-update">Ubah</button>
                   </a>
@@ -80,10 +78,17 @@ $i = 1;
             <?php endforeach ?>
           </tbody>
         </table>
-      </div>
     </section>
   </div>
-  <script src="../../resources/js/adminpanel.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js"></script>
+  <script>
+    $(document).ready(function () {
+    $('#dtBasicExample').DataTable();
+  });
+  </script>
+
 
 </body>
 
