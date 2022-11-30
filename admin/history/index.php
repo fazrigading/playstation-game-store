@@ -5,8 +5,10 @@ if (!isset($_SESSION["loginAdmin"])) {
   header('Location: ../../auth.php');
   exit;
 }
-$histories = query("SELECT history.*, users.fullname FROM history LEFT JOIN users ON users.id = history.id_user ");
+$histories = query("SELECT history.*, users.fullname FROM users LEFT JOIN history ON users.id = history.id_user ");
 $i = 1;
+// var_dump($histories);
+// exit;
 ?>
 
 <!DOCTYPE html>
@@ -26,55 +28,60 @@ $i = 1;
 </head>
 
 <body>
-  <div class="sidebar">
-    <a class='main'>
-      <h2>Panel Admin</h2>
-    </a>
-    <a href="../../index.php">Home</a>
-    <a href="../users/">User Panel</a>
-    <a href="../products/">Product Panel</a>
-    <a href class="active">History Panel</a>
-    <a href="../../logout.php">Logout</a>
-  </div>
-
-  <!-- Page content -->
-  <div class="content">
-    <section>
-      <!--for demo wrap-->
-      <div class="warp">
-        <h1>History Table</h1>
+  <div class="row">
+    <div class="col-md-2">
+      <div class="sidebar">
+        <a class='main'>
+          <h5>Panel Admin</h5>
+        </a>
+        <a href="../../index.php">Home</a>
+        <a href="../users/">User Panel</a>
+        <a href="../products/">Product Panel</a>
+        <a href class="active">History Panel</a>
+        <a href="../../logout.php">Logout</a>
       </div>
-      <div class="container-fluid">
-      <table id="dtBasicExample" class="table table-hover" cellspacing="0" width="100%">
-          <thead>
-            <tr>
-              <th>No.</th>
-              <th>Nama Pembeli</th>
-              <th>Nama Produk</th>
-              <th>Tanggal</th>
-              <th>Total Harga</th>
-              <th>Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            <?php foreach ($histories as $history) : ?>
-              <tr>
-                <td><?= $i++ ?></td>
-                <td><?= $history['fullname'] ?></td>
-                <td><?= substr($history['product_name'], 0, 50) ?></td>
-                <td><?= $history['date'] ?></td>
-                <td><?= $history['total_price'] ?></td>
-                <td><?= $history['status'] ?></td>
-              </tr>
-            <?php endforeach ?>
-          </tbody>
-        </table>
+    </div>
+    <div class="col-md-10">
+      <!-- Page content -->
+      <div class="content">
+        <section>
+          <!--for demo wrap-->
+          <div class="warp">
+            <h5>History Table</h5>
+          </div>
+          <div class="container-fluid">
+          <table id="dtBasicExample" class="table table-hover" cellspacing="0" width="100%">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Nama Pembeli</th>
+                  <th>Nama Produk</th>
+                  <th>Tanggal</th>
+                  <th>Total Harga</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php foreach ($histories as $history) : ?>
+                  <tr>
+                    <td>HISTORY_<?= $i++ ?></td>
+                    <td><?= $history['fullname'] ?></td>
+                    <td><?= substr($history['product_name'], 0, 50) ?></td>
+                    <td><?= $history['date'] ?></td>
+                    <td><?= $history['total_price'] ?></td>
+                    <td><?= $history['status'] ?></td>
+                  </tr>
+                <?php endforeach ?>
+              </tbody>
+            </table>
+          </div>
+        </section>
       </div>
-    </section>
+    </div>
   </div>
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-  <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
-  <script src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js"></script>
+  <script src="../../resources/js/jquery.dataTables.min.js"></script>
+  <script src="../../resources/js/dataTables.bootstrap5.min.js"></script>
   <script>
     $(document).ready(function () {
     $('#dtBasicExample').DataTable();

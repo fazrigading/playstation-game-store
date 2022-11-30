@@ -23,6 +23,10 @@
   --bg-border: rgba(28, 49, 124, 0.1);
 }
 
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+
 .container-half {
   position: relative;
   top: 20%;
@@ -36,13 +40,10 @@ textarea {
 }
 
 .sidebar {
-  margin: 0;
-  padding: 0;
-  width: 200px;
+  min-width: 350px;
   background-color: #f1f1f1;
   position: fixed;
   height: 100%;
-  overflow: auto;
 }
 
 .sidebar a {
@@ -71,9 +72,7 @@ textarea {
 }
 
 div.content {
-  margin-left: 200px;
   padding: 1px 16px;
-  height: 1000px;
 }
 
 @media screen and (max-width: 700px) {
@@ -108,11 +107,6 @@ h1 {
   text-transform: uppercase;
   font-weight: 300;
   margin-bottom: 15px;
-}
-
-table {
-  width: 100%;
-  table-layout: fixed;
 }
 
 .tbl-header {

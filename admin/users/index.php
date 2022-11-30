@@ -26,67 +26,79 @@ $i = 1;
 </head>
 
 <body>
-  <div class="sidebar">
-    <a class='main'>
-      <h2>Panel Admin</h2>
-    </a>
-    <a href="../../index.php">Home</a>
-    <a class="active" href="#">User Panel</a>
-    <a href="../products/">Product Panel</a>
-    <a href="../history/">History Panel</a>
-    <a href="../../logout.php">Logout</a>
-  </div>
-
-  <!-- Page content -->
-  <div class="content">
-    <section>
-      <!--for demo wrap-->
-      <div class="warp">
-        <h1>Users Table</h1>
+  <div class="row">
+    <div class="col-md-2">
+      <div class="sidebar">
+        <a class='main'><h5>Panel Admin</h5></a>
+        <a href="../../index.php">Home</a>
+        <a class="active" href="#">User Panel</a>
+        <a href="../products/">Product Panel</a>
+        <a href="../history/">History Panel</a>
+        <a href="../../logout.php">Logout</a>
       </div>
-      <div class="container-fluid">
-        <table id="dtBasicExample" class="table table-hover" cellspacing="0" width="100%">
-          <thead>
-            <tr>
-              <th>No.</th>
-              <th>Photo</th>
-              <th>Nama Lengkap</th>
-              <th>Username</th>
-              <th>Email</th>
-              <th>Alamat</th>
-              <th>Aksi</th>
-            </tr>
-          </thead>
-          <tbody>
-            <?php foreach ($users as $user) : ?>
-              <tr>
-                <td><?= $i++ ?></td>
-                <td><img src="../../resources/img/<?= $user['photo'] ?>" alt="Avatar" class="avatar"></td>
-                <td><?= $user['fullname'] ?></td>
-                <td><?= $user['username'] ?></td>
-                <td><?= $user['email'] ?></td>
-                <td><?= $user['address'] ?></td>
-                <td>
-                  <a href="update.php?id=<?= $user["id"] ?>" class="text-black fs-15px">
-                    <button class="button-update">Ubah</button>
-                  </a>
-                  <a href="delete.php?id=<?= $user["id"] ?>" onclick="return confirm('Apakah anda ingin menghapus File?')" class="text-black fs-15px">
-                    <button class="button-delete">Hapus</button>
-                  </a>
-                </td>
-              </tr>
-            <?php endforeach ?>
-          </tbody>
-        </table>
-    </section>
+    </div>
+    <div class="col-md-10">
+      <!-- Page content -->
+      <div class="content pb-5">
+          <section>
+            <!--for demo wrap-->
+            <div class="warp">
+              <h5>Users Table</h5>
+            </div>
+            <div class="container-fluid">
+              <table id="dtBasicExample" class="table table-hover" cellspacing="0" width="100%">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Photo</th>
+                    <th>Nama Lengkap</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Alamat</th>
+                    <th>Aksi</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <?php foreach ($users as $user) : ?>
+                    <tr>
+                      <td>USER_<?= $i++ ?></td>
+                      <td>
+                        <?php 
+                          $photo = $user["photo"];
+                          echo $photo ? 
+                            "<img src='../../resources/img/$photo' width='50' alt='Avatar' class='avatar'>" :
+                            '<img src="../../resources/assets/person-dummy.jpg" width="50" alt="Avatar" class="avatar">';
+                        ?>
+                      </td>
+                      <td><?= $user['fullname'] ?></td>
+                      <td><?= $user['username'] ?></td>
+                      <td><?= $user['email'] ?></td>
+                      <td><?= $user['address'] ?></td>
+                      <td>
+                        <a href="update.php?id=<?= $user["id"] ?>" class="text-black fs-15px">
+                          <button class="button-update">Ubah</button>
+                        </a>
+                        <a href="delete.php?id=<?= $user["id"] ?>" onclick="return confirm('Apakah anda ingin menghapus File?')" class="text-black fs-15px">
+                          <button class="button-delete">Hapus</button>
+                        </a>
+                      </td>
+                    </tr>
+                  <?php endforeach ?>
+                </tbody>
+              </table>
+          </section>
+        </div>
+    </div>
   </div>
+  
+  
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-  <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
-  <script src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js"></script>
+  <script src="../../resources/js/jquery.dataTables.min.js"></script>
+  <script src="../../resources/js/dataTables.bootstrap5.min.js"></script>
   <script>
     $(document).ready(function () {
-    $('#dtBasicExample').DataTable();
-  });
+      $('#dtBasicExample').DataTable();
+    });
   </script>
 
 
