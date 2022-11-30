@@ -8,23 +8,19 @@ if (!isset($_SESSION["loginUser"])) {
 }
 $query = "SELECT cart.*, products.name, products.photo, products.price FROM cart LEFT JOIN products ON cart.id_product = products.id WHERE id_user = $_COOKIE[id];";
 $carts = query($query);
+// var_dump($carts);
+// exit;
 $sum = 0;
-$idToCheckout = array();
-$productName = '';
+$total_price_cart = 0;
+$total_item_cart = 0;
 foreach ($carts as $cart) {
-  $productName .= $cart['name'] . ', ';
-  $sum += $cart['price'];
-  array_push($idToCheckout, $cart['id']);
+  $total_price_cart += $cart['price'] * $cart['quantity'];
+  $total_item_cart++;
 }
 
 if (isset($_POST['btnCheckout'])) {
-  if (buy($_POST) > 0) {
+    buy($carts);
     header('Location: success.php');
-  } else {
-    echo "<script>
-            alert('Gagal membeli barang!');
-            </script>";
-  }
 }
 ?>
 <!DOCTYPE html>
@@ -101,9 +97,12 @@ if (isset($_POST['btnCheckout'])) {
             </div>
             <div class="price"><?= $cart['price'] ?></div>
             <div class="quantity">
-              <input type="number" value="<?= $cart['quantity'] ?>" min="1" class="quantity-field">
+              <form action="update_quantity.php" method="post" class="quantity-form">
+                <input type="hidden" name="id" value="<?=$cart['id'] ?>">
+                <input type="number" name="quantity" value="<?= abs($cart['quantity']) ?>" min="1" class="quantity-field">
+              </form>
             </div>
-            <div class="subtotal"><?= $cart['price'] ?></div>
+            <div class="subtotal"><?= $cart['price'] * $cart['quantity'] ?></div>
             <input type="hidden" name="id" value="<?= $cart['id'] ?>">
             <div class="remove">
               <a href="delete.php?id=<?= $cart["id"] ?>" onclick="return confirm('Apakah anda ingin menghapus barang ini dari keranjang?')">
@@ -115,20 +114,17 @@ if (isset($_POST['btnCheckout'])) {
       </div>
 
       <form action="" method="post">
-        <input type="hidden" name="totalPrice" value="<?= $sum ?>">
-        <input type="hidden" name="productName" value="<?= $productName ?>">
-        <input type="hidden" name="idToCheckout[]" value="<?= $idToCheckout ?>">
         <aside>
           <div class="summary">
-            <div class="summary-total-items"><span class="total-items"></span>Item(s) in Cart</div>
+            <div class="summary-total-items"> <?= $total_item_cart ?> Item(s) in Cart</div>
             <div class="summary-subtotal">
               <div class="subtotal-title">Subtotal</div>
-              <div class="subtotal-value final-value" id="basket-subtotal"><?= $sum ?></div>
+              <div class="subtotal-value final-value" id="basket-subtotal"><?= $total_price_cart ?></div>
             </div>
             <div class="summary-total">
               <div class="total-title">Total</div>
-              <div class="total-value final-value" id="basket-total"><?= $sum ?></div>
-              <input type="hidden" name="price">
+              <div class="total-value final-value" id="basket-total"><?= $total_price_cart ?></div>
+              <input class="total-value final-value" id="basket-total-hidden" type="hidden" name="totalPrice">
             </div>
             <div class="summary-checkout">
               <button type="submit" class="checkout-cta" name="btnCheckout">Checkout</button>
@@ -138,7 +134,7 @@ if (isset($_POST['btnCheckout'])) {
       </form>
     </main>
   </div>
-  <script src="resources/js/payment.js"></script>
+  <script src="../resources/js/payment.js"></script>
 </body>
 
 </html>

@@ -6,8 +6,10 @@ if (!isset($_SESSION["loginUser"])) {
   header('Location: index.php');
   exit;
 }
-$query = "SELECT * FROM history  WHERE id_user = $_COOKIE[id]";
+$query = "SELECT history.*, products.name FROM history LEFT JOIN products ON history.id_product = products.id";
 $histories = query($query);
+// var_dump($histories);
+// exit;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -59,7 +61,7 @@ $histories = query($query);
 
   <div class="container-fluid">
     <section>
-      <h1>History</h1>
+      <h5>History</h5>
         <table id="dtBasicExample" class="table table-hover" cellspacing="0" width="100%">
           <thead>
             <tr>
@@ -73,10 +75,10 @@ $histories = query($query);
           <tbody>
             <?php foreach ($histories as $history) : ?>
               <tr>
-                <td><?= $history['id'] ?></td>
-                <td><?= $history['product_name'] ?></td>
+                <td>HISTORY_<?= $history['id'] ?></td>
+                <td><?= mb_strimwidth($history['name'], 0, 30, "...") ?></td>
                 <td><?= $history['date'] ?></td>
-                <td><?= $history['total_price'] ?></td>
+                <td>Rp.<?= number_format($history['total_price'], 2, ',', '.') ?></td>
                 <td><?= $history['status'] ?></td>
               </tr>
             <?php endforeach ?>

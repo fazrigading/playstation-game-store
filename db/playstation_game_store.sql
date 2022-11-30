@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 13, 2022 at 04:30 PM
--- Server version: 10.4.24-MariaDB
--- PHP Version: 8.1.6
+-- Waktu pembuatan: 30 Nov 2022 pada 05.15
+-- Versi server: 10.4.25-MariaDB
+-- Versi PHP: 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,86 +20,73 @@ SET time_zone = "+00:00";
 --
 -- Database: `playstation-game-store`
 --
-CREATE DATABASE IF NOT EXISTS `playstation-game-store` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `playstation-game-store`;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cart`
+-- Struktur dari tabel `cart`
 --
 
-CREATE TABLE IF NOT EXISTS `cart` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `cart` (
+  `id` int(11) NOT NULL,
   `id_user` int(11) NOT NULL,
   `id_product` int(11) NOT NULL,
-  `quantity` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4;
+  `quantity` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `cart`
+-- Dumping data untuk tabel `cart`
 --
 
 INSERT INTO `cart` (`id`, `id_user`, `id_product`, `quantity`) VALUES
-(11, 11, 1, 1);
+(11, 11, 1, 1),
+(30, 19, 162, 10);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `history`
+-- Struktur dari tabel `history`
 --
 
-CREATE TABLE IF NOT EXISTS `history` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `history` (
+  `id` int(11) NOT NULL,
   `id_user` int(11) NOT NULL,
-  `product_name` text NOT NULL,
+  `id_product` text NOT NULL,
   `date` varchar(128) NOT NULL,
+  `quantity` int(11) NOT NULL,
   `total_price` int(11) NOT NULL,
-  `status` varchar(64) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4;
+  `status` varchar(64) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `history`
+-- Dumping data untuk tabel `history`
 --
 
-INSERT INTO `history` (`id`, `id_user`, `product_name`, `date`, `total_price`, `status`) VALUES
-(7, 11, 'Sony Playstation 5 Digital Edition Resmi', '11/12/2022-11:28:28', 10618600, 'success'),
-(8, 11, '123', '11/12/2022-11:37:18', 123, 'success'),
-(9, 11, 'Sony Playstation 5 Digital Edition Resmi123', '11/12/2022-11:41:10', 0, 'success'),
-(10, 11, 'Sony Playstation 5 Digital Edition Resmi,123,', '11/12/2022-11:50:57', 0, 'success'),
-(11, 11, 'Sony Playstation 5 Digital Edition Resmi,123,', '11/12/2022-12:11:59', 0, 'success'),
-(12, 11, 'Sony Playstation 5 Digital Edition Resmi,123,', '11/12/2022-12:14:17', 10618723, 'success'),
-(13, 11, 'Sony Playstation 5 Digital Edition Resmi,123,', '11/12/2022-12:18:06', 10618723, 'success'),
-(14, 11, 'Sony Playstation 5 Digital Edition Resmi,123,', '11/12/2022-12:19:19', 10618723, 'success'),
-(15, 11, 'Sony Playstation 5 Digital Edition Resmi,123,', '11/12/2022-12:19:30', 10618723, 'success'),
-(16, 11, 'Sony Playstation 5 Digital Edition Resmi,123,', '11/12/2022-12:19:48', 10618723, 'success'),
-(17, 11, 'Sony Playstation 5 Digital Edition Resmi,123,', '11/12/2022-12:20:10', 10618723, 'success'),
-(18, 11, 'Sony Playstation 5 Digital Edition Resmi,123,', '11/12/2022-12:20:19', 10618723, 'success'),
-(19, 11, 'Sony Playstation 5 Digital Edition Resmi,123,', '11/12/2022-12:20:43', 10618723, 'success'),
-(20, 11, 'Sony Playstation 5 Digital Edition Resmi,123,', '11/12/2022-12:21:05', 10618723, 'success'),
-(21, 11, 'Sony Playstation 5 Digital Edition Resmi,123,', '11/12/2022-12:26:17', 10618723, 'success');
+INSERT INTO `history` (`id`, `id_user`, `id_product`, `date`, `quantity`, `total_price`, `status`) VALUES
+(35, 19, '162', '11/30/2022-05:00:07', 3, 14997000, 'success'),
+(36, 19, '128', '11/30/2022-05:02:17', 2, 3458000, 'success'),
+(37, 19, '127', '11/30/2022-05:02:17', 4, 6796000, 'success'),
+(38, 19, '132', '11/30/2022-05:02:17', 2, 1758000, 'success'),
+(39, 19, '162', '11/30/2022-05:11:54', 4, 19996000, 'success');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `products`
+-- Struktur dari tabel `products`
 --
 
-CREATE TABLE IF NOT EXISTS `products` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `products` (
+  `id` int(11) NOT NULL,
   `name` varchar(128) NOT NULL,
   `price` int(11) NOT NULL,
   `stock` int(11) NOT NULL,
   `descriptions` text NOT NULL,
   `category` varchar(128) NOT NULL,
-  `photo` text NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=164 DEFAULT CHARSET=utf8mb4;
+  `photo` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `products`
+-- Dumping data untuk tabel `products`
 --
 
 INSERT INTO `products` (`id`, `name`, `price`, `stock`, `descriptions`, `category`, `photo`) VALUES
@@ -143,28 +130,84 @@ INSERT INTO `products` (`id`, `name`, `price`, `stock`, `descriptions`, `categor
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Struktur dari tabel `users`
 --
 
-CREATE TABLE IF NOT EXISTS `users` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
   `fullname` varchar(128) NOT NULL,
   `username` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `address` text NOT NULL,
-  `photo` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4;
+  `photo` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `users`
+-- Dumping data untuk tabel `users`
 --
 
 INSERT INTO `users` (`id`, `fullname`, `username`, `password`, `email`, `address`, `photo`) VALUES
 (11, 'riskykurniawan', 'riskykurniawan', '$2y$10$y5fzouN9zfHXA9c5LwWdYeCg0DIFunijd59Sb.qC4AxDvZhoZfeua', 'riskykrnawan@gmail.com', '', ''),
 (13, 'admin', 'admin', '$2y$10$TfC5doldIIAmpM2LaJdGpeXkBaXi0pc3FO3K9/cnrrAZks1B.E9XC', 'admin', 'Jl Kipas Angin, Depok, Indonesia, 13120', 'IMG_11122022_014547.png'),
-(14, '12345', '123', '$2y$10$wppnSVsWFPLVcelZbjONq.Ge6g.7Si888N1V0HY5DmHpuJx7B4Qr2', '123@2.2', 'Utan Kayu Selatan, Matraman, Jakarta Timur, Indonesia, 13120 222', 'IMG_11132022_092430.png');
+(14, '12345', '123', '$2y$10$wppnSVsWFPLVcelZbjONq.Ge6g.7Si888N1V0HY5DmHpuJx7B4Qr2', '123@2.2', 'Utan Kayu Selatan, Matraman, Jakarta Timur, Indonesia, 13120 222', 'IMG_11132022_092430.png'),
+(19, 'risky', 'risky', '$2y$10$MjlA68YbFaemSEF/BQrw8O1gq8qfzVarVlRVnBlKBubyM9t6lPlZe', 'risky@gmail.com', '', '');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indeks untuk tabel `cart`
+--
+ALTER TABLE `cart`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `history`
+--
+ALTER TABLE `history`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `products`
+--
+ALTER TABLE `products`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT untuk tabel yang dibuang
+--
+
+--
+-- AUTO_INCREMENT untuk tabel `cart`
+--
+ALTER TABLE `cart`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+
+--
+-- AUTO_INCREMENT untuk tabel `history`
+--
+ALTER TABLE `history`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+
+--
+-- AUTO_INCREMENT untuk tabel `products`
+--
+ALTER TABLE `products`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=164;
+
+--
+-- AUTO_INCREMENT untuk tabel `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

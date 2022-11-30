@@ -21,13 +21,14 @@ $(document).ready(function () {
 
 function recalculateCart(onlyTotal) {
     var subtotal = 0;
-
-
+    
+    
     $('.basket-product').each(function () {
         subtotal += parseFloat($(this).children('.subtotal').text());
     });
-
+    
     var total = subtotal;
+    $('#basket-total-hidden').val(total);
 
     if (onlyTotal) {
   
@@ -90,6 +91,11 @@ function removeItem(removeButton) {
         updateSumItems();
     });
 }
+
+// add quantity to db
+$('.quantity-field').on('change', function() {
+    $(this).closest('.quantity-form').submit();
+});
 
 //Dark Mode
 const modeGelap = document.getElementById("modegelap");

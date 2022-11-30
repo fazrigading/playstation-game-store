@@ -34,15 +34,15 @@ if (isset($_POST['btnCart'])) {
   }
 }
 
-if (isset($_POST['btnBuy'])) {
-  if (buy($_POST) > 0) {
-    header('Location: payment/success.php');
-  } else {
-    echo "<script>
-            alert('Gagal membeli barang!');
-            </script>";
-  }
-}
+// if (isset($_POST['btnBuy'])) {
+//   if (buy($_POST) > 0) {
+//     header('Location: payment/success.php');
+//   } else {
+//     echo "<script>
+//             alert('Gagal membeli barang!');
+//             </script>";
+//   }
+// }
 ?>
 
 <!DOCTYPE html>
@@ -137,7 +137,7 @@ if (isset($_POST['btnBuy'])) {
             <button type="submit" name="btnCart" id="add-cart">Tambah Ke Keranjang</button><br>
 
             <!-- TOMBOL BELI SEKARANG -->
-            <button type="submit" name="btnBuy" id="buy-now">Beli Sekarang</button><br>
+            <!-- <button type="submit" name="btnBuy" id="buy-now">Beli Sekarang</button><br> -->
           </form>
         </div>
       </div>

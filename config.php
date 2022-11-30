@@ -261,17 +261,19 @@ function deleteFromCart($id) {
     mysqli_query($db, $query);
     return (mysqli_affected_rows($db));
 }
-function buy($data) {
-    global $db, $idToCheckout;
+function buy($items) {
+    global $db;
     $idUser = $_COOKIE['id'];
-    $productName = mysqli_escape_string($db, $data["productName"]);
-    $totalPrice = mysqli_escape_string($db, $data["totalPrice"]);
-    $date = date('m/d/Y-h:i:s');
-    $query = "INSERT INTO history (id_user, product_name, date, total_price, status) VALUES ('$idUser', '$productName', '$date', '$totalPrice', 'success')";
-    mysqli_query($db, $query);
+    foreach($items as $item) {
+        $idProduct = $item['id_product'];
+        $date = $date = date('m/d/Y-h:i:s');
+        $quantity = $item['quantity'];
+        $totalPrice = $item['price'] * $item['quantity'];
     
-    foreach($idToCheckout as $idToDelete) {
-        mysqli_query($db, "DELETE FROM cart WHERE id = $idToDelete");
+        $query = "INSERT INTO history (id_user, id_product, date, quantity, total_price, status) VALUES ('$idUser', '$idProduct', '$date', '$quantity', '$totalPrice', 'success')";
+        mysqli_query($db, $query);
+        mysqli_query($db, "DELETE FROM cart WHERE id_user = $idUser");
     }
+    
     return (mysqli_affected_rows($db));
 }
