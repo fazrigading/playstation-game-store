@@ -83,7 +83,6 @@ main {
 
 .main-container {
   width: 1200px;
-  margin-left: 100px;
   height: 500px;
   margin-bottom: 20px;
 }
@@ -129,7 +128,6 @@ main {
 
 .product {
   width: 1200px;
-  margin-left: 100px;
 }
 
 .product-detail {

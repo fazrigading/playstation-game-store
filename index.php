@@ -71,7 +71,7 @@ require 'config.php';
         </div>
       </div>
 
-      <div class="row align-items-center">
+      <div class="row align-items-center reveal">
         <div class="col-7">
           <h4>Greatness Awaits</h4>
           <h1>PlayStation 4</h1>
@@ -84,7 +84,7 @@ require 'config.php';
         </div>
       </div>
 
-      <div class="row align-items-center">
+      <div class="row align-items-center reveal">
         <div class="col-5">
           <img src="resources/img/ps5games.png" alt="Playstation 5 Games" class="offer-img img-fluid">
         </div>
@@ -97,7 +97,7 @@ require 'config.php';
         </div>
       </div>
       
-      <div class="row align-items-center">
+      <div class="row align-items-center reveal">
         <div class="col-7">
           <h4>Need more tools?</h4>
           <h1>Discover Accessories</h1>

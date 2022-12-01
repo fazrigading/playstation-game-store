@@ -44,7 +44,7 @@ $i = 1;
             <div class="warp">
               <h5>Products Table</h5>
               <div>
-                <a href="create.php" role="button"><button class="button-add">Tambah</button></a>
+                <a href="create.php" role="button"><button class="btn btn-success">Tambah</button></a>
               </div>
             </div>
             <div class="container-fluid">
@@ -73,10 +73,10 @@ $i = 1;
                       <td><?= $product['category'] ?></td>
                       <td >
                         <a href="update.php?id=<?= $product["id"] ?>">
-                          <button class="button-update">Ubah</button>
+                          <button class="btn btn-warning mb-1 btn-block btn-sm">Ubah</button>
                         </a>
                         <a href="delete.php?id=<?= $product["id"] ?>" onclick="return confirm('Apakah anda ingin menghapus File?')">
-                          <button class="button-delete">Hapus</button>
+                          <button class="btn btn-danger btn-block btn-sm">Hapus</button>
                         </a>
                       </td>
                     </tr>

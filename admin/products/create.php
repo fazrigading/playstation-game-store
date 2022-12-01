@@ -21,6 +21,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   <title>Tambah Produk</title>
   <link rel="stylesheet" href="../../resources/css/userpanel.css">
 </head>
@@ -32,25 +34,32 @@
           <fieldset>
             <legend>Tambah Produk</legend>
 
-            <label for="photo">Foto</label>
-            <input type="file" id="photo" name="photo" placeholder="Add Picture...">
+            <label class="form-label" for="photo">Foto</label>
+            <input type="file" class="form-control" id="photo" name="photo" placeholder="Add Picture..."><br>
 
-            <label for="fullname">Fullname</label>
-            <input type="text" id="fullname" name="name" placeholder="Name" required>
+            <label class="form-label" for="fullname">Fullname</label>
+            <input type="text"  class="form-control" id="fullname" name="name" placeholder="Name" required>
 
-            <label for="price">Price</label>
-            <input type="number" id="price" name="price" placeholder="Price" required>
+            <label class="form-label" for="price">Price</label>
+            <input type="number" class="form-control" id="price" name="price" placeholder="Price" required>
 
-            <label for="stock">Stock</label>
-            <input type="text" id="stock" name="stock" placeholder="Stock" required>
+            <label class="form-label" for="stock">Stock</label>
+            <input type="text" class="form-control" id="stock" name="stock" placeholder="Stock" required>
 
-            <label for="descriptions">Descriptions</label>
-            <textarea type="text" id="descriptions" name="descriptions" placeholder="Descriptions" required></textarea>
+            <label class="form-label" for="descriptions">Descriptions</label>
+            <textarea type="text" class="form-control" id="descriptions" name="descriptions" placeholder="Descriptions" required></textarea>
 
-            <label for="category">Category</label>
-            <input type="text" id="category" name="category" placeholder="Category" required>
+            <!-- <label class="form-label mt-3" for="category">Category</label>
+            <input type="text" class="form-control" id="category" name="category" placeholder="Category" required> -->
+          
+            <label class="form-label" for="category">Category</label>
+              <select class="form-select" required>
+                    <option value="">Games</option>
+                    <option value="">Console</option>
+                    <option value="">Accessories</option>
+              </select>
           </fieldset>
-          <button type="submit" name="submitCreate" class="button-submit">Submit</button>
+          <button type="submit" name="submitCreate" class="btn btn-primary">Submit</button>
       </form>
     </div>
   <script src="../../resources//js/login.js"></script>

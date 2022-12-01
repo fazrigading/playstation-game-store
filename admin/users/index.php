@@ -76,10 +76,10 @@ $i = 1;
                       <td><?= $user['address'] ?></td>
                       <td>
                         <a href="update.php?id=<?= $user["id"] ?>" class="text-black fs-15px">
-                          <button class="button-update">Ubah</button>
+                          <button class="btn btn-warning mb-1 btn-block btn-sm">Ubah</button>
                         </a>
                         <a href="delete.php?id=<?= $user["id"] ?>" onclick="return confirm('Apakah anda ingin menghapus File?')" class="text-black fs-15px">
-                          <button class="button-delete">Hapus</button>
+                          <button class="btn btn-danger mb-1 btn-block btn-sm">Hapus</button>
                         </a>
                       </td>
                     </tr>

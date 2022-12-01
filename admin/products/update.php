@@ -24,6 +24,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
   <title>Update Profile</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   <link rel="stylesheet" href="../../resources/css/userpanel.css">
 </head>
 
@@ -36,22 +38,30 @@
               <input type="hidden" name="id" value="<?= $product['id'] ?>">
               <input type="hidden" name="samePhoto" value="<?= $product["photo"] ?>"><br>
               <input type="hidden" name="id" value="<?= $product['id'] ?>">
-              <img src="../../resources/img/<?= $product["photo"] ?>" alt="Your photo" width="100">
-              <input type="file" name="photo" placeholder="Add Picture...">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" placeholder="Name" value="<?= $product['name'] ?>">
-
-              <label for="price">Price</label>
-              <input type="text" id="price" name="price" placeholder="Price" value="<?= $product['price'] ?>">
-
-              <label for="category">Category</label>
-              <input type="text" id="category" name="category" placeholder="Category" value="<?= $product['category'] ?>">
+              <img src="../../resources/img/<?= $product["photo"] ?>" alt="Your photo" width="100"><br>
+              <input type="file" class="form-control mt-2" name="photo" placeholder="Add Picture..."><br>
               
-              <label for="stock">Stock</label>
-              <input type="number" id="stock" name="stock" placeholder="Stock" value="<?= $product["stock"] ?>">
+              <label class="form-label" for="name">Nama</label>
+              <input type="text" class="form-control" id="name" name="name" placeholder="<?= $product['name'] ?>" value="">
+
+              <label class="form-label" for="price">Price</label>
+              <input type="number" class="form-control" id="price" name="price" placeholder="<?= $product['price'] ?>" value="">
+
+              <label class="form-label" for="category">Category</label>
+              <select class="form-select" required>
+                    <option value="">Games</option>
+                    <option value="">Console</option>
+                    <option value="">Accessories</option>
+              </select>
+
+              <!-- <label class="form-label" for="category">Category</label>
+              <input type="text" class="form-control" id="category" name="category" placeholder="<?= $product['category'] ?>" value=""> -->
               
-              <label for="descriptions">Descriptions</label>
-              <textarea rows="4"  id="descriptions" name="descriptions" placeholder="Descriptions"><?= $product['descriptions'] ?></textarea>
+              <label class="form-label" for="stock">Stock</label>
+              <input type="number" class="form-control" id="stock" name="stock" placeholder="<?= $product["stock"] ?>" value="">
+              
+              <label class="form-label" for="descriptions">Descriptions</label>
+              <textarea rows="4"  class="form-control" id="descriptions" name="descriptions" placeholder="<?= $product['descriptions'] ?>"></textarea>
           </fieldset>
           <button type="submit" name="submitupdate" class="button-submit">Submit</button>
       </form>
