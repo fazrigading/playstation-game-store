@@ -49,7 +49,7 @@ if (isset($_POST["submitRegis"])) {
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
   <title>Login & Registration Form</title>
-  <link rel="stylesheet" href="./resources/css/auth.css?v=<?php echo time(); ?>">
+  <link rel="stylesheet" href="./resources/css/auth.css">
 </head>
 
 <body>

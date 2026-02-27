@@ -16,3 +16,8 @@ $(".button-submit").click(function () {
         input.value = '';
     });
 });
+
+$(document).ready(function () {
+    $('#dtBasicExample').DataTable();
+});
+

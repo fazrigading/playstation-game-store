@@ -15,7 +15,7 @@ $i = 1;
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Accessories Catalog</title>
-  <link rel="stylesheet" href="resources/css/catalog.css?v=<?php echo time(); ?>">
+  <link rel="stylesheet" href="resources/css/catalog.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;700;900&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/5bbbb39d34.js" crossorigin="anonymous"></script>
 </head>
@@ -27,17 +27,18 @@ $i = 1;
     <nav>
       <ul id="menuList">
         <li><a href="index.php">Home</a></li>
-        <li><a href="catalog.php">Catalog</a></li>
         <li><a href="aboutus.php">About Us</a></li>
+        <li><a href="catalog.php">Catalog</a></li>
         <?php
-        if (isset($_SESSION["loginAdmin"])) {
+        if (isset($_SESSION["loginUser"])) {
+          echo "<li><a href='payment/'>Cart</a></li>";
+          echo "<li><a href='riwayat.php'>History</a></li>";
+        } else if (isset($_SESSION["loginAdmin"])) {
           echo "<li><a href='admin/products/'>Dashboard</a></li>";
         } else if (!isset($_SESSION["loginUser"]) && !isset($_SESSION["loginAdmin"])) {
           echo "<li><a href='auth.php'>Login</a></li>";
         }
-        if (isset($_SESSION["loginUser"]) || isset($_SESSION["loginAdmin"])) {
-          echo "<li><a href='payment/'>Cart</a></li>";
-          echo "<li><a href='riwayat.php'>Riwayat</a></li>";
+        if (isset($_SESSION["loginUser"]) || isset($_SESSION["loginAdmin"])){
           echo "<li><a href='profile.php'>Profile</a></li>";
           echo "<li><a href='logout.php'>Logout</a></li>";
         }
