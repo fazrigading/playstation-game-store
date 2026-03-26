@@ -1,65 +1,71 @@
-# Playstation Game Store
-Playstation Game Store adalah judul dengan tema Game Console Store, yang merupakan proyek akhir dari Praktikum Web 2022 yang dibuat oleh Kelompok 3 dari kelas A 2020 Program Studi Informatika Fakultas Teknik Universitas Mulawarman.
-> COMPLETED ON: 14/11/2022 22:11 WITA
+# PlayStation Game Store
 
-# Contributors
-Kontributor proyek ini terdiri dari 1 programmer back-end dan 2 programmer front-end, yakni:
-- Back-End: Risky Kurniawan (2009106050)
-- Front-End: Fazri Rahmad Nor Gading (2009106031)
-- Front-End: Alexander Januar Dienc Caesarea Andhika (2009106035)
+A vanilla PHP e-commerce application for a PlayStation game store. Built as a final project for Praktikum Web 2022 at Universitas Mulawarman.
 
-# Project Progress
-Bagian ini menunjukkan hasil perkembangan pengerjaan proyek dengan beberapa emoji yang melambangkan tingkat kelengkapan.
+## Overview
 
-> Design: 
-> 18/18 = 100% of 100%
-> 
-> System:
-> 24/24 = 100% of 100%
+- **Backend**: PHP (native, no framework)
+- **Database**: MySQL
+- **Frontend**: HTML, CSS, JavaScript (vanilla)
 
-## Keterangan:
-- 🟡 Design Not Started
-- 🔵 Design On Progress
-- 🟢 Design Done
-- 🟨 System Not Started
-- 🟦 System On Progress
-- 🟩 System Done
+## Features
 
-## Prequisites
-- 🟩[Gading] Database Completeness
-- 🟩[Gading] Clean redundant items from Post-tests
-- 🟩[Risky] Hosting with SSL
+- Product catalog with categories (consoles, games, accessories)
+- User authentication (login/register)
+- Shopping cart
+- Checkout and purchase history
+- User profile management
+- Admin panel (user management, product CRUD, purchase history)
 
-## Pre-Auth:
-- 🟢[Gading] 🟩[Risky] - Homepage
-  - 🟢[Gading] Scroll Featured Catalog
-  - 🟢[Gading] Explore Catalog Buttons  
-- 🟢[Alex] 🟩[Alex] - About Us
-- 🟢[Gading] 🟩[Risky] - Catalog
-- 🟢[Gading] 🟩[Risky] - Catalog: Console
-- 🟢[Gading] 🟩[Risky] - Catalog: Game 
-- 🟢[Gading] 🟩[Risky] - Catalog: Accessories 
-- 🟢[Alex]   🟩[Risky] - Detail Page 
+## Getting Started
 
-## Auth:
-- 🟢[Gading] 🟩[Risky] - Login
-- 🟢[Gading] 🟩[Risky] - Register
-- 🟩[Risky] Auth Cookies 
-- 🟩[Risky] Auth Session
+### Prerequisites
 
-## Post-Auth:
-- 🟢[Alex] 🟩[Risky] - Cart
-  - 🟩[Risky] - Remove
-- 🟢[Alex] 🟩[Risky] - Payment
-  - 🟩[Risky] - Checkout
-- 🟢[Alex] 🟩[Risky] - History
-  - 🟩[Risky] - Items
+- PHP 8.0+
+- MySQL
+- Web server (Apache/Nginx) or PHP built-in server
 
-## User:
-- 🟢[Alex] 🟩[Risky] - Profile Page (Display Info) 
-- 🟢[Alex] 🟩[Risky] - Edit Account Page (Personal Info & Address)
+### Installation
 
-## Admin:
-- 🟢[Alex] 🟩[Risky] - User Panel (Kelola User) 
-- 🟢[Alex] 🟩[Risky] - Item Panel (CRUD Barang) 
-- 🟢[Risky] 🟩[Risky] - History Panel (History Pembelian) 
+1. Clone the repository
+2. Create the database:
+   ```bash
+   mysql -u root -p playstation_game_store < db/playstation_game_store.sql
+   ```
+3. Start the PHP server:
+   ```bash
+   php -S localhost:8000
+   ```
+4. Open `http://localhost:8000` in your browser
+
+### Default Admin Account
+
+- Username: `admin`
+- Password: (set during initial setup or check database)
+
+## Project Structure
+
+```
+/                    # Main pages (index, catalog, detail)
+/admin/              # Admin panel
+  /users/           # User CRUD
+  /products/        # Product CRUD
+  /history/         # Purchase history
+/components/         # Reusable components
+/db/                # Database schema
+/payment/           # Cart & checkout
+/resources/         # Static assets
+config.php          # Database connection & helpers
+```
+
+## Contributors
+
+- Risky Kurniawan (2009106050) - Back-end
+- Fazri Rahmad Nor Gading (2009106031) - Front-end
+- Alexander Januar Dienc Caesarea Andhika (2009106035) - Front-end
+
+## License & Usage
+
+Feel free to use this project for learning purposes. However, do not distribute or sell this code as your own. Always credit our work when referencing or using this project.
+
+See [LICENSE](LICENSE) file.
