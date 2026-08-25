@@ -1,3 +1,5 @@
+
+
 # PlayStation Game Store
 
 A vanilla PHP e-commerce application for a PlayStation game store. Built as a final project for Praktikum Web 2022 at Universitas Mulawarman.
@@ -32,7 +34,7 @@ A vanilla PHP e-commerce application for a PlayStation game store. Built as a fi
    ```bash
    mysql -u root -p playstation_game_store < db/playstation_game_store.sql
    ```
-3. Start the PHP server:
+3. Start the PHP server from the repository root:
    ```bash
    php -S localhost:8000
    ```
